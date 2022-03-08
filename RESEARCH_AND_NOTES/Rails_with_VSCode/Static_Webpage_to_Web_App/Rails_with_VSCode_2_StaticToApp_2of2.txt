@@ -1,0 +1,9 @@
+Rails with VSCode Static to WebApp 2/?
+	app/controllers/home_controller.rb
+def index	Function correlates to index.html in app/views/home/index.html.erb
+All code pertaining to index page goes in home_controller.rb
+	app/layouts/application.html.erb
+Rails generates a base template file called application.html.erb. For every page in the web app, it grabs the body contents of each HTML file  and  redirects it with <%= yield %> in the body block. This means changes made in application.html.erb will affect the contents of every page in the web app, and the developer does not need to adjust the formatting for each page.
+Every page needs the HTML file (index), a controller, and a route to that page. Rails automatically generates this for us
+Even if page is created manually without rails generate, application.html.erb will still apply its template formatting
+In the header, a navbar is commonly used to direct the user to different parts of the page or to a new page entirely. After implementing the correct routing paths in the navbar, application.html.erb will be able to implement this navbar with the correct links to every page in the web app

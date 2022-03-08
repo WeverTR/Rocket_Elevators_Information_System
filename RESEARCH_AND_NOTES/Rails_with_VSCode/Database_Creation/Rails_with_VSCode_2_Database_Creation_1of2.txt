@@ -1,0 +1,30 @@
+Rails with VSCode Database Creation 1/?
+https://www.youtube.com/watch?v=iF8caVyDi5g&list=PLCC34OHNcOtrk3BDsfZwf4GattdLoKCOF- Codemy series on building first web app playlist
+
+Most web and mobile app UIs (user interfaces) use a MVC: Model-View-Controller design architecture
+Models - databases
+Views - webpages
+Controller - dictates logic, mainly code
+Each component of a MVC is loosely coupled - they act independently of each other, allowing developers to modify one component without affecting the others, keeping organization simple and maintenance easier. 
+	E.G. Programmers can fix a bug in the view without changing the model or controller code
+C.R.U.D. - Create, Read, Update, Delete/Destroy
+Nearly every website uses CRUD in some way 
+	E.G. Facebook: create post, reading someone's post, updating your post, deleting your post
+CRUD uses scaffolding, a technique used to generate views and controllers based on the model present in the app		$ rails g scaffold <name> in Ubuntu to make new scaffold	
+Quotes table:
+Allows user to save the forms filled out on the site and eventually turn them into prospects. This table must persist all required fields.
+Users table:
+Allows users to authenticate. This table is responsible for keeping authentication data such as email, encrypted password, token, etc.
+Employees table:
+Allows user to reserve a section of the site only to authenticated users. When a user authenticates, they are attached to an "Employee" profile and have access to information specific to them. The table will collect the following fields at first to designate an employee:
+User ID
+Last Name
+First name
+Title or Function
+For Employees table:	
+	rails g scaffold Rocket_Elevators_Information_System user_id:string last_name:string 		first_name:string title:string email:string
+*Rails by default doesn't use plurals in naming conventions*
+
+Newly generated databases with Rails will populate the db folder with a folder called migrate, housing a migration which holds the information of the database
+
+
