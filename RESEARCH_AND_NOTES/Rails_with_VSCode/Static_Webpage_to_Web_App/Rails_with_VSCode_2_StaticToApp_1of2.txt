@@ -1,0 +1,28 @@
+Rails with VSCode Static to Webapp 1/?
+https://www.youtube.com/watch?v=iF8caVyDi5g&list=PLCC34OHNcOtrk3BDsfZwf4GattdLoKCOF- Codemy series on building first web app playlist
+
+Gems are software packages containing a packaged Ruby app or library (collection of prewritten code users can use to optimize tasks)
+Gems are used to distribute reusable functionality for other Ruby users to use in their apps
+After initializing a new Rails database:
+app Folder
+	app/assets contains things like CSS stylesheets, Javascript code, images, etc.
+	app/controllers
+	app/models
+	app/layouts
+config Folder
+	config/routes.rb
+
+Gemfile
+	Gemfile contains gems to be used with project
+
+Rails has many helper files to help with webpage creation (E.G. generators)
+IN TERMINAL:	rails generate OR rails g
+Initialize website with Rails generator:	rails g controller home index
+					creates controller made at home, creates page called index
+All Rails HTML files end in .erb, allows developer to use embedded Ruby on web page
+Upon creation, localhost:3000/home/index now displays a mostly blank page with a Home#index header
+To change index file, go to VSCode - app/views/home and change index.html.erb
+To have home page display index instead of the Rails page, change route by going to:
+	config/routes.rb
+		Comment out:	 get 'home/index'	Remember the single quote marks!
+		Next line under: 	root 'home#index'
