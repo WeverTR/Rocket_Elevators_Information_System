@@ -1,3 +1,4 @@
 class Employee < ApplicationRecord
-  belongs_to :user
+    validates :user_id, :first_name, :last_name, :title,  presence: true
+    belongs_to :user
 end
