@@ -27,4 +27,4 @@
 /config/master.key
 
 # Ignore database to prevent overwriting MySQL information
-config/database.yml
+/config/database.yml
