@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
+
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'font-awesome-sass', '~> 4.3.0'
@@ -19,6 +20,10 @@ gem 'bootstrap-social-rails'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3' #newly test
 gem 'popper_js', '~> 2.9.3' #new
 gem 'rails-ujs', '~> 0.1.0' #newly test
+
+gem 'devise', '~> 4.8', '>= 4.8.1'
+gem 'rails_admin', '~> 2.2', '>= 2.2.1'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
