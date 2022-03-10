@@ -10,42 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_09_171347) do
-
-  create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "title"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "TypeOfBuilding"
-    t.integer "Number_Of_Apartments"
-    t.integer "Number_Of_Floors"
-    t.integer "Number_Of_Basements"
-    t.integer "Number_Of_Companies"
-    t.integer "Number_Of_Parking_Spots"
-    t.integer "Number_Of_Elevator_Cages"
-    t.integer "Maximum_Occupants_Per_Floor"
-    t.integer "Number_Of_Hours_Of_Activity_In_The_Building"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "NumberOfElevator"
-    t.integer "Range"
-    t.integer "TotalPrice"
-    t.integer "InstallFees"
-    t.integer "FinalPrice"
-  end
-
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 ActiveRecord::Schema.define(version: 2022_03_09_234445) do
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -57,6 +21,25 @@ ActiveRecord::Schema.define(version: 2022_03_09_234445) do
     t.string "email"
     t.string "title"
     t.index ["user_id"], name: "index_employees_on_user_id"
+  end
+
+  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "Number_Of_Apartments"
+    t.integer "Number_Of_Floors"
+    t.integer "Number_Of_Basements"
+    t.integer "Number_Of_Companies"
+    t.integer "Number_Of_Parking_Spots"
+    t.integer "Number_Of_Elevator_Cages"
+    t.integer "Maximum_Occupants_Per_Floor"
+    t.integer "Number_Of_Hours_Of_Activity_In_The_Building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "NumberOfElevator"
+    t.string "TypeOfBuilding"
+    t.integer "Range"
+    t.integer "TotalPrice"
+    t.integer "InstallFees"
+    t.integer "FinalPrice"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
