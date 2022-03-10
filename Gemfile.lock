@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GEM
   remote: https://rubygems.org/
   specs:
@@ -346,3 +347,5 @@ RUBY VERSION
 
 BUNDLED WITH
    2.1.4
+=======
+>>>>>>> 5ec3c32e133ecc89c65e8910835275182c0a14f1
