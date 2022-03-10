@@ -1,32 +1,33 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actioncable (5.2.6.2)
-      actionpack (= 5.2.6.2)
+    actioncable (5.2.6.3)
+      actionpack (= 5.2.6.3)
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
-    actionmailer (5.2.6.2)
-      actionpack (= 5.2.6.2)
-      actionview (= 5.2.6.2)
-      activejob (= 5.2.6.2)
+    actionmailer (5.2.6.3)
+      actionpack (= 5.2.6.3)
+      actionview (= 5.2.6.3)
+      activejob (= 5.2.6.3)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 2.0)
-    actionpack (5.2.6.2)
-      actionview (= 5.2.6.2)
-      activesupport (= 5.2.6.2)
+    actionpack (5.2.6.3)
+      actionview (= 5.2.6.3)
+      activesupport (= 5.2.6.3)
       rack (~> 2.0, >= 2.0.8)
       rack-test (>= 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (5.2.6.2)
-      activesupport (= 5.2.6.2)
+    actionview (5.2.6.3)
+      activesupport (= 5.2.6.3)
       builder (~> 3.1)
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
-    activejob (5.2.6.2)
-      activesupport (= 5.2.6.2)
+    activejob (5.2.6.3)
+      activesupport (= 5.2.6.3)
       globalid (>= 0.3.6)
+<<<<<<< HEAD
     activemodel (5.2.6.2)
       activesupport (= 5.2.6.2)
     activemodel-serializers-xml (1.0.2)
@@ -36,12 +37,19 @@ GEM
     activerecord (5.2.6.2)
       activemodel (= 5.2.6.2)
       activesupport (= 5.2.6.2)
+=======
+    activemodel (5.2.6.3)
+      activesupport (= 5.2.6.3)
+    activerecord (5.2.6.3)
+      activemodel (= 5.2.6.3)
+      activesupport (= 5.2.6.3)
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
       arel (>= 9.0)
-    activestorage (5.2.6.2)
-      actionpack (= 5.2.6.2)
-      activerecord (= 5.2.6.2)
+    activestorage (5.2.6.3)
+      actionpack (= 5.2.6.3)
+      activerecord (= 5.2.6.3)
       marcel (~> 1.0.0)
-    activesupport (5.2.6.2)
+    activesupport (5.2.6.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -53,14 +61,25 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (10.4.2.0)
       execjs (~> 2)
+<<<<<<< HEAD
     bcrypt (3.1.16)
+=======
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
     bindex (0.8.1)
-    bootsnap (1.10.3)
+    bootsnap (1.11.1)
       msgpack (~> 1.2)
+<<<<<<< HEAD
     bootstrap (5.1.3)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 2.9.3, < 3)
       sassc-rails (>= 2.0.0)
+=======
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
+    bootstrap-social-rails (4.12.0)
+      railties (>= 3.1)
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.36.0)
@@ -94,6 +113,8 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.5)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     haml (5.2.2)
@@ -111,6 +132,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
+<<<<<<< HEAD
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -123,6 +145,8 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
+=======
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -145,7 +169,10 @@ GEM
     nokogiri (1.13.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+<<<<<<< HEAD
     orm_adapter (0.5.0)
+=======
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
     popper_js (2.9.3)
     public_suffix (4.0.6)
     puma (3.12.6)
@@ -156,24 +183,25 @@ GEM
       rack (>= 1.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
-    rails (5.2.6.2)
-      actioncable (= 5.2.6.2)
-      actionmailer (= 5.2.6.2)
-      actionpack (= 5.2.6.2)
-      actionview (= 5.2.6.2)
-      activejob (= 5.2.6.2)
-      activemodel (= 5.2.6.2)
-      activerecord (= 5.2.6.2)
-      activestorage (= 5.2.6.2)
-      activesupport (= 5.2.6.2)
+    rails (5.2.6.3)
+      actioncable (= 5.2.6.3)
+      actionmailer (= 5.2.6.3)
+      actionpack (= 5.2.6.3)
+      actionview (= 5.2.6.3)
+      activejob (= 5.2.6.3)
+      activemodel (= 5.2.6.3)
+      activerecord (= 5.2.6.3)
+      activestorage (= 5.2.6.3)
+      activesupport (= 5.2.6.3)
       bundler (>= 1.3.0)
-      railties (= 5.2.6.2)
+      railties (= 5.2.6.3)
       sprockets-rails (>= 2.0.0)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+<<<<<<< HEAD
     rails_admin (2.2.1)
       activemodel-serializers-xml (>= 1.0)
       builder (~> 3.1)
@@ -189,6 +217,13 @@ GEM
     railties (5.2.6.2)
       actionpack (= 5.2.6.2)
       activesupport (= 5.2.6.2)
+=======
+    rails-ujs (0.1.0)
+      railties (>= 3.1)
+    railties (5.2.6.3)
+      actionpack (= 5.2.6.3)
+      activesupport (= 5.2.6.3)
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
@@ -267,19 +302,36 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
+<<<<<<< HEAD
   bootstrap (~> 5.1.3)
+=======
+  bootstrap-sass (~> 3.3.4)
+  bootstrap-social-rails
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
   byebug
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
+<<<<<<< HEAD
   devise (~> 4.8, >= 4.8.1)
   jbuilder (~> 2.5)
   jquery-rails
+=======
+  font-awesome-sass (~> 4.3.0)
+  jbuilder (~> 2.5)
+  jquery-rails (~> 4.3, >= 4.3.3)
+  jquery-ui-rails
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4, < 0.6.0)
+  popper_js (~> 2.9.3)
   puma (~> 3.11)
   rails (~> 5.2.6, >= 5.2.6.2)
+<<<<<<< HEAD
   rails_admin (~> 2.2, >= 2.2.1)
+=======
+  rails-ujs (~> 0.1.0)
+>>>>>>> 8d9194f26fdb195551d73cf5c46bd55cb8491805
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
