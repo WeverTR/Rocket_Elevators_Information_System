@@ -1,0 +1,302 @@
+
+<div id="wrapper">
+
+        <div id="header" class="navbar-toggleable-md sticky clearfix">
+
+            <!-- TOP NAV -->
+            <header id="topNav">
+                <div class="container">
+
+                    <!-- Mobile Menu Button -->
+                    <button class="btn btn-mobile" data-toggle="collapse" data-question=".nav-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Logo -->
+                    <a class="logo float-left" href="#top">
+					<%= favicon_link_tag 'favicon.ico' %>
+                    </a>
+
+                    <!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+                    <div class="navbar-collapse collapse float-right nav-main-collapse">
+                        <nav class="nav-main">
+
+                            <!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+                            <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                                <li class="active">
+                                    <!-- HOME -->
+                                    <a href="/index.html">
+                                        HOME</a>
+
+
+                                </li>
+                                <li>
+                                    <!-- SERVICES -->
+                                    <a href="/index.html#services">
+                                        SERVICES
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- PORTFOLIO -->
+                                    <a href="/index.html#portfolio">
+                                        PORTFOLIO
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <!-- CLIENTS -->
+                                    <a href="/index.html#clients">
+                                        CLIENTS
+                                    </a>
+                                </li>
+                                <li>
+                                    <!-- CONTACT -->
+                                    <a href="/index.html#contact">
+                                        CONTACT
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+
+                </div>
+            </header>
+            <!-- /Top Nav -->
+
+
+        </div>
+
+
+
+
+
+
+
+        <!-- wrapper -->
+        <div id="wrapper">
+
+            <div class="container">
+                <br>
+
+                <div class="fancy-form fancy-form-select">
+                    <label>What type of building is this?</label>
+                    <select class="fancy-form-select" id="building-type">
+                        <option id="select-building-type" value="selected">--- Select Building Type ---</option>
+                        <option id="residential" value="residential">Residential</option>
+                        <option id="commercial" value="commercial">Commercial</option>
+                        <option id="corporate" value="corporate">Corporate</option>
+                        <option id="hybrid" value="hybrid">Hybrid</option>
+                    </select>
+                </div><br />
+                <form action="" method="" enctype="multipart/form-data" id="elevatorForm">
+                    <fieldset>
+                        <input type="hidden" name="action" value="contact_send" />
+
+
+                        <div class="row">
+                            <div class="col-md-8" id="number-of-apartments" style="display:none">
+                                <label>How Many Apartments?</label>
+                                <input name="numofapt" id="numofapt" type="text" min="0" max="1000"
+                                onchange="update()"  class="form-control stepper">
+                            </div>
+
+                            <div class="col-md-8" id="number-of-floors" style="display:none">
+                                <label>Number of Floors? (excluding basements)</label>
+                                <input name="numoffloors" id="numoffloors" type="number" min="0" max="500"
+                                onchange="update()"  class="form-control">
+                            </div>
+                            <div class="col-md-8" id="number-of-basements" style="display:none">
+                                <label>Number of Basements?</label>
+                                <input name="numofbase" id="numofbase" type="number" min="0" max="100"
+                                onchange="update()"  class="form-control">
+                            </div>
+                            <div class="col-md-8" id="number-of-parking-spots" style="display:none">
+                                <label>Number of Parking Spaces?</label>
+                                <input name="numofpark" id="numofpark" type="number" min="0" max="100"
+                                onchange="update()"  class="form-control">
+                            </div>
+                            <div class="col-md-8" id="number-of-companies" style="display:none">
+                                <label>Number of Companies?</label>
+                                <input name="numofcomp" id="numofcomp" type="number" min="0" max="100"
+                                onchange="update()"  class="form-control">
+                            </div>
+                            <div class="col-md-8" id="number-of-elevators" style="display:none">
+                                <label>Number of Elevators Needed?</label>
+                                <input name="numofelev" id="numofelev" type="number" min="0" max="1000"
+                                onchange="update()" class="form-control">
+                            </div>
+                            <div class="col-md-8" id="maximum-occupancy" style="display:none">
+                                <label>Maxium Occupancy?</label>
+                                <input name="maxocc" id="maxocc" type="number" min="0" max="1000" onchange="update()"
+                                 class="form-control">
+                            </div>
+
+                            <div class="col-md-8" id="business-hours" style="display:none">
+                                <label>How Many Business Hours in a Day?</label>
+                                <input name="bushrs" id="bushrs" type="number" min="0" max="24" onchange="update()" 
+                                class="form-control">
+                            </div>
+                            <div class="col-md-8" id="number-of-corporations" style="display:none">
+                                <label>How Many Corporations?</label>
+                                <input name="corp" id="corp" type="number" min="0" max="24" 
+                                onchange="update()" class="form-control">
+                            </div>
+
+                            <div class="col-md-8" id="type_elevator">
+                                <label>Type of Elevator</label>
+                            </div>
+                            <div class="col-md-8" id="standard">
+                                <label class="radio">
+                                    <input type="radio" name="liftCage" value="standard" checked="false" onclick="update()">
+                                    <i></i> Standard
+                                </label>
+                            </div>
+                            <div class="col-md-8" id="premium">
+                                <label class="radio">
+                                    <input type="radio" name="liftCage" value="premium" onclick="update()">
+                                    <i></i> Premium
+                                </label>
+                            </div>
+                            <div class="col-md-8" id="excelium">
+                                <label class="radio">
+                                    <input type="radio" name="liftCage" value="excelium" onclick="update()">
+                                    <i></i> Excelium
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+                </form>
+
+
+
+                <!-- /FORM -->
+
+
+
+                <!-- INFO -->
+                <form action="" method="" enctype="multipart/form-data" id="outputForm">
+                    <fieldset>
+                        <input type="hidden" name="action" value="contact_send" />
+                        <div class="col-md-8" id="elevator-amount">
+                            <label>Elevators Needed
+                                <input type="text" id="elevatorNum" value="" min="0" max="1000" class="form-control"
+                                onchange="update()"  readonly>
+                            </label>
+                        </div>
+                        <div class="col-md-8" id="elevator-unit-price">
+                            <label>Elevator Unit Price
+                                <input type="text" id="unitPrice" value="" min="0" max="1000" class="form-control"
+                                onchange="update()"   readonly>
+                            </label>
+                        </div>
+                        <div class="col-md-8" id="elevator-total-price">
+                            <label>Total Price of Elevators
+                                <input type="text" id="totalPriceElevators" value="" min="0" max="1000"
+                                onchange="update()"  class="form-control" readonly>
+                            </label>
+                        </div>
+                        <div class="col-md-8" id="installation-fees">
+                            <label>Installation Fees
+                                <input type="text" id="installFees" value="" min="0" max="1000" class="form-control"
+                                onchange="update()"  readonly>
+                            </label>
+                        </div>
+                        <div class="col-md-8" id="final-price">
+                            <label>Final Price of Elevators
+                                <input type="text" id="totalPrice" value="" min="0" max="1000" class="form-control"
+                                onchange="update()"   readonly>
+                            </label>
+                        </div>
+
+            </div>
+            </fieldset>
+            </form>
+            <!-- /INFO -->
+
+        </div>
+
+    </div>
+    </section>
+    <!-- /CONTACT -->
+
+
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container">
+
+
+            <div class="row">
+
+                <!-- col #1 -->
+                <div class="col-md-8">
+
+                    <h3 class="letter-spacing-1">WHY US?</h3>
+
+                    <!-- Small Description -->
+                    <p>
+                        We have the conviction that we create the most innovative and reliable products on the market.
+                        Contact us today for any questions you might have.
+                    </p>
+                    <h2>(418) 555-1234</h2>
+                </div>
+                <!-- /col #1 -->
+
+                <!-- col #2 -->
+                <div class="col-md-4">
+                    <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+                    <!-- Newsletter Form -->
+                    <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+                    <form class="validate" action="php/newsletter.php" method="post"
+                        data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                            <input type="email" id="email" name="email" class="form-control required"
+                                placeholder="Enter your Email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Subscribe</button>
+                            </span>
+                        </div>
+                    </form>
+                    <!-- /Newsletter Form -->
+
+
+                </div>
+                <!-- /col #2 -->
+
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            <div class="container">
+                <ul class="float-right m-0 list-inline mobile-block">
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li>&bull;</li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+                &copy; All Rights Reserved, Company LTD
+            </div>
+        </div>
+
+    </footer>
+    <!-- /FOOTER -->
+
+</div>
