@@ -83,15 +83,14 @@
 				<li data-transition="parallaxtobottom" data-slotamount="7" data-masterspeed="600"
 					data-saveperformance="off" data-title="Home">
 					<!-- MAIN IMAGE -->
-					<img src="/assets/backgroundgoingup.jpg" alt="cover image" data-bgposition="center top"
-						data-bgfit="cover" data-bgrepeat="no-repeat">
+					<%= image_tag("/assets/backgroundgoingup.jpg", :alt => "img", :data => "center top", :data => "cover", :data =>"no-repeat") %>
 
-					<div class="tp-caption content_text_center skewfromleft tp-resizeme" data-x="46" data-y="100"
-						data-speed="400" data-start="1500" data-easing="Power3.easeInOut" data-splitin="none"
-						data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
-						style="background: #0066ffda; z-index: 5; color:white; font-size:110px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:slategray;">
-						Rocket Elevators
-					</div>
+				<div class="tp-caption content_text_center skewfromleft tp-resizeme" data-x="46" data-y="100"
+					data-speed="400" data-start="1500" data-easing="Power3.easeInOut" data-splitin="none"
+					data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="600"
+					style="background: #0066ffda; z-index: 5; color:white; font-size:110px; line-height:85px; font-weight:bold; letter-spacing:0; text-shadow:slategray;">
+					Rocket Elevators
+				</div>
 
 
 
@@ -117,9 +116,7 @@
 				<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"
 					data-saveperformance="off" data-title="RESIDENT">
 					<!-- SECOND IMAGE -->
-					<img src="/assets/stairsimg.jpg" alt="cover image" data-bgposition="center top"
-						data-bgfit="cover" data-bgrepeat="no-repeat">
-
+						<%= image_tag("/assets/stairsimg.jpg", :alt => "img", :data => "center top", :data => "cover", :data =>"no-repeat") %>
 					<div class="overlay dark-4">
 						<!-- dark overlay [0 to 9 opacity] -->
 					</div>
@@ -153,9 +150,7 @@
 				<li data-transition="parallaxtotop" data-slotamount="7" data-masterspeed="300"
 					data-saveperformance="off" data-title="CORPORATE">
 					<!-- MAIN IMAGE -->
-					<img src="/assets/corporateimg.jpg" alt="cover image" data-bgposition="center top"
-						data-bgfit="cover" data-bgrepeat="no-repeat">
-
+						<%= image_tag("/assets/corporateimg.jpg", :alt => "img", :data => "center top", :data => "cover", :data =>"no-repeat") %>
 					<div class="overlay dark-4">
 						<!-- dark overlay [0 to 9 opacity] -->
 					</div>
@@ -218,7 +213,7 @@
 
 
 						</span>
-						<img class="img-fluid" src="/assets/champion.jpg" alt="img" />
+						<%= image_tag("/assets/champion.jpg", :alt => "img", :class => "img-fluid") %>
 					</a>
 
 					<h3 class="mt-10">Awards and Projects</h3>
@@ -232,7 +227,7 @@
 
 
 						</span>
-						<img class="img-fluid" src="/assets/residentialelevator.jpg" alt="img" />
+						<%= image_tag("/assets/residentialelevator.jpg", :alt => "img", :class => "img-fluid") %>
 					</a>
 					<h3 class="mt-10">Residential Building Services</h3>
 					<p>The company offers a service for residential buildings.</p>
@@ -246,7 +241,7 @@
 
 
 						</span>
-						<img class="img-fluid" src="/assets/elevator1.jpeg" alt="img" />
+						<%= image_tag("/assets/elevator1.jpeg", :alt => "img", :class => "img-fluid") %>
 					</a>
 					<h3 class="mt-10">Corporate Building Services</h3>
 					<p>The company offers a service for corporate buildings</p>
@@ -328,9 +323,7 @@
 
 								</span>
 							</span>
-
-							<img class="img-fluid" src="/assets/Awardpic1.jpg" width="600" height="399"
-								alt="">
+							<%= image_tag("/assets/Awardpic1.jpg", :alt => "Award", :class => "img-fluid" , :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -368,7 +361,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Elevator-Worldmention2.jpg", :alt => "Elevator", :class => "img-fluid") %>
+							<%= image_tag("/assets/Elevator-Worldmention2.jpg", :alt => "Elevator", :class => "img-fluid" , :width=>"600", :height=>"399") %>
 
 						</figure>
 
@@ -442,7 +435,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award4.jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award4.jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -478,7 +471,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award5.jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award5.jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -514,7 +507,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award6 (1).jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award6 (1).jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -549,7 +542,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award7 (1).jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award7 (1).jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -585,7 +578,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award8 (1).jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award8 (1).jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 						<div class="item-box-desc">
 							<h3>Historic Design</h3>
@@ -623,7 +616,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award9 (1).jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award9 (1).jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -658,7 +651,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/2Award10.jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/2Award10.jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -692,7 +685,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/2Award11.jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/2Award11.jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
@@ -727,7 +720,7 @@
 
 								</span>
 							</span>
-							<%= image_tag("/assets/Award12.jpg", :alt => "Award", :class => "img-fluid") %>
+							<%= image_tag("/assets/Award12.jpg", :alt => "Award", :class => "img-fluid", :width=>"600", :height=>"399") %>
 						</figure>
 
 						<div class="item-box-desc">
