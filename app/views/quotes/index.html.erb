@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of building</th>
+      <th>Number of apartments</th>
+      <th>Number of floors</th>
+      <th>Number of basements</th>
+      <th>Number of companies</th>
+      <th>Number of apartments</th>
+      <th>Number of floors</th>
+      <th>Number of basements</th>
+      <th>Number of companies</th>
+      <th>Number of parking spots</th>
+      <th>Number of elevator cages</th>
+      <th>Maximum occupants per floor</th>
+      <th>Number of hours of activity in the building</th>
+      <th>number of elevator</th>
+      <th>Range</th>
+      <th>Unit price</th>
+      <th>Total price</th>
+      <th>Installation fees</th>
+      <th>Final price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quotes.each do |quote| %>
+      <tr>
+        <td><%= quote.Type_Of_Building %></td>
+        <td><%= quote.Number_Of_Apartments %></td>
+        <td><%= quote.Number_Of_Floors %></td>
+        <td><%= quote.Number_Of_Basements %></td>
+        <td><%= quote.Number_Of_Companies %></td>
+        <td><%= quote.Number_Of_Parking_Spots %></td>
+        <td><%= quote.Number_Of_Elevator_Cages %></td>
+        <td><%= quote.Maximum_Occupants_Per_Floor %></td>
+        <td><%= quote.Number_Of_Hours_Of_Activity_In_The_Building %></td>
+        <td><%= quote.Number_Of_Elevator %></td>
+        <td><%= quote.Range %></td>
+        <td><%= quote.Unit_Price %></td>
+        <td><%= quote.Total_Price %></td>
+        <td><%= quote.Installation_Fees %></td>
+        <td><%= Final_Price %></td>
+        <td><%= link_to 'Show', quote %></td>
+        <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+        <td><%= link_to 'Destroy', quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quote', new_quote_path %>
