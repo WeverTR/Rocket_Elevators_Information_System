@@ -10,7 +10,7 @@ app = ENV['APP']
 if app.nil? or app.empty?
   app = "TroyWever" 
 end
-set :branch, proc { `git rev-parse --abbrev-ref main`.chomp }
+set :branch, proc { `git rev-parse --abbrev-ref master`.chomp }
 set :application, app
 set :rails_env, "development"
 set :bundle_without, "production"
