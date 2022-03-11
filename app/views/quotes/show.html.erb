@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type of building:</strong>
+  <%= @quote.Type_Of_Building %>
+</p>
+<p>
+  <strong>Number of apartments:</strong>
+  <%= @quote.Number_Of_Apartments %>
+</p>
+
+<p>
+  <strong>Number of floors:</strong>
+  <%= @quote.Number_Of_Floors %>
+</p>
+
+<p>
+  <strong>Number of basements:</strong>
+  <%= @quote.Number_Of_Basements %>
+</p>
+
+<p>
+  <strong>Number of companies:</strong>
+  <%= @quote.Number_Of_Companies %>
+</p>
+
+<p>
+  <strong>Number of parking spots:</strong>
+  <%= @quote.Number_Of_Parking_Spots %>
+</p>
+
+<p>
+  <strong>Number of elevator cages:</strong>
+  <%= @quote.Number_Of_Elevator_Cages %>
+</p>
+
+<p>
+  <strong>Maximum occupants per floor:</strong>
+  <%= @quote.Maximum_Occupants_Per_Floor %>
+</p>
+
+<p>
+  <strong>Number of hours of activity in the building:</strong>
+  <%= @quote.Number_Of_Hours_Of_Activity_In_The_Building %>
+</p>
+<p>
+  <strong>Number of elevator:</strong>
+  <%= @quote.Number_Of_Elevator %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @quote.Range %>
+</p>
+<p>
+  <strong>Unit price:</strong>
+  <%= @quote.Unit_Price %>
+</p>
+<p>
+  <strong>Total price:</strong>
+  <%= @quote.Total_Price %>
+</p>
+<p>
+  <strong>Installation fees:</strong>
+  <%= @quote.Installation_Fees %>
+</p>
+<p>
+  <strong>Final price:</strong>
+  <%= @quote.Final_Price %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>
