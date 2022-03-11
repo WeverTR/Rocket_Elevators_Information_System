@@ -1,0 +1,2 @@
+module QuoteHelper
+end
