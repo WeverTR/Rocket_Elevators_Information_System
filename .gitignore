@@ -26,5 +26,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore database to prevent overwriting MySQL information
 /config/database.yml
