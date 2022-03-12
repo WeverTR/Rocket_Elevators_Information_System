@@ -1,5 +1,0 @@
-Rails with VSCode Database Creation 1/?
-https://guides.rubyonrails.org/v3.2/migrations.html#supported-types
-Link above lists all the data types available to use with Rails
-Create schema file by pushing migration into the database:
-	rails db:migrate
