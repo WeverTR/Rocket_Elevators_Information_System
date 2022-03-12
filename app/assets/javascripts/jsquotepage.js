@@ -197,5 +197,3 @@ function displayResults() {
     let installFee = totalPrice * installFees[cage]
     $("#totalPrice").val(`$${(totalPrice + installFee).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 }
-
-

@@ -1,4 +1,3 @@
-
 <div id="wrapper">
 
         <div id="header" class="navbar-toggleable-md sticky clearfix">
@@ -13,8 +12,9 @@
                     </button>
 
                     <!-- Logo -->
-				        <%= image_tag("/assets/R2.png", :alt => "logo", :class =>"img-fluid", :width =>"130", :height =>"65") %>
-				    </a>
+                    <a class="logo float-left" href="#top">
+					
+                    </a>
 
                     <!-- 
 							Top Nav 
@@ -90,7 +90,8 @@
 
                 <div class="fancy-form fancy-form-select">
                     <label>What type of building is this?</label>
-                    <select class="fancy-form-select" id="building-type">
+                    <form action="/quote" method="post" enctype="multipart/form-data" id="elevatorForm">
+                    <select class="fancy-form-select" id="building-type" name ="buildingtype">
                         <option id="select-building-type" value="selected">--- Select Building Type ---</option>
                         <option id="residential" value="residential">Residential</option>
                         <option id="commercial" value="commercial">Commercial</option>
@@ -98,7 +99,7 @@
                         <option id="hybrid" value="hybrid">Hybrid</option>
                     </select>
                 </div><br />
-                <form action="" method="" enctype="multipart/form-data" id="elevatorForm">
+                
                     <fieldset>
                         <input type="hidden" name="action" value="contact_send" />
 
@@ -177,7 +178,7 @@
                         </div>
 
                     </fieldset>
-                </form>
+               
 
 
 
@@ -186,7 +187,7 @@
 
 
                 <!-- INFO -->
-                <form action="" method="" enctype="multipart/form-data" id="outputForm">
+               
                     <fieldset>
                         <input type="hidden" name="action" value="contact_send" />
                         <div class="col-md-8" id="elevator-amount">
@@ -222,6 +223,7 @@
 
             </div>
             </fieldset>
+            <input type="submit" value="Submit">
             </form>
             <!-- /INFO -->
 

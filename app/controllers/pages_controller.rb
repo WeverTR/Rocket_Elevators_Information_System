@@ -5,8 +5,7 @@ class PagesController < ApplicationController
     def corporate
     end
 
-    def quote
-    end
+    
 
     def residential
     end
