@@ -1,0 +1,85 @@
+<%= form_with(model: quote, local: true) do |form| %>
+  <% if quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+  <%= form.label :Building_Type %>
+  <%= form.number_field :Building_Type %>
+  </div>
+  <div class="field">
+    <%= form.label :Number_Of_Apartments %>
+    <%= form.number_field :Number_Of_Apartments %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_Of_Floors %>
+    <%= form.number_field :Number_Of_Floors %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_Of_Basements %>
+    <%= form.number_field :Number_Of_Basements %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_Of_Companies %>
+    <%= form.number_field :Number_Of_Companies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_Of_Parking_Spots %>
+    <%= form.number_field :Number_Of_Parking_Spots %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_Of_Elevator_Cages %>
+    <%= form.number_field :Number_Of_Elevator_Cages %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Maximum_Occupants_Per_Floor %>
+    <%= form.number_field :Maximum_Occupants_Per_Floor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Number_Of_Hours_Of_Activity_In_The_Building %>
+    <%= form.number_field :Number_Of_Hours_Of_Activity_In_The_Building %>
+  </div>
+  <div class="field">
+    <%= form.label :Number_Of_Elevator %>
+    <%= form.number_field :Number_Of_Elevator %>
+  </div>
+  <div class="field">
+    <%= form.label :Range %>
+    <%= form.number_field :Range %>
+  </div>
+  <div class="field">
+    <%= form.label :Unit_Price %>
+    <%= form.number_field :Unit_Price %>
+  </div>
+  <div class="field">
+    <%= form.label :Total_Price %>
+    <%= form.number_field :Total_Price %>
+  </div>
+  <div class="field">
+    <%= form.label :Installation_Fees %>
+    <%= form.number_field :Installation_Fees %>
+  </div>
+  <div class="field">
+    <%= form.label :Final_Price %>
+    <%= form.number_field :Final_Price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
