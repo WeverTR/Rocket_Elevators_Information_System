@@ -5549,3 +5549,550 @@ puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
 puma (4.3.11) lib/puma/server.rb:472:in `process_client'
 puma (4.3.11) lib/puma/server.rb:328:in `block in run'
 puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-03-11 20:42:10 -0500
+  [1m[35m (6.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (45.1ms)
+Started GET "/" for ::1 at 2022-03-11 20:42:11 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (23.6ms)
+  Rendered shared/_navbar.html.erb (9.2ms)
+Completed 200 OK in 3577ms (Views: 3529.5ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_navbar.html.erb (4.5ms)
+Completed 200 OK in 2216ms (Views: 2209.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for ::1 at 2022-03-11 20:42:15 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for ::1 at 2022-03-11 20:42:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for ::1 at 2022-03-11 20:42:17 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for ::1 at 2022-03-11 20:42:18 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.8ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 283ms (Views: 203.9ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-03-11 20:42:23 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYaCknk5Fo2NqMlzqjJgXXRLVntsHpXS/j7g1aY9RtefPwxDJEDnq6VTYKb2aD6hPErYrvCgwKRKjH+Bfq+3QA==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mathieu.houde@codeboxx.biz' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 1161ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/" for ::1 at 2022-03-11 20:42:24 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (1.0ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (60.8ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (1895.4ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (15.7ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (37.7ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (10.0ms)
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (19.7ms)
+Completed 200 OK in 2376ms (Views: 2072.1ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/" for ::1 at 2022-03-11 20:42:31 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1653.4ms)
+Completed 500 Internal Server Error in 1961ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dashboard_path' for #<#<Class:0x00005616698941c8>:0x00007f22781d7cd8>):
+    11:                 <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+    12:             </li>
+    13:             <li class='nav-item'>
+    14:             <%= link_to 'Employee page', dashboard_path, class: 'nav-link' %>
+    15:         <% else %>
+    16:             <li class="nav-item">
+    17:                 <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+  
+app/views/shared/_navbar.html.erb:14:in `_app_views_shared__navbar_html_erb___4609864547859144965_29980'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___3395586974590844419_29960'
+Started GET "/" for ::1 at 2022-03-11 20:42:49 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1238.8ms)
+Completed 500 Internal Server Error in 1573ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dashboard' for #<#<Class:0x00005616698941c8>:0x00007f2285d3bc20>):
+    11:                 <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+    12:             </li>
+    13:             <li class='nav-item'>
+    14:             <%= link_to 'Employee page', dashboard, class: 'nav-link' %>
+    15:         <% else %>
+    16:             <li class="nav-item">
+    17:                 <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
+  
+app/views/shared/_navbar.html.erb:14:in `_app_views_shared__navbar_html_erb___4609864547859144965_30760'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___3395586974590844419_30740'
+Started GET "/" for 127.0.0.1 at 2022-03-11 20:43:55 -0500
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (23.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (98.5ms)
+Completed 200 OK in 2089ms (Views: 2058.6ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for ::1 at 2022-03-11 20:43:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for ::1 at 2022-03-11 20:44:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for ::1 at 2022-03-11 20:44:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin" for ::1 at 2022-03-11 20:44:02 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (1.2ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (45.7ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (1020.1ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (15.9ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (52.3ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (17.4ms)
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (38.8ms)
+Completed 200 OK in 1472ms (Views: 1209.7ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/admin" for ::1 at 2022-03-11 20:44:04 -0500
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (1.7ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (48.1ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (604.0ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (14.4ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (34.0ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (10.3ms)
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (23.3ms)
+Completed 200 OK in 809ms (Views: 774.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for ::1 at 2022-03-11 20:44:09 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (20.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (6.6ms)
+Completed 200 OK in 209ms (Views: 204.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for ::1 at 2022-03-11 20:44:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for ::1 at 2022-03-11 20:44:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for ::1 at 2022-03-11 20:44:12 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-03-11 20:44:22 -0500
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (12.3ms)
+Completed 200 OK in 221ms (Views: 217.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/fonts/fontawesome-webfont.woff2?v=4.7.0" for ::1 at 2022-03-11 20:44:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff2"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.woff?v=4.7.0" for ::1 at 2022-03-11 20:44:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/fonts/fontawesome-webfont.ttf?v=4.7.0" for ::1 at 2022-03-11 20:44:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/fontawesome-webfont.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
