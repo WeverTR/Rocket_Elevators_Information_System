@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get "/quote", to:"quote#quote"
   get "/corporate", to:"pages#corporate"
   get "/residential", to:"pages#residential"
+  resources :quote
 end

@@ -181,17 +181,17 @@ function displayResults() {
     
      
     // Display the recommended number of elevators
-    $("#elevatorNum").val(outputValues.elevatorsRequired)
+    $('#elevatorNum').val(outputValues.elevatorsRequired)
 
     // Display the unit price of an elevator
     $('#unitPrice').val(`$${liftCage[cage].toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 
     // Display the total price of the elevators
-    $("#totalPriceElevators").val(`$${(outputValues.elevatorsRequired * liftCage[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    $('#totalPriceElevators').val(`$${(outputValues.elevatorsRequired * liftCage[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 
     // Display the installation fees
     let totalPrice = outputValues.elevatorsRequired * liftCage[cage]
-    $("#installFees").val(`$${(totalPrice * installFees[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    $('#installFees').val(`$${(totalPrice * installFees[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 
     // Display the final total price including fees
     let installFee = totalPrice * installFees[cage]
