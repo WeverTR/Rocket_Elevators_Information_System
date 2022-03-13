@@ -10,13 +10,33 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
 //= require rails-ujs
-//= require bootstrap
 //= require activestorage
 //= require turbolinks
-//= require_tree ./plugins
 
-
-
+//=require jquery-3.3.1.min.js
+//=require jquery.form.min.js
+//=require jquery.magnific-popup.min.js
+//=require jquery.maskedinput.js
+//=require jquery.mixitup.min.js
+//=require jquery.nav.min.js
+//=require jquery.stepper.min.js
+//=require jquery.themepunch.revolution.min.js
+//=require jquery.themepunch.tools.min.js
+//=require jquery.validation.js
+//=require jquery.validation.min.js
+//=require scripts.js
+//=require smoothscroll.js
+//=require bootstrap.bundle.min.js
+//=require bootstrap.min.js
+//=require contact.js
+//=require custom.fle_upload.js
+//=require demo.revolution_slider.js
+//=require gmaps.js
+//=require jsfile1.js
+//=require jsquotepage.js
+//=require owl.carousel.min.js
+//=require pages.coffee
+//=require quote.coffee
+//=require home.coffee
 
