@@ -21,7 +21,7 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'rails_admin', '~> 2.2', '>= 2.2.1'
 
 gem 'bcrypt'
-gem 'font-awesome-sass', '~> 4.3.0'
+gem "font-awesome-rails"
 gem 'bootstrap-social-rails'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3' #newly test
 gem 'popper_js', '~> 2.9.3' #new
