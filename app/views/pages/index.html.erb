@@ -742,56 +742,39 @@
 	<section id="team" class="section-xs dark">
 		<div class="container">
 
-
-			<div class="owl-carousel text-center m-0"
-				data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
-				<div class="testimonial">
-					<figure>
-						<%= image_tag("/assets/Alex CEO.png", :alt => "Alex", :class => "rounded") %>
-					</figure>
-					<div class="testimonial-content p-0">
+			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner" style="text-align:center">
+					<div class="carousel-item active">
+						<img src="/assets/Alex CEO.png" width="75px" height="auto"> 
 						<p class="lead">CEO of Rocket Elevators</p>
 						<cite>
-
-							<span>Company CEO</span>
+						<span>Company CEO</span>
 						</cite>
 					</div>
-
-				</div>
-				<div class="testimonial">
-					<figure>
-						<%= image_tag("/assets/Kiril MD.png", :alt => "Kiril", :class => "rounded") %>
-					</figure>
-					<div class="testimonial-content p-0">
-						<p class="lead">Rocket Elevators Managing Director
-						</p>
+					<div class="carousel-item">
+						<img src="/assets/Kiril MD.png" width="75px" height="auto"> 
+						<p class="lead">Rocket Elevators Managing Director</p>
 						<cite>
-							Kiril Kleinerman
-							<span>Company MD</span>
+						<span>Company MD</span>
 						</cite>
 					</div>
-				</div>
-				<div class="testimonial">
-					<figure>
-						<%= image_tag("/assets/employee-of-the-month.jpg", :alt => "employee of the month", :class => "rounded") %>
-					</figure>
-					<div class="testimonial-content p-0">
-						<p class="lead">Employee of the Month
-						</p>
+					<div class="carousel-item">
+						<img src="/assets/employee-of-the-month.jpg" width="75px" height="auto"> 
+						<p class="lead">Employee of the Month</p>
 						<cite>
-							Megan Thompson
-							<span>Employee</span>
+						<span>Employee</span>
 						</cite>
 					</div>
 				</div>
-
 			</div>
+		</div>
 	</section>
 	<!-- /Testimonials -->
-
-
-
-
 
 	<!-- News -->
 	<section id="news">
@@ -801,129 +784,103 @@
 				<h2>Recent News</h2>
 			</div>
 
-			<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over"
-				data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
-				<div class="img-hover">
-					<a
+			<div id="carouselExampleFade" class="carousel slide carousel-fade carousel-dark" data-bs-ride="carousel">
+				<div class="carousel-inner" style="text-align:center">
+					<div class="carousel-item active">
+						<a
 						href="https://elevatorworld.com/news/daily-news/tallest-residential-development-on-singapore-river-revealed/">
 						<%= image_tag("/assets/worldstallest.jpg", :alt => "worlds tallest", :class => "img-fluid") %>
 					</a>
 
-					<h4 class="text-left mt-20"><a
+					<h4 class="mt-20"><a
 							href="https://elevatorworld.com/news/daily-news/tallest-residential-development-on-singapore-river-revealed/">Worlds
 							Tallest Residential
-							Develompment</a></h4>
-					<p class="text-left">Residential Develompment Revealed</p>
-					<ul class="text-left fs-12 list-inline list-separator">
+							Development</a></h4>
+					<p>Residential Development Revealed</p>
+					<ul class="fs-12 list-inline list-separator">
 						<li>
 							<i class="fa fa-calendar"></i>
 							Sept 22nd 2021
 						</li>
-						<li>
-
-
-
-
-						</li>
 					</ul>
-				</div>
-				<div class="img-hover">
+					</div>
+					<div class="carousel-item">
 					<a
 						href="https://elevatorworld.com/article/tke-acquires-florida-company-jacksonville-riverfront-tower-projects-and-more/">
 						<%= image_tag("/assets/TampaEle.jpg", :alt => "Tampa Ele", :class => "img-fluid") %>
 					</a>
 
-					<h4 class="text-left mt-20"><a
+					<h4 class=" mt-20"><a
 							href="https://elevatorworld.com/article/tke-acquires-florida-company-jacksonville-riverfront-tower-projects-and-more/">TKE
 							Aquires Florida Company
 						</a></h4>
-					<p class="text-left">New Elevators Coming to FLorida!</p>
-					<ul class="text-left fs-12 list-inline list-separator">
+					<p class="">New Elevators Coming to Florida!</p>
+					<ul class=" fs-12 list-inline list-separator">
 						<li>
 							<i class="fa fa-calendar"></i>
 							October 11th 2021
 						</li>
-						<li>
-
-						</li>
 					</ul>
-				</div>
-				<div class="img-hover">
+					</div>
+					<div class="carousel-item">
 					<a
 						href="https://elevatorworld.com/article/chicago-yimby-mixed-use-developments-and-tower-approved/">
 						<%= image_tag("/assets/Chicagonews.png", :alt => "Chicago news", :class => "img-fluid") %>
 					</a>
 
-					<h4 class="text-left mt-20"><a
+					<h4 class=" mt-20"><a
 							href="https://elevatorworld.com/article/chicago-yimby-mixed-use-developments-and-tower-approved/">New
 							Chicago Elevators</a></h4>
-					<p class="text-left">Chicago Developments</p>
-					<ul class="text-left fs-12 list-inline list-separator">
+					<p class="">Chicago Developments</p>
+					<ul class=" fs-12 list-inline list-separator">
 						<li>
 							<i class="fa fa-calendar"></i>
 							Aug 20th 2021
 						</li>
-						<li>
-
-						</li>
 					</ul>
-				</div>
-				<div class="img-hover">
-					<a href="https://elevatorworld.com/article/towers-around-the-nation-2/">
-						<%= image_tag("/assets/Towers-Around-the-Nation.jpg", :alt => "Towers Around the Nation", :class => "img-fluid") %>
-					</a>
-
-					<h4 class="text-left mt-20"><a
-							href="https://elevatorworld.com/article/towers-around-the-nation-2/">National News</a></h4>
-					<p class="text-left">Towers around the Nation</p>
-					<ul class="text-left fs-12 list-inline list-separator">
-						<li>
-							<i class="fa fa-calendar"></i>
-							December 1st 2021
-						</li>
-						<li>
-
-						</li>
-					</ul>
-				</div>
-				<div class="img-hover">
+					</div>
+					<div class="carousel-item">
 					<a href="https://elevatorworld.com/article/acquisition-hiring-and-certification/">
 						<%= image_tag("/assets/TKE2.jpg", :alt => "TKE2", :class => "img-fluid") %>
 					</a>
-					<h4 class="text-left mt-20"><a
+					<h4 class=" mt-20"><a
 							href="https://elevatorworld.com/article/acquisition-hiring-and-certification/">Business
 							News</a></h4>
-					<p class="text-left">Acquisition Hiring and Certification</p>
-					<ul class="text-left fs-12 list-inline list-separator">
+					<p class="">Acquisition Hiring and Certification</p>
+					<ul class=" fs-12 list-inline list-separator">
 						<li>
 							<i class="fa fa-calendar"></i>
 							January 20th 2021
 						</li>
-						<li>
-
-						</li>
 					</ul>
-				</div>
-				<div class="img-hover">
+					</div>
+					<div class="carousel-item">
 					<a	href="https://elevatorworld.com/article/busy-market-generates-work-for-construction-and-vertical-transportation-industries/">
 						<%= image_tag("/assets/BusyMarket2.jpg", :alt => "BusyMarket", :class => "img-fluid") %>
 					</a>
-					<h4 class="text-left mt-20"><a
+					<h4 class=" mt-20"><a
 							href="https://elevatorworld.com/article/busy-market-generates-work-for-construction-and-vertical-transportation-industries/">Busy
 							Market</a></h4>
-					<p class="text-left">Busy Market Generates Work for Transportation Industries</p>
-					<ul class="text-left fs-12 list-inline list-separator">
+					<p class="">Busy Market Generates Work for Transportation Industries</p>
+					<ul class=" fs-12 list-inline list-separator">
 						<li>
 							<i class="fa fa-calendar"></i>
 							July 1st 2021
 						</li>
 						<li>
-
-						</li>
 					</ul>
+					</div>
 				</div>
-		  	</div>
-	  	</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</div>
  	</section>
 	<!-- /News -->
 
