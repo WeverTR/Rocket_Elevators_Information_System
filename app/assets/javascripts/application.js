@@ -14,7 +14,10 @@
 //= require activestorage
 //= require turbolinks
 
-//=require jquery-3.3.1.min.js
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
 //=require jquery.form.min.js
 //=require jquery.magnific-popup.min.js
 //=require jquery.maskedinput.js
