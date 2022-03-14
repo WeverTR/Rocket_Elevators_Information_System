@@ -1,2 +1,0 @@
-class Battery < ApplicationRecord
-end
