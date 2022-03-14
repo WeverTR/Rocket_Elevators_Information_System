@@ -20175,3 +20175,1131 @@ Processing by QuotesController#index as HTML
 Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:23:00 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (11.6ms)
+Completed 200 OK in 337ms (Views: 332.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:23:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:23:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:23:05 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 74ms (Views: 70.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2022-03-14 14:23:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:23:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:23:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-14 14:23:08 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eBjUmv55EcvFlBkJX50KhZduCzIdhiGIbPHYRRPRO1cw+Z0e20o9AwZD2iYUMNZJO7yb01BkqBliB6lHVwft4w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:23:08 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 61ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:23:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:23:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:23:12 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:23:14 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.2ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:23:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:23:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quote" for 127.0.0.1 at 2022-03-14 14:23:16 -0400
+Processing by PagesController#quote as HTML
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2022-03-14 14:23:19 -0400
+Processing by QuotesController#create as HTML
+  Parameters: {"buildingtype"=>"residential", "numofapt"=>"3", "numoffloors"=>"3", "numofbase"=>"3", "numofpark"=>"", "numofcomp"=>"", "numofelev"=>"", "maxocc"=>"", "bushrs"=>"", "corp"=>"", "liftCage"=>"standard", "elevatorNum"=>"1", "unitPrice"=>"$7,565.00", "totalPriceElevators"=>"$7,565.00", "installFees"=>"$756.50", "totalPrice"=>"$8,321.50"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  [1m[36mQuote Create (0.7ms)[0m  [1m[32mINSERT INTO `quotes` (`buildingtype`, `numofapt`, `numoffloors`, `numofbase`, `liftCage`, `elevatorNum`, `unitPrice`, `totalPriceElevators`, `installFees`, `totalPrice`, `created_at`, `updated_at`) VALUES ('residential', 3, 3, 3, 'standard', 1, '$7,565.00', '$7,565.00', '$756.50', '$8,321.50', '2022-03-14 18:23:19', '2022-03-14 18:23:19')[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quotes_controller.rb:47
+Redirected to http://localhost:3000/quote.2
+Completed 302 Found in 14ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/quote.2" for 127.0.0.1 at 2022-03-14 14:23:19 -0400
+Processing by PagesController#quote as 
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:23:23 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:23:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:23:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:23:36 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (12.2ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 80ms (Views: 74.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:23:37 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:23:58 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:23:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:23:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:00 -0400
+Processing by QuotesController#index as HTML
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate!' for #<QuotesController:0x00007f4380e81410>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.2.7) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.7) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.7) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.7) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.7) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.7) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:24:09 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:11 -0400
+Processing by QuotesController#index as HTML
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate_employee!' for #<QuotesController:0x00007f43828a1778>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.2.7) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.7) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.7) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.7) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.7) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.7) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:16 -0400
+Processing by QuotesController#index as HTML
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate_employee' for #<QuotesController:0x00007f43829d76d8>
+Did you mean?  authenticate_user!):
+  
+activesupport (5.2.7) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.7) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.7) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.7) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.7) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.7) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:22 -0400
+Processing by QuotesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:24:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 53.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:24:26 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:24:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:24:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:24:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:24:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VuXXflhbTgXpIhJcHlrWskXIb7F0e5hqMycqVji2zuyagfO/M61A8boLc/TM77WKKGd5e9cAFEDpK5VmMlL6dw==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mathieu.houde@codeboxx.biz' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/quotes
+Completed 302 Found in 185ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:30 -0400
+Processing by QuotesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (13.8ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 75ms (Views: 69.5ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-14 14:24:34 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DQafyCkbx1boFI8mFM8GDUOxfHX5gvZAIwge6bIZxVtT0k8NeXMiAkRJRIn3Ermg/j0+h3pyqOyuHTQOXHc6pg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:24:34 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:24:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:24:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:24:35 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:24:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KszoyhYgpsBB1tGZT655NqLY55fPztCXbVGAk4vHi9dk6iQX8fSNQHXI9Z9NnWWva+I01rrPKDD1QX5arzJXzQ==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mathieu.houde@codeboxx.biz' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 184ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:24:38 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (2.1ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:24:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:24:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:42 -0400
+Processing by QuotesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (1.1ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (2.5ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 63.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/quote" for 127.0.0.1 at 2022-03-14 14:24:44 -0400
+Processing by PagesController#quote as HTML
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.5ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2022-03-14 14:24:50 -0400
+Processing by QuotesController#create as HTML
+  Parameters: {"buildingtype"=>"commercial", "numofapt"=>"", "numoffloors"=>"3", "numofbase"=>"3", "numofpark"=>"3", "numofcomp"=>"2", "numofelev"=>"3", "maxocc"=>"", "bushrs"=>"", "corp"=>"", "liftCage"=>"premium", "elevatorNum"=>"1", "unitPrice"=>"$12,345.00", "totalPriceElevators"=>"$12,345.00", "installFees"=>"$1,604.85", "totalPrice"=>"$13,949.85"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quotes_controller.rb:48
+  [1m[36mQuote Create (0.5ms)[0m  [1m[32mINSERT INTO `quotes` (`buildingtype`, `numoffloors`, `numofbase`, `numofpark`, `numofcomp`, `numofelev`, `liftCage`, `elevatorNum`, `unitPrice`, `totalPriceElevators`, `installFees`, `totalPrice`, `created_at`, `updated_at`) VALUES ('commercial', 3, 3, 3, 2, 3, 'premium', 1, '$12,345.00', '$12,345.00', '$1,604.85', '$13,949.85', '2022-03-14 18:24:50', '2022-03-14 18:24:50')[0m
+  ↳ app/controllers/quotes_controller.rb:48
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quotes_controller.rb:48
+Redirected to http://localhost:3000/quote.3
+Completed 302 Found in 13ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/quote.3" for 127.0.0.1 at 2022-03-14 14:24:50 -0400
+Processing by PagesController#quote as 
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.7ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:24:53 -0400
+Processing by QuotesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.3ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.6ms)
+
+
