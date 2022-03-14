@@ -1,14 +1,22 @@
 class CreateQuotes < ActiveRecord::Migration[5.2]
   def change
     create_table :quotes do |t|
-      t.integer :Number_Of_Apartments
-      t.integer :Number_Of_Floors
-      t.integer :Number_Of_Basements
-      t.integer :Number_Of_Companies
-      t.integer :Number_Of_Parking_Spots
-      t.integer :Number_Of_Elevator_Cages
-      t.integer :Maximum_Occupants_Per_Floor
-      t.integer :Number_Of_Hours_Of_Activity_In_The_Building
+      t.string :buildingtype
+      t.integer :numofapt
+      t.integer :numoffloors
+      t.integer :numofbase
+      t.integer :numofpark
+      t.integer :numofcomp
+      t.integer :numofelev
+      t.integer :maxocc
+      t.integer :bushrs
+      t.integer :corp
+      t.string :liftCage
+      t.integer :elevatorNum
+      t.string :unitPrice
+      t.string :totalPriceElevators
+      t.string :installFees
+      t.string :totalPrice
 
       t.timestamps
     end
