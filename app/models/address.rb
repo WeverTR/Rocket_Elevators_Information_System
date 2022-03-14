@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-    has_one :battery
+    has_one :Building
 end
