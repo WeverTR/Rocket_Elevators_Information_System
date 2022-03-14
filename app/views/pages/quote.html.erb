@@ -1,4 +1,3 @@
-
 <div id="wrapper">
 
         <div id="header" class="navbar-toggleable-md sticky clearfix">
@@ -13,8 +12,9 @@
                     </button>
 
                     <!-- Logo -->
-				        <%= image_tag("/assets/R2.png", :alt => "logo", :class =>"img-fluid", :width =>"130", :height =>"65") %>
-				    </a>
+                    <a class="logo float-left" href="#top">
+					
+                    </a>
 
                     <!-- 
 							Top Nav 
@@ -90,7 +90,8 @@
 
                 <div class="fancy-form fancy-form-select">
                     <label>What type of building is this?</label>
-                    <select class="fancy-form-select" id="building-type">
+                    <form action="/quotes" method="post" enctype="multipart/form-data" id="elevatorForm">
+                    <select class="fancy-form-select" id="building-type" name ="buildingtype">
                         <option id="select-building-type" value="selected">--- Select Building Type ---</option>
                         <option id="residential" value="residential">Residential</option>
                         <option id="commercial" value="commercial">Commercial</option>
@@ -98,7 +99,7 @@
                         <option id="hybrid" value="hybrid">Hybrid</option>
                     </select>
                 </div><br />
-                <form action="" method="" enctype="multipart/form-data" id="elevatorForm">
+                
                     <fieldset>
                         <input type="hidden" name="action" value="contact_send" />
 
@@ -177,7 +178,7 @@
                         </div>
 
                     </fieldset>
-                </form>
+               
 
 
 
@@ -186,42 +187,41 @@
 
 
                 <!-- INFO -->
-                <form action="" method="" enctype="multipart/form-data" id="outputForm">
-                    <fieldset>
-                        <input type="hidden" name="action" value="contact_send" />
+               
                         <div class="col-md-8" id="elevator-amount">
                             <label>Elevators Needed
-                                <input type="text" id="elevatorNum" value="" min="0" max="1000" class="form-control"
+                                <input type="text" name="elevatorNum" id="elevatorNum" value="" min="0" max="1000" class="form-control"
                                 onchange="update()"  readonly>
                             </label>
                         </div>
                         <div class="col-md-8" id="elevator-unit-price">
                             <label>Elevator Unit Price
-                                <input type="text" id="unitPrice" value="" min="0" max="1000" class="form-control"
+                                <input type="text" name="unitPrice" id="unitPrice"  min="0" max="1000" class="form-control"
                                 onchange="update()"   readonly>
                             </label>
                         </div>
                         <div class="col-md-8" id="elevator-total-price">
                             <label>Total Price of Elevators
-                                <input type="text" id="totalPriceElevators" value="" min="0" max="1000"
+                                <input type="text" name="totalPriceElevators" id="totalPriceElevators"  min="0" max="1000"
                                 onchange="update()"  class="form-control" readonly>
                             </label>
                         </div>
                         <div class="col-md-8" id="installation-fees">
                             <label>Installation Fees
-                                <input type="text" id="installFees" value="" min="0" max="1000" class="form-control"
+                                <input type="text" name="installFees" id="installFees" value="" min="0" max="1000" class="form-control"
                                 onchange="update()"  readonly>
                             </label>
                         </div>
                         <div class="col-md-8" id="final-price">
                             <label>Final Price of Elevators
-                                <input type="text" id="totalPrice" value="" min="0" max="1000" class="form-control"
+                                <input type="text" name="totalPrice" id="totalPrice" value="" min="0" max="1000" class="form-control"
                                 onchange="update()"   readonly>
                             </label>
                         </div>
 
             </div>
             </fieldset>
+            <input type="submit" value="Submit">
             </form>
             <!-- /INFO -->
 
@@ -229,73 +229,3 @@
 
     </div>
     </section>
-    <!-- /CONTACT -->
-
-
-
-
-    <!-- FOOTER -->
-    <footer id="footer">
-        <div class="container">
-
-
-            <div class="row">
-
-                <!-- col #1 -->
-                <div class="col-md-8">
-
-                    <h3 class="letter-spacing-1">WHY US?</h3>
-
-                    <!-- Small Description -->
-                    <p>
-                        We have the conviction that we create the most innovative and reliable products on the market.
-                        Contact us today for any questions you might have.
-                    </p>
-                    <h2>(418) 555-1234</h2>
-                </div>
-                <!-- /col #1 -->
-
-                <!-- col #2 -->
-                <div class="col-md-4">
-                    <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-
-                    <!-- Newsletter Form -->
-                    <p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-                    <form class="validate" action="php/newsletter.php" method="post"
-                        data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input type="email" id="email" name="email" class="form-control required"
-                                placeholder="Enter your Email">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" type="submit">Subscribe</button>
-                            </span>
-                        </div>
-                    </form>
-                    <!-- /Newsletter Form -->
-
-
-                </div>
-                <!-- /col #2 -->
-
-            </div>
-
-
-        </div>
-
-        <div class="copyright">
-            <div class="container">
-                <ul class="float-right m-0 list-inline mobile-block">
-                    <li><a href="#">Terms &amp; Conditions</a></li>
-                    <li>&bull;</li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-                &copy; All Rights Reserved, Company LTD
-            </div>
-        </div>
-
-    </footer>
-    <!-- /FOOTER -->
-
-</div>

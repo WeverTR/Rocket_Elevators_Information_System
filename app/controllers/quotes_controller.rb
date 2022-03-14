@@ -1,5 +1,6 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /quotes or /quotes.json
   def index
@@ -21,17 +22,36 @@ class QuotesController < ApplicationController
 
   # POST /quotes or /quotes.json
   def create
-    @quote = Quote.new(quote_params)
+    # @quote = quotes.new(title: "...", body: "...")
 
-    respond_to do |format|
-      if @quote.save
-        format.html { redirect_to quote_url(@quote), notice: "Quote was successfully created." }
-        format.json { render :show, status: :created, location: @quote }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @quote.errors, status: :unprocessable_entity }
-      end
-    end
+    @buildingtype= params[:buildingtype] 
+    @numofapt= params[:numofapt]  
+    @numoffloors= params[:numoffloors]
+    @numofbase= params[:numofbase]
+    @numofpark= params[:numofpark]
+    @numofcomp= params[:numofcomp]
+    @numofelev= params[:numofelev]
+    @maxocc= params[:maxocc]
+    @bushrs= params[:bushrs]
+    @corp= params[:corp]
+    @liftCage= params[:liftCage]
+    @elevatorNum= params[:elevatorNum]
+    @unitPrice= params[:unitPrice]
+    @totalPriceElevators= params[:totalPriceElevators]
+    @installFees= params[:installFees]
+    @totalPrice= params[:totalPrice]
+
+    @quote = Quote.new(buildingtype: @buildingtype, numofapt: @numofapt, numoffloors: @numoffloors, numofbase: @numofbase, numofpark: @numofpark, numofcomp: @numofcomp, numofelev: @numofelev, maxocc: @maxocc, bushrs: @bushrs, corp: @corp, liftCage: @liftCage, elevatorNum: @elevatorNum, unitPrice: @unitPrice, totalPriceElevators: @totalPriceElevators, installFees: @installFees, totalPrice: @totalPrice)
+    
+        respond_to do |format|
+          if @quote.save
+            format.html { redirect_to quote_url(@quote), notice: "Quote was successfully created." }
+            format.json { render :show, status: :created, location: @quote }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @quote.errors, status: :unprocessable_entity }
+          end
+        end
   end
 
   # PATCH/PUT /quotes/1 or /quotes/1.json
@@ -49,7 +69,7 @@ class QuotesController < ApplicationController
 
   # DELETE /quotes/1 or /quotes/1.json
   def destroy
-    @quote.destroy
+    @quote = Quote.destroy
 
     respond_to do |format|
       format.html { redirect_to quotes_url, notice: "Quote was successfully destroyed." }
@@ -61,10 +81,5 @@ class QuotesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
       @quote = Quote.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
-    def quote_params
-      params.require(:quote).permit(:Number_Of_Apartments, :Number_Of_Floors, :Number_Of_Basements, :Number_Of_Companies, :Number_Of_Parking_Spots, :Number_Of_Elevator_Cages, :Maximum_Occupants_Per_Floor, :Number_Of_Hours_Of_Activity_In_The_Building)
     end
 end
