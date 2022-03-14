@@ -19358,3 +19358,820 @@ puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
 puma (4.3.11) lib/puma/server.rb:472:in `process_client'
 puma (4.3.11) lib/puma/server.rb:328:in `block in run'
 puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (83.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `TroyWever`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE DATABASE `TroyWever` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (53.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (56.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('212022909487307310', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateQuotes (20220308203212)
+  [1m[35m (67.8ms)[0m  [1m[35mCREATE TABLE `quotes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `buildingtype` varchar(255), `numofapt` int, `numoffloors` int, `numofbase` int, `numofpark` int, `numofcomp` int, `numofelev` int, `maxocc` int, `bushrs` int, `corp` int, `liftCage` varchar(255), `elevatorNum` int, `unitPrice` varchar(255), `totalPriceElevators` varchar(255), `installFees` varchar(255), `totalPrice` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220308203212_create_quotes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220308203212')[0m
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20220308233426)
+  [1m[35m (56.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `confirmation_token` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `unconfirmed_email` varchar(255), `failed_attempts` int DEFAULT 0 NOT NULL, `unlock_token` varchar(255), `locked_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:5
+  [1m[35m (36.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:41
+  [1m[35m (39.7ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:42
+  [1m[35m (40.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token`  ON `users` (`confirmation_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:43
+  [1m[35m (39.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_unlock_token`  ON `users` (`unlock_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220308233426')[0m
+  ↳ bin/rails:9
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEmployees (20220309220713)
+  [1m[35m (66.8ms)[0m  [1m[35mCREATE TABLE `employees` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_employees_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_dcfd3d4fc3`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20220309220713_create_employees.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220713')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddLastNameToEmployees (20220309220819)
+  [1m[35m (35.9ms)[0m  [1m[35mALTER TABLE `employees` ADD `last_name` varchar(255)[0m
+  ↳ db/migrate/20220309220819_add_last_name_to_employees.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220819')[0m
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddFirstNameToEmployees (20220309220830)
+  [1m[35m (32.3ms)[0m  [1m[35mALTER TABLE `employees` ADD `first_name` varchar(255)[0m
+  ↳ db/migrate/20220309220830_add_first_name_to_employees.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220830')[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToEmployees (20220309220842)
+  [1m[35m (41.2ms)[0m  [1m[35mALTER TABLE `employees` ADD `email` varchar(255)[0m
+  ↳ db/migrate/20220309220842_add_email_to_employees.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220842')[0m
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTitleToEmployees (20220309234445)
+  [1m[35m (34.1ms)[0m  [1m[35mALTER TABLE `employees` ADD `title` varchar(255)[0m
+  ↳ db/migrate/20220309234445_add_title_to_employees.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309234445')[0m
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-03-14 18:09:12', '2022-03-14 18:09:12')[0m
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('212022909487307310')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:09:32 -0400
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (7.1ms)
+Completed 200 OK in 370ms (Views: 364.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:09:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:09:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:09:35 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (9.5ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+Completed 200 OK in 78ms (Views: 67.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/quote" for 127.0.0.1 at 2022-03-14 14:09:37 -0400
+Processing by PagesController#quote as HTML
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2022-03-14 14:09:41 -0400
+Processing by QuotesController#create as HTML
+  Parameters: {"buildingtype"=>"residential", "numofapt"=>"3", "numoffloors"=>"3", "numofbase"=>"3", "numofpark"=>"", "numofcomp"=>"", "numofelev"=>"", "maxocc"=>"", "bushrs"=>"", "corp"=>"", "liftCage"=>"standard", "elevatorNum"=>"1", "unitPrice"=>"$7,565.00", "totalPriceElevators"=>"$7,565.00", "installFees"=>"$756.50", "totalPrice"=>"$8,321.50"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  Rendering quotes/new.html.erb within layouts/application
+  Rendered quotes/_form.html.erb (8.5ms)
+  Rendered quotes/new.html.erb within layouts/application (10.0ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 422 Unprocessable Entity in 92ms (Views: 69.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:09:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 80ms (Views: 69.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:09:48 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QeK+BWmVRMs2e+u7HnE1ImMnJx5H/Up5qjtHgVqU3CnMjIJ5SPy2O3LzmSfqZ57JFxtW81QP0IVf/foXW3dfVg==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mathieu.houde@codeboxx.biz' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QeK+BWmVRMs2e+u7HnE1ImMnJx5H/Up5qjtHgVqU3CnMjIJ5SPy2O3LzmSfqZ57JFxtW81QP0IVf/foXW3dfVg==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 245ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 84ms (Views: 71.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:10:10 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.7ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 63.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:11 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 64ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:13 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mix5P1B2lJNLbaNr/ZDfGMyIyCz2/IFvx/bqS0iu9LkXQkVDcR9mYw/l0fcJhnTzuLS5weUOG5MyMFfdSU13xg==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mathieu.houde@codeboxx.biz' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mix5P1B2lJNLbaNr/ZDfGMyIyCz2/IFvx/bqS0iu9LkXQkVDcR9mYw/l0fcJhnTzuLS5weUOG5MyMFfdSU13xg==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 245ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:16 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 66ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:10:16 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_navbar.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2022-03-14 14:10:20 -0400
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered shared/_navbar.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'mathieu.houde@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('mathieu.houde@codeboxx.biz', '$2a$12$BwtSgtfrWEWlx8QzbmexI.wICJ18CiVE0zfJpzcxn2xGd52OGCo3a', '2022-03-14 18:10:31', '2022-03-14 18:10:31')[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'patrick.thibault@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('patrick.thibault@codeboxx.biz', '$2a$12$5vNLOZafRB/FRpMun9QTYuFcma2l.dBy4hQkd7c/2.FBPjBSDqPIa', '2022-03-14 18:10:32', '2022-03-14 18:10:32')[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'francis.patry-jessop@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:24
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('francis.patry-jessop@codeboxx.biz', '$2a$12$VPACQ38TUYgktpld4BAFP.RYFJ0C9uABKnvLjNrPdn79qm82SWFrG', '2022-03-14 18:10:32', '2022-03-14 18:10:32')[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'abdul.akeeb@codebozz.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('abdul.akeeb@codebozz.biz', '$2a$12$kv4BvQH/eyAwiSCu/C06j.xEjSAwR33YVe6.jpozp3Y8oBbDschUG', '2022-03-14 18:10:32', '2022-03-14 18:10:32')[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'david.amyot@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:26
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('david.amyot@codeboxx.biz', '$2a$12$nTGbah1d6t3FVPeYovE.tuuEIpqJl9r6ibpNXBaY6HcfEt8f7Bsem', '2022-03-14 18:10:32', '2022-03-14 18:10:32')[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'thomas.carrier@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('thomas.carrier@codeboxx.biz', '$2a$12$98gwvznGD.RiCoe80MFscu5XTQWLZc6ME.xQFad4meuE9vfZ4HC/m', '2022-03-14 18:10:32', '2022-03-14 18:10:32')[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'timothy.wever@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:28
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('timothy.wever@codeboxx.biz', '$2a$12$CnRPhB.mtxq/1bvl.WlfV.fUeq6iJEwsCrI4UPt0X1dNXCsElCT7m', '2022-03-14 18:10:33', '2022-03-14 18:10:33')[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kiril.kleinerman@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:29
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('kiril.kleinerman@codeboxx.biz', '$2a$12$k2tFo4JI6QzaIDehWInOf.6eoVl26EC1a4ASBE6XTAZYIFKfCNGZu', '2022-03-14 18:10:33', '2022-03-14 18:10:33')[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'emmanuela.derilus@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:30
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('emmanuela.derilus@codeboxx.biz', '$2a$12$qTXHyd6KKC9B8FdQU4.fHOtScAo8SDLmUggnpoiu51iTAW3tuMVnq', '2022-03-14 18:10:33', '2022-03-14 18:10:33')[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'marie-eve.goupil@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:31
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('marie-eve.goupil@codeboxx.biz', '$2a$12$NOIMRPIQXtvZ3k1OE788H.MLPGkPJ3i4ftpj9ipOagNdZ1SPjOab6', '2022-03-14 18:10:33', '2022-03-14 18:10:33')[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'perry.sawatsky@codeboxx.biz' LIMIT 1[0m
+  ↳ db/seeds.rb:32
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('perry.sawatsky@codeboxx.biz', '$2a$12$49oaisDV0enfIsW8ENnVvuQhKXtoygAGxJDods4QfP95xFaTgs1Li', '2022-03-14 18:10:33', '2022-03-14 18:10:33')[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ db/seeds.rb:33
+  [1m[36mEmployee Create (0.4ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (1, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Houde', 'Mattieu', 'mathieu.houde@codeboxx.biz', 'Captain')[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:34
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ db/seeds.rb:34
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (2, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Thibault', 'Patrick', 'patrick.thibault@codeboxx.biz', 'Engineer')[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:35
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ db/seeds.rb:35
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (3, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Patry-Jessop', 'Francis', 'francis.patry-jessop@codeboxx.biz', 'Engineer')[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ db/seeds.rb:36
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (4, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Akeeb', 'Abdul', 'abdul.akeeb@codebozz.biz', 'Engineer')[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:37
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ db/seeds.rb:37
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (5, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Amyot', 'David', 'david.amyot@codeboxx.biz', 'Engineer')[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:37
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ db/seeds.rb:38
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (6, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Carrier', 'Thomas', 'thomas.carrier@codeboxx.biz', 'Developer')[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:39
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  ↳ db/seeds.rb:39
+  [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (7, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Wever', 'Timothy', 'timothy.wever@codeboxx.biz', 'Developer')[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:39
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:40
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ db/seeds.rb:40
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (8, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Kleinerman', 'Kiril', 'kiril.kleinerman@codeboxx.biz', 'Developer')[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:41
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ db/seeds.rb:41
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (9, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Derilus', 'Emmanuela', 'emmanuela.derilus@codeboxx.biz', 'Developer')[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:41
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:42
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ db/seeds.rb:42
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (10, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Goupil', 'Marie-Ève', 'marie-eve.goupil@codeboxx.biz', 'Developer')[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 11 LIMIT 1[0m
+  ↳ db/seeds.rb:43
+  [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO `employees` (`user_id`, `created_at`, `updated_at`, `last_name`, `first_name`, `email`, `title`) VALUES (11, '2022-03-14 18:10:33', '2022-03-14 18:10:33', 'Sawatsky', 'Perry', 'perry.sawatsky@codeboxx.biz', 'Developer')[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:10:39 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 339ms (Views: 336.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:10:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:10:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 79.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-14 14:10:43 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"21nOiUsEgOo7gPHlcWfYb3Mkt0O32g70uct9O9TKu59WN/L1am1yGn8Ig3mFcXOEBxjGrqQolAhMDcCt1Sk44A==", "user"=>{"email"=>"mathieu.houde@codeboxx.biz", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'mathieu.houde@codeboxx.biz' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 186ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2022-03-14 14:10:43 -0400
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` DESC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `quotes`[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mQuote Load (0.1ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY `quotes`.`id` DESC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY `users`.`id` DESC LIMIT 1[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (9.9ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_head.html.haml (122.7ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_secondary_navigation.html.haml (2.9ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_navigation.html.haml (6.3ms)
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (2.2ms)
+  Rendering /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/layouts/rails_admin/pjax.html.haml (3.2ms)
+Completed 200 OK in 290ms (Views: 150.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/quotesa" for 127.0.0.1 at 2022-03-14 14:10:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/quotesa"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:10:51 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.4ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.6ms)
+Completed 200 OK in 112ms (Views: 109.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quote" for 127.0.0.1 at 2022-03-14 14:10:53 -0400
+Processing by PagesController#quote as HTML
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.8ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2022-03-14 14:10:58 -0400
+Processing by QuotesController#create as HTML
+  Parameters: {"buildingtype"=>"residential", "numofapt"=>"3", "numoffloors"=>"3", "numofbase"=>"1", "numofpark"=>"", "numofcomp"=>"", "numofelev"=>"", "maxocc"=>"", "bushrs"=>"", "corp"=>"", "liftCage"=>"standard", "elevatorNum"=>"1", "unitPrice"=>"$7,565.00", "totalPriceElevators"=>"$7,565.00", "installFees"=>"$756.50", "totalPrice"=>"$8,321.50"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  Rendering quotes/new.html.erb within layouts/application
+  Rendered quotes/_form.html.erb (5.5ms)
+  Rendered quotes/new.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 422 Unprocessable Entity in 84ms (Views: 69.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-14 14:16:51 -0400
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wevertr/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (11.7ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/font/revicons.woff?5510888" for 127.0.0.1 at 2022-03-14 14:16:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for 127.0.0.1 at 2022-03-14 14:16:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/quote" for 127.0.0.1 at 2022-03-14 14:16:54 -0400
+Processing by PagesController#quote as HTML
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/quotes" for 127.0.0.1 at 2022-03-14 14:16:59 -0400
+Processing by QuotesController#create as HTML
+  Parameters: {"buildingtype"=>"residential", "numofapt"=>"3", "numoffloors"=>"3", "numofbase"=>"3", "numofpark"=>"", "numofcomp"=>"", "numofelev"=>"", "maxocc"=>"", "bushrs"=>"", "corp"=>"", "liftCage"=>"standard", "elevatorNum"=>"1", "unitPrice"=>"$7,565.00", "totalPriceElevators"=>"$7,565.00", "installFees"=>"$756.50", "totalPrice"=>"$8,321.50"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  [1m[36mQuote Create (0.4ms)[0m  [1m[32mINSERT INTO `quotes` (`buildingtype`, `numofapt`, `numoffloors`, `numofbase`, `liftCage`, `elevatorNum`, `unitPrice`, `totalPriceElevators`, `installFees`, `totalPrice`, `created_at`, `updated_at`) VALUES ('residential', 3, 3, 3, 'standard', 1, '$7,565.00', '$7,565.00', '$756.50', '$8,321.50', '2022-03-14 18:16:59', '2022-03-14 18:16:59')[0m
+  ↳ app/controllers/quotes_controller.rb:47
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/quotes_controller.rb:47
+Redirected to http://localhost:3000/quote.1
+Completed 302 Found in 25ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/quote.1" for 127.0.0.1 at 2022-03-14 14:16:59 -0400
+Processing by PagesController#quote as 
+  Rendering pages/quote.html.erb within layouts/application
+  Rendered pages/quote.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (2.8ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/quotes" for 127.0.0.1 at 2022-03-14 14:17:03 -0400
+Processing by QuotesController#index as HTML
+  Rendering quotes/index.html.erb within layouts/application
+  [1m[36mQuote Load (0.6ms)[0m  [1m[34mSELECT `quotes`.* FROM `quotes`[0m
+  ↳ app/views/quotes/index.html.erb:30
+  Rendered quotes/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/shared/_navbar.html.erb:9
+  Rendered shared/_navbar.html.erb (1.9ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 1.1ms)
+
+
