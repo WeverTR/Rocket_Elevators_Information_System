@@ -39,5 +39,4 @@ RailsAdmin.config do |config|
     # history_show
   end
 
-  config.included_models = [ Employee ]
 end
