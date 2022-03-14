@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_14_175939) do
+ActiveRecord::Schema.define(version: 2022_03_14_195723) do
+
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "type_of_address"
+    t.string "status"
+    t.string "entity"
+    t.string "number_and_street"
+    t.string "suite_appartment"
+    t.string "city"
+    t.string "postal_code"
+    t.string "country"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "BuildingId"
@@ -22,6 +36,14 @@ ActiveRecord::Schema.define(version: 2022_03_14_175939) do
     t.string "Certificate_of_operations"
     t.string "Information"
     t.string "Notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "BuildingId"
+    t.integer "type"
+    t.integer "Value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
