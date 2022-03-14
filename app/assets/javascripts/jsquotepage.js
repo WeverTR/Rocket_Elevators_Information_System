@@ -74,11 +74,11 @@ function pick() {
 }
 
 let outputValues = {
-    "elevatorsRequired": 0,
-    "columnsRequired": 0,
-    "unitPrice": 0,
-    "installationCosts:": 0,
-    "finalPrice": 0
+    "elevatorsRequired": 1,
+    "columnsRequired": 1,
+    "unitPrice": 1,
+    "installationCosts:": 1,
+    "finalPrice": 1
 }
 
 let cages;
@@ -96,7 +96,7 @@ let installFees = {
     "excelium": .16
 }
 
-function update(that) {
+function update() {
     
     elevatorsNeeded()
     elevatorUnitPrice()
@@ -125,7 +125,7 @@ function elevatorsNeeded() {
         let columnsRequired = Math.ceil(numOfFloors / 20) 
 
         outputValues.elevatorsRequired = elevatorShaftsRequired * columnsRequired
-        
+        console.log(elevatorsRequired)
 
     } else if (buildingType === "commercial") {
         
@@ -162,7 +162,7 @@ function elevatorsNeeded() {
        
         let elevatorsPerColumn = Math.ceil(elevatorShaftsRequired / columnsRequired)
        
-        outputValues.elevatorsRequired = elevatorsPerColumn * columnsRequired
+        elevatorsRequired = elevatorsPerColumn * columnsRequired
        
     }
 }
@@ -181,17 +181,17 @@ function displayResults() {
     
      
     // Display the recommended number of elevators
-    $('#elevatorNum').val(outputValues.elevatorsRequired)
+    $("#elevatorNum").val(outputValues.elevatorsRequired)
 
     // Display the unit price of an elevator
-    $('#unitPrice').val(`$${liftCage[cage].toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    $("#unitPrice").val(`$${liftCage[cage].toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 
     // Display the total price of the elevators
-    $('#totalPriceElevators').val(`$${(outputValues.elevatorsRequired * liftCage[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    $("#totalPriceElevators").val(`$${(outputValues.elevatorsRequired * liftCage[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 
     // Display the installation fees
     let totalPrice = outputValues.elevatorsRequired * liftCage[cage]
-    $('#installFees').val(`$${(totalPrice * installFees[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    $("#installFees").val(`$${(totalPrice * installFees[cage]).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
 
     // Display the final total price including fees
     let installFee = totalPrice * installFees[cage]
