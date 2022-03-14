@@ -1,0 +1,2 @@
+class Battery < ApplicationRecord
+end
