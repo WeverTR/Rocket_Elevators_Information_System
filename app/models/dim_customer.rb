@@ -1,0 +1,2 @@
+class DimCustomer < PostgresRecord
+end

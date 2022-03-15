@@ -1,0 +1,2 @@
+class FactElevator < PostgresRecord
+end
