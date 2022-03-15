@@ -18,6 +18,7 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 #RailsAdmin
 gem 'rails_admin', '~> 2.2', '>= 2.2.1'
+gem 'faker'
 
 gem 'bcrypt'
 gem "font-awesome-rails"
