@@ -41,4 +41,119 @@
   Employee.create(user_id: 9, last_name: 'Derilus', first_name: 'Emmanuela', email: 'emmanuela.derilus@codeboxx.biz', title: 'Developer')
   Employee.create(user_id: 10, last_name: 'Goupil', first_name: 'Marie-Ève', email: 'marie-eve.goupil@codeboxx.biz', title: 'Developer')
   Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 'perry.sawatsky@codeboxx.biz', title: 'Developer')
-  
+
+
+  30.times do |i|
+    i+=1
+    x = i +12
+
+    bType= ["residential","commerical","corporate","hybrid"].sample
+    if(bType == "residential")
+      bEntity = ["Person", "Coorporation"]
+   else
+     bEntity = ["Person","Coorporation", "Business", "LLC"].sample
+   end
+    User.create(
+        email: Faker::Internet.email,
+        password:123456
+    )
+    Customer.create(
+      full_name_company_contact: Faker::Name.name_with_middle,
+      company_contact_phone: Faker::PhoneNumber.cell_phone,
+      email_company: Faker::Internet.email,
+      full_name_service_technical_authority: Faker::Name.name_with_middle,
+      technical_autority_phone: Faker::PhoneNumber.cell_phone,
+      technical_autority_email: Faker::Internet.email,
+      user_id: x
+    )
+
+    
+
+    Address.create(
+      type_of_address: bType,
+      status: ["active", "inactive"].sample,
+      number_and_street: rand(6000).to_s + " " +   [ "Summit Street",
+      "Brandywine Drive",
+      "Front Street South",
+      "River Street",
+      "Forest Street",
+      "Route 9",
+      "14th Street",
+      "Hillcrest Avenue",
+      "Cedar Lane",
+      "11th Street",
+      "5th Street South",
+      "Laurel Lane",
+      "12th Street East",
+      "Willow Lane",
+      "Bridge Street",
+      "Bank Street",
+      "Linden Avenue",
+      "Valley View Road",
+      "Hudson Street",
+      "Poplar Street",
+      "Willow Avenue",
+      "Linden Street",
+      "Locust Street",
+      "Augusta Drive",
+      "Briarwood Court"].sample,
+      city: ["Montreal", "Quebec"].sample,
+      country: ["Canada", "USA"].sample,
+      entity: bEntity
+    )
+
+    Building.create(customer_id: i, address_id: i,
+      full_name_building_admin: Faker::Name.name_with_middle,
+      email_building_admin: Faker::Internet.email,
+      phone_building_admin: Faker::PhoneNumber.cell_phone,
+      full_name_technical_contact: Faker::Name.name_with_middle,
+      email_technical_contact: Faker::Internet.email,
+      phone_technical_contact: Faker::PhoneNumber.cell_phone
+    )
+
+  infosKey = ["type", "Construction year", "Value"]
+ if infosKey == "type"
+    valueKey = bType
+ elsif infosKey == "Construction year"
+  valueKey = [1998,1986,1981,2001,2009,2020,2022].sample.to_s
+ else
+  valueKey = ["1,23M$", "1,152M$", "40,6M$", "2,5M$"].sample
+ end
+
+    # Building_detail.create(
+    #   building_id: i,
+    #   information_key: infosKey, 
+    #   value: valueKey
+    # )
+    
+
+    Battery.create(
+      building_id: i,
+      employee_id: [1,2,3,4,5,6,7,8,9,10,11].sample,
+      status: ["active","inactive"].sample
+    )
+
+
+   
+    ([1,3,5].sample).times do |z|
+      z+=1
+      model_elevator = ['standard','premium','excelium'].sample
+      Column.create(
+        battery_id: i,
+        status: ["active", "inactive"].sample,
+        Number_of_floor_served: rand(60)
+      )
+      ([2,5,8].sample).times do |g|
+        
+        Elevator.create(
+          serial_number: rand(100000..200000),
+          model: model_elevator,
+          status: ["active", "inactive"].sample,
+          column_id:z
+        )
+      end
+    end
+    
+
+
+  end
