@@ -1,9 +1,7 @@
 class CreateCustomers < ActiveRecord::Migration[5.2]
   def change
     create_table :customers do |t|
-      t.integer :user_id #  bind the client to the connecting user
       t.datetime :customer_creation_date
-      t.string :company_hq_address # get from address table
       t.string :full_name_company_contact
       t.integer :company_contact_phone
       t.string :email_company
