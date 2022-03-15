@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/corporate", to:"pages#corporate"
   get "/residential", to:"pages#residential"
   resources :quotes
+  resources :leads
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 end

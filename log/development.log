@@ -21303,3 +21303,1621 @@ Processing by QuotesController#index as HTML
 Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (2.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (217.8ms)[0m  [1m[35mCREATE DATABASE `mysql2` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (15.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('7589571156664414155', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLeads (20220315144823)
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE `leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `FullName` varchar(255), `CompanyName` varchar(255), `Email` varchar(255), `Phone` varchar(255), `ProjectName` varchar(255), `ProjectDescription` varchar(255), `DepartmentInCharge` varchar(255), `Message` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315144823_create_leads.rb:3
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('7589571156664414155')[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('7589571156664414155', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLeads (20220315144823)
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE `leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `FullName` varchar(255), `CompanyName` varchar(255), `Email` varchar(255), `Phone` varchar(255), `ProjectName` varchar(255), `ProjectDescription` varchar(255), `DepartmentInCharge` varchar(255), `Message` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315144823_create_leads.rb:3
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7589571156664414155')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('7589571156664414155', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLeads (20220315144823)
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE `leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `FullName` varchar(255), `CompanyName` varchar(255), `Email` varchar(255), `Phone` varchar(255), `ProjectName` varchar(255), `ProjectDescription` varchar(255), `DepartmentInCharge` varchar(255), `Message` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315144823_create_leads.rb:3
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7589571156664414155')[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (3252.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `mysql2`[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (409.2ms)[0m  [1m[35mCREATE DATABASE `mysql2` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (1524.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (1719.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT GET_LOCK('7589571156664414155', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateQuotes (20220308203212)
+  [1m[35m (2212.1ms)[0m  [1m[35mCREATE TABLE `quotes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `buildingtype` varchar(255), `numofapt` int, `numoffloors` int, `numofbase` int, `numofpark` int, `numofcomp` int, `numofelev` int, `maxocc` int, `bushrs` int, `corp` int, `liftCage` varchar(255), `elevatorNum` int, `unitPrice` varchar(255), `totalPriceElevators` varchar(255), `installFees` varchar(255), `totalPrice` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220308203212_create_quotes.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220308203212')[0m
+  ↳ bin/rails:9
+  [1m[35m (194.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20220308233426)
+  [1m[35m (1113.6ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `confirmation_token` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `unconfirmed_email` varchar(255), `failed_attempts` int DEFAULT 0 NOT NULL, `unlock_token` varchar(255), `locked_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:5
+  [1m[35m (720.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:41
+  [1m[35m (767.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:42
+  [1m[35m (798.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token`  ON `users` (`confirmation_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:43
+  [1m[35m (700.0ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_unlock_token`  ON `users` (`unlock_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:44
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220308233426')[0m
+  ↳ bin/rails:9
+  [1m[35m (235.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEmployees (20220309220713)
+  [1m[35m (1203.4ms)[0m  [1m[35mCREATE TABLE `employees` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_employees_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_dcfd3d4fc3`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20220309220713_create_employees.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220713')[0m
+  ↳ bin/rails:9
+  [1m[35m (190.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddLastNameToEmployees (20220309220819)
+  [1m[35m (763.3ms)[0m  [1m[35mALTER TABLE `employees` ADD `last_name` varchar(255)[0m
+  ↳ db/migrate/20220309220819_add_last_name_to_employees.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220819')[0m
+  ↳ bin/rails:9
+  [1m[35m (130.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddFirstNameToEmployees (20220309220830)
+  [1m[35m (808.9ms)[0m  [1m[35mALTER TABLE `employees` ADD `first_name` varchar(255)[0m
+  ↳ db/migrate/20220309220830_add_first_name_to_employees.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220830')[0m
+  ↳ bin/rails:9
+  [1m[35m (207.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToEmployees (20220309220842)
+  [1m[35m (597.1ms)[0m  [1m[35mALTER TABLE `employees` ADD `email` varchar(255)[0m
+  ↳ db/migrate/20220309220842_add_email_to_employees.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220842')[0m
+  ↳ bin/rails:9
+  [1m[35m (271.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTitleToEmployees (20220309234445)
+  [1m[35m (518.9ms)[0m  [1m[35mALTER TABLE `employees` ADD `title` varchar(255)[0m
+  ↳ db/migrate/20220309234445_add_title_to_employees.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309234445')[0m
+  ↳ bin/rails:9
+  [1m[35m (159.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateLeads (20220315144823)
+  [1m[35m (1098.2ms)[0m  [1m[35mCREATE TABLE `leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `FullName` varchar(255), `CompanyName` varchar(255), `Email` varchar(255), `Phone` varchar(255), `ProjectName` varchar(255), `ProjectDescription` varchar(255), `DepartmentInCharge` varchar(255), `Message` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315144823_create_leads.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315144823')[0m
+  ↳ bin/rails:9
+  [1m[35m (177.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DropLeads (20220315145414)
+  [1m[35m (515.3ms)[0m  [1m[35mDROP TABLE `leads`[0m
+  ↳ db/migrate/20220315145414_drop_leads.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315145414')[0m
+  ↳ bin/rails:9
+  [1m[35m (204.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-03-15 15:03:46', '2022-03-15 15:03:46')[0m
+  ↳ bin/rails:9
+  [1m[35m (320.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('7589571156664414155')[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT GET_LOCK('7589571156664414155', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLeads (20220315150822)
+  [1m[35m (943.3ms)[0m  [1m[35mCREATE TABLE `leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `FullName` varchar(255), `CompanyName` varchar(255), `Email` varchar(255), `Phone` varchar(255), `ProjectName` varchar(255), `ProjectDescription` varchar(255), `DepartmentInCharge` varchar(255), `Message` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315150822_create_leads.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315150822')[0m
+  ↳ bin/rails:9
+  [1m[35m (428.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('7589571156664414155')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2022-03-15 11:14:10 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (47.5ms)
+Started GET "/" for ::1 at 2022-03-15 11:14:14 -0400
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.0ms)
+  Rendered shared/_navbar.html.erb (7.7ms)
+Completed 200 OK in 40271ms (Views: 40268.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_navbar.html.erb (11.8ms)
+Completed 200 OK in 43684ms (Views: 43675.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 11:14:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for ::1 at 2022-03-15 11:15:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2022-03-15 11:15:02 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-03-15 12:14:39 -0400
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (22.4ms)
+Started GET "/" for ::1 at 2022-03-15 12:14:44 -0400
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.6ms)
+  Rendered shared/_navbar.html.erb (8.0ms)
+Completed 200 OK in 13015ms (Views: 12981.4ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_navbar.html.erb (3.4ms)
+Completed 200 OK in 8392ms (Views: 8376.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 12:14:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for ::1 at 2022-03-15 12:14:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:16:25 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/leads"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:19:07 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.7) lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+actionpack (5.2.7) lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+devise (4.8.1) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (5.2.7) lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+activesupport (5.2.7) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.7) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.7) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.7) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.7) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.7) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.7) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.7) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.7) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.7) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.7) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:20:09 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/leads_controller.rb:8:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:20:38 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeadsController::Leads):
+  
+app/controllers/leads_controller.rb:13:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:22:11 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeadsController::Leads):
+  
+app/controllers/leads_controller.rb:16:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:29:30 -0400
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeadsController::Leads):
+  
+app/controllers/leads_controller.rb:16:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:37:04 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant LeadsController::Leads):
+  
+app/controllers/leads_controller.rb:16:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:39:01 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 7.6ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'fullname' for Lead.):
+  
+app/controllers/leads_controller.rb:17:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:39:45 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 5.7ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'fullname' for Lead.):
+  
+app/controllers/leads_controller.rb:17:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 12:45:11 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 134ms (ActiveRecord: 9.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:45:15 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:45:23 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 73ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:45:25 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 91ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:45:26 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 175ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:45:28 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"fullname"=>"test", "businessname"=>"yes y", "email"=>"tess@gmail.com", "phone"=>"4187146767", "projectname"=>"elevqator", "projectdescription"=>"we need 10 elevators", "departement"=>"Residential", "message"=>"hello if there is a possibilty to contact us for a quotes infromations"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-03-15 12:45:40 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (11.3ms)
+  Rendered shared/_navbar.html.erb (4.9ms)
+Completed 200 OK in 1065ms (Views: 1055.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 12:45:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for ::1 at 2022-03-15 12:45:44 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:46:20 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 225ms (ActiveRecord: 15.3ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:22 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:23 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 129ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:38 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:39 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:40 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:40 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:41 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:41 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 87ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:41 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 63ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:42 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:46:54 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/leads"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:47:20 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/leads"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:47:38 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 113ms (ActiveRecord: 7.8ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:47:41 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 57ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:47:51 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 61ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:47:54 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:14 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:15 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:15 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 73ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:16 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 87ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:17 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 60ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:17 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:48:20 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 104ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:49:39 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 101ms (ActiveRecord: 8.7ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:49:40 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:50:38 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 90ms (ActiveRecord: 7.1ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:50:39 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello "}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-03-15 12:50:41 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+Completed 200 OK in 347ms (Views: 343.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 12:50:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for ::1 at 2022-03-15 12:50:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:51:17 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:51:18 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:51:19 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 63ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:51:19 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"hello"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2022-03-15 12:53:24 -0400
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.4ms)
+  Rendered shared/_navbar.html.erb (4.5ms)
+Completed 200 OK in 1072ms (Views: 1061.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 12:53:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for ::1 at 2022-03-15 12:53:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 12:53:43 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 127ms (ActiveRecord: 11.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:53:44 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:53:57 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 83ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:54:48 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:54:49 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 94ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:54:51 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 81ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:57:34 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 118ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:57:36 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+No template found for LeadsController#create, rendering head :no_content
+Completed 204 No Content in 107ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/leads" for ::1 at 2022-03-15 12:58:55 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Residential", "Message"=>"trst"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/leads_controller.rb:19
+  [1m[36mLeads Create (0.9ms)[0m  [1m[32mINSERT INTO `leads` (`FullName`, `CompanyName`, `Email`, `Phone`, `ProjectName`, `ProjectDescription`, `DepartmentInCharge`, `Message`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test@gmail.com', '4188621678', 'test', 'testdesc', 'Residential', 'trst', '2022-03-15 16:58:55', '2022-03-15 16:58:55')[0m
+  ↳ app/controllers/leads_controller.rb:19
+  [1m[35m (123.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/leads_controller.rb:19
+Redirected to http://localhost:3000/leads.1
+Completed 302 Found in 173ms (ActiveRecord: 134.2ms)
+
+
+Started GET "/leads.1" for ::1 at 2022-03-15 12:58:55 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LeadsController):
+  
+actionpack (5.2.7) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/leads.1" for ::1 at 2022-03-15 13:01:48 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LeadsController):
+  
+actionpack (5.2.7) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 13:02:28 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Commercial", "Message"=>"waeeee"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/leads_controller.rb:19
+  [1m[36mLeads Create (1.4ms)[0m  [1m[32mINSERT INTO `leads` (`FullName`, `CompanyName`, `Email`, `Phone`, `ProjectName`, `ProjectDescription`, `DepartmentInCharge`, `Message`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test@gmail.com', '4188621678', 'test', 'testdesc', 'Commercial', 'waeeee', '2022-03-15 17:02:28', '2022-03-15 17:02:28')[0m
+  ↳ app/controllers/leads_controller.rb:19
+  [1m[35m (177.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/leads_controller.rb:19
+Redirected to http://localhost:3000/leads
+Completed 302 Found in 268ms (ActiveRecord: 189.0ms)
+
+
+Started GET "/leads" for ::1 at 2022-03-15 13:02:28 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LeadsController):
+  
+actionpack (5.2.7) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.7) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.7) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.7) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.7) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.7) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.7) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.7) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.7) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.7) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 13:09:12 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Commercial", "Message"=>"waeeee"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/leads_controller.rb:23
+  [1m[36mLeads Create (1.5ms)[0m  [1m[32mINSERT INTO `leads` (`FullName`, `CompanyName`, `Email`, `Phone`, `ProjectName`, `ProjectDescription`, `DepartmentInCharge`, `Message`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test@gmail.com', '4188621678', 'test', 'testdesc', 'Commercial', 'waeeee', '2022-03-15 17:09:12', '2022-03-15 17:09:12')[0m
+  ↳ app/controllers/leads_controller.rb:23
+  [1m[35m (200.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/leads_controller.rb:23
+Redirected to http://localhost:3000/leads
+Completed 302 Found in 248ms (ActiveRecord: 212.2ms)
+
+
+Started GET "/leads" for ::1 at 2022-03-15 13:09:12 -0400
+Processing by LeadsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template leads/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/wael/Rocket/Rocket_Elevators_Information_System/app/views"
+  * "/home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views"
+  * "/home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.2/app/views"
+  * "/home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views"
+):
+  
+app/controllers/leads_controller.rb:4:in `index'
+Started GET "/leads" for ::1 at 2022-03-15 13:10:04 -0400
+Processing by LeadsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template leads/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/home/wael/Rocket/Rocket_Elevators_Information_System/app/views"
+  * "/home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views"
+  * "/home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/kaminari-core-1.2.2/app/views"
+  * "/home/wael/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/devise-4.8.1/app/views"
+):
+  
+app/controllers/leads_controller.rb:3:in `index'
+Started POST "/leads" for ::1 at 2022-03-15 13:13:41 -0400
+  
+SyntaxError (/home/wael/Rocket/Rocket_Elevators_Information_System/app/controllers/leads_controller.rb:25: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/leads_controller.rb:25: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/leads" for ::1 at 2022-03-15 13:13:53 -0400
+  
+SyntaxError (/home/wael/Rocket/Rocket_Elevators_Information_System/app/controllers/leads_controller.rb:25: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/leads_controller.rb:25: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/leads" for ::1 at 2022-03-15 13:14:20 -0400
+  
+SyntaxError (/home/wael/Rocket/Rocket_Elevators_Information_System/app/controllers/leads_controller.rb:25: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/leads_controller.rb:25: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/leads" for ::1 at 2022-03-15 13:14:56 -0400
+  
+SyntaxError (/home/wael/Rocket/Rocket_Elevators_Information_System/app/controllers/leads_controller.rb:26: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/leads_controller.rb:26: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/leads" for ::1 at 2022-03-15 13:15:41 -0400
+  
+SyntaxError (/home/wael/Rocket/Rocket_Elevators_Information_System/app/controllers/leads_controller.rb:26: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/leads_controller.rb:26: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/leads" for ::1 at 2022-03-15 13:16:11 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Commercial", "Message"=>"waeeee"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/leads_controller.rb:20
+  [1m[36mLeads Create (0.9ms)[0m  [1m[32mINSERT INTO `leads` (`FullName`, `CompanyName`, `Email`, `Phone`, `ProjectName`, `ProjectDescription`, `DepartmentInCharge`, `Message`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test@gmail.com', '4188621678', 'test', 'testdesc', 'Commercial', 'waeeee', '2022-03-15 17:16:11', '2022-03-15 17:16:11')[0m
+  ↳ app/controllers/leads_controller.rb:20
+  [1m[35m (191.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/leads_controller.rb:20
+Redirected to http://localhost:3000/index
+Completed 406 Not Acceptable in 232ms (ActiveRecord: 199.2ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/leads_controller.rb:19:in `create'
+Started POST "/leads" for ::1 at 2022-03-15 13:16:38 -0400
+  
+SyntaxError (/home/wael/Rocket/Rocket_Elevators_Information_System/app/controllers/leads_controller.rb:25: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/leads_controller.rb:25: syntax error, unexpected `end', expecting end-of-input
+Started POST "/leads" for ::1 at 2022-03-15 13:16:48 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Commercial", "Message"=>"waeeee"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/leads_controller.rb:20
+  [1m[36mLeads Create (0.8ms)[0m  [1m[32mINSERT INTO `leads` (`FullName`, `CompanyName`, `Email`, `Phone`, `ProjectName`, `ProjectDescription`, `DepartmentInCharge`, `Message`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test@gmail.com', '4188621678', 'test', 'testdesc', 'Commercial', 'waeeee', '2022-03-15 17:16:48', '2022-03-15 17:16:48')[0m
+  ↳ app/controllers/leads_controller.rb:20
+  [1m[35m (176.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/leads_controller.rb:20
+Redirected to http://localhost:3000/index
+Completed 302 Found in 217ms (ActiveRecord: 184.8ms)
+
+
+Started GET "/index" for ::1 at 2022-03-15 13:16:48 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.7ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 244ms (Views: 241.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 13:16:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/font/revicons.ttf?5510888" for ::1 at 2022-03-15 13:16:55 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.ttf"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/leads" for ::1 at 2022-03-15 13:17:16 -0400
+Processing by LeadsController#create as HTML
+  Parameters: {"FullName"=>"test", "CompanyName"=>"test", "Email"=>"test@gmail.com", "Phone"=>"4188621678", "ProjectName"=>"test", "ProjectDescription"=>"testdesc", "DepartmentInCharge"=>"Commercial", "Message"=>"wade"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/leads_controller.rb:20
+  [1m[36mLeads Create (3.4ms)[0m  [1m[32mINSERT INTO `leads` (`FullName`, `CompanyName`, `Email`, `Phone`, `ProjectName`, `ProjectDescription`, `DepartmentInCharge`, `Message`, `created_at`, `updated_at`) VALUES ('test', 'test', 'test@gmail.com', '4188621678', 'test', 'testdesc', 'Commercial', 'wade', '2022-03-15 17:17:16', '2022-03-15 17:17:16')[0m
+  ↳ app/controllers/leads_controller.rb:20
+  [1m[35m (205.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/leads_controller.rb:20
+Redirected to http://localhost:3000/index
+Completed 302 Found in 218ms (ActiveRecord: 208.9ms)
+
+
+Started GET "/index" for ::1 at 2022-03-15 13:17:16 -0400
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.1ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+Completed 200 OK in 257ms (Views: 254.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/revicons.woff?5510888" for ::1 at 2022-03-15 13:17:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/font/revicons.woff"):
+  
+actionpack (5.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.7) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.7) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.7) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.7) lib/rails/engine.rb:524:in `call'
+puma (4.3.11) lib/puma/configuration.rb:228:in `call'
+puma (4.3.11) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.11) lib/puma/server.rb:472:in `process_client'
+puma (4.3.11) lib/puma/server.rb:328:in `block in run'
+puma (4.3.11) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
