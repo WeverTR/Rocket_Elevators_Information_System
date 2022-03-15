@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_14_213403) do
+ActiveRecord::Schema.define(version: 2022_03_15_114340) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "type_of_address"
@@ -27,34 +27,47 @@ ActiveRecord::Schema.define(version: 2022_03_14_213403) do
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.integer "BuildingId"
-    t.string "Type"
-    t.string "Status"
-    t.integer "EmployeeId"
-    t.date "Date_of_commissioning"
-    t.date "Date_of_last_inspection"
-    t.string "Certificate_of_operations"
-    t.string "Information"
-    t.string "Notes"
+    t.integer "building_id"
+    t.string "type"
+    t.string "status"
+    t.integer "employee_id"
+    t.datetime "date_of_commissioning"
+    t.datetime "date_of_last_inspection"
+    t.string "certificate_of_operations"
+    t.string "information"
+    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.integer "BuildingId"
-    t.integer "type"
-    t.integer "Value"
+    t.integer "building_id"
+    t.string "information_key"
+    t.string "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.integer "customer_id"
+    t.string "address"
+    t.string "full_name_building_admin"
+    t.string "email_building_admin"
+    t.string "phone_building_admin"
+    t.string "full_name_technical_contact"
+    t.string "email_technical_contact"
+    t.string "phone_technical_contact"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.integer "BatteryId"
-    t.string "Type"
+    t.integer "battery_id"
+    t.string "type"
     t.integer "Number_of_floor_served"
-    t.string "Status"
-    t.string "Information"
-    t.string "Notes"
+    t.string "status"
+    t.string "information"
+    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
