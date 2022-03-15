@@ -19,6 +19,8 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 #RailsAdmin
 gem 'rails_admin', '~> 2.2', '>= 2.2.1'
 
+gem 'multiverse'
+
 gem 'bcrypt'
 gem "font-awesome-rails"
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3' #newly test
