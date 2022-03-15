@@ -10,9 +10,6 @@ class CreateAddresses < ActiveRecord::Migration[5.2]
       t.string :postal_code
       t.string :country
       t.string :notes
-      #t.string :attached_file ->> get files as binary file
-
-      t.has_one :battery
 
       t.timestamps
     end

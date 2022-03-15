@@ -20750,3 +20750,311 @@ FOREIGN KEY (`column_id`)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (11.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `weverMysql`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE DATABASE `weverMysql` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `weverMysql` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (53.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (49.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4632049562355875520', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateQuotes (20220308203212)
+  [1m[35m (53.5ms)[0m  [1m[35mCREATE TABLE `quotes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `buildingtype` varchar(255), `numofapt` int, `numoffloors` int, `numofbase` int, `numofpark` int, `numofcomp` int, `numofelev` int, `maxocc` int, `bushrs` int, `corp` int, `liftCage` varchar(255), `elevatorNum` int, `unitPrice` varchar(255), `totalPriceElevators` varchar(255), `installFees` varchar(255), `totalPrice` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220308203212_create_quotes.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220308203212')[0m
+  ↳ bin/rails:9
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20220308233426)
+  [1m[35m (117.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `confirmation_token` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `confirmed_at` datetime, `confirmation_sent_at` datetime, `unconfirmed_email` varchar(255), `failed_attempts` int DEFAULT 0 NOT NULL, `unlock_token` varchar(255), `locked_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:5
+  [1m[35m (72.8ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:41
+  [1m[35m (37.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:42
+  [1m[35m (37.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_confirmation_token`  ON `users` (`confirmation_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:43
+  [1m[35m (36.9ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_unlock_token`  ON `users` (`unlock_token`) [0m
+  ↳ db/migrate/20220308233426_devise_create_users.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220308233426')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateEmployees (20220309220713)
+  [1m[35m (65.8ms)[0m  [1m[35mCREATE TABLE `employees` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_employees_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_dcfd3d4fc3`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20220309220713_create_employees.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220713')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddLastNameToEmployees (20220309220819)
+  [1m[35m (34.4ms)[0m  [1m[35mALTER TABLE `employees` ADD `last_name` varchar(255)[0m
+  ↳ db/migrate/20220309220819_add_last_name_to_employees.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220819')[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddFirstNameToEmployees (20220309220830)
+  [1m[35m (35.6ms)[0m  [1m[35mALTER TABLE `employees` ADD `first_name` varchar(255)[0m
+  ↳ db/migrate/20220309220830_add_first_name_to_employees.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220830')[0m
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddEmailToEmployees (20220309220842)
+  [1m[35m (30.9ms)[0m  [1m[35mALTER TABLE `employees` ADD `email` varchar(255)[0m
+  ↳ db/migrate/20220309220842_add_email_to_employees.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309220842')[0m
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddTitleToEmployees (20220309234445)
+  [1m[35m (31.2ms)[0m  [1m[35mALTER TABLE `employees` ADD `title` varchar(255)[0m
+  ↳ db/migrate/20220309234445_add_title_to_employees.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220309234445')[0m
+  ↳ bin/rails:9
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateAddresses (20220314195723)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('4632049562355875520')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('4632049562355875520', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateAddresses (20220314195723)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('4632049562355875520')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4632049562355875520', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateAddresses (20220314195723)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('4632049562355875520')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4632049562355875520', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateAddresses (20220314195723)
+  [1m[35m (100.1ms)[0m  [1m[35mCREATE TABLE `addresses` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `type_of_address` varchar(255), `status` varchar(255), `entity` varchar(255), `number_and_street` varchar(255), `suite_appartment` varchar(255), `city` varchar(255), `postal_code` varchar(255), `country` varchar(255), `notes` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220314195723_create_addresses.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220314195723')[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCustomers (20220314213403)
+  [1m[35m (55.4ms)[0m  [1m[35mCREATE TABLE `customers` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `customer_creation_date` datetime, `full_name_company_contact` varchar(255), `company_contact_phone` int, `email_company` varchar(255), `company_description` varchar(255), `full_name_service_technical_authority` varchar(255), `technical_autority_phone` int, `technical_autority_email` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220314213403_create_customers.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220314213403')[0m
+  ↳ bin/rails:9
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateBuildings (20220314214559)
+  [1m[35m (55.0ms)[0m  [1m[35mCREATE TABLE `buildings` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `full_name_building_admin` varchar(255), `email_building_admin` varchar(255), `phone_building_admin` varchar(255), `full_name_technical_contact` varchar(255), `email_technical_contact` varchar(255), `phone_technical_contact` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220314214559_create_buildings.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220314214559')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateBuildingDetails (20220314222216)
+  [1m[35m (54.2ms)[0m  [1m[35mCREATE TABLE `building_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `information_key` varchar(255), `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220314222216_create_building_details.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220314222216')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateBatteries (20220314222430)
+  [1m[35m (58.2ms)[0m  [1m[35mCREATE TABLE `batteries` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `type` varchar(255), `status` varchar(255), `date_of_commissioning` datetime, `date_of_last_inspection` datetime, `certificate_of_operations` varchar(255), `information` varchar(255), `notes` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220314222430_create_batteries.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220314222430')[0m
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateColumns (20220315114340)
+  [1m[35m (55.8ms)[0m  [1m[35mCREATE TABLE `columns` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `type` varchar(255), `Number_of_floor_served` int, `status` varchar(255), `information` varchar(255), `notes` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315114340_create_columns.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315114340')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateElevators (20220315125536)
+  [1m[35m (69.8ms)[0m  [1m[35mCREATE TABLE `elevators` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `serial_number` int, `model` varchar(255), `type` varchar(255), `status` varchar(255), `date_of_commissioning` datetime, `date_of_last_inspection` datetime, `information` varchar(255), `notes` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315125536_create_elevators.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315125536')[0m
+  ↳ bin/rails:9
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to DropLeads (20220315145414)
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE `leads`[0m
+  ↳ db/migrate/20220315145414_drop_leads.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('4632049562355875520')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4632049562355875520', 0)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateLeads (20220315150822)
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE TABLE `leads` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `FullName` varchar(255), `CompanyName` varchar(255), `Email` varchar(255), `Phone` varchar(255), `ProjectName` varchar(255), `ProjectDescription` varchar(255), `DepartmentInCharge` varchar(255), `Message` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20220315150822_create_leads.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315150822')[0m
+  ↳ bin/rails:9
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to AddReferences (20220315162030)
+  [1m[35m (37.5ms)[0m  [1m[35mALTER TABLE `customers` ADD `user_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:3
+  [1m[35m (36.2ms)[0m  [1m[35mCREATE  INDEX `index_customers_on_user_id`  ON `customers` (`user_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:3
+  [1m[35m (126.1ms)[0m  [1m[35mALTER TABLE `customers` ADD CONSTRAINT `fk_rails_9917eeaf5d`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:3
+  [1m[35m (35.5ms)[0m  [1m[35mALTER TABLE `customers` ADD `address_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:4
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE  INDEX `index_customers_on_address_id`  ON `customers` (`address_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:4
+  [1m[35m (134.9ms)[0m  [1m[35mALTER TABLE `customers` ADD CONSTRAINT `fk_rails_3f9404ba26`
+FOREIGN KEY (`address_id`)
+  REFERENCES `addresses` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:4
+  [1m[35m (34.1ms)[0m  [1m[35mALTER TABLE `buildings` ADD `customer_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:5
+  [1m[35m (42.4ms)[0m  [1m[35mCREATE  INDEX `index_buildings_on_customer_id`  ON `buildings` (`customer_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:5
+  [1m[35m (277.0ms)[0m  [1m[35mALTER TABLE `buildings` ADD CONSTRAINT `fk_rails_c29cbe7fb8`
+FOREIGN KEY (`customer_id`)
+  REFERENCES `customers` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:5
+  [1m[35m (75.3ms)[0m  [1m[35mALTER TABLE `buildings` ADD `address_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:6
+  [1m[35m (75.3ms)[0m  [1m[35mCREATE  INDEX `index_buildings_on_address_id`  ON `buildings` (`address_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:6
+  [1m[35m (173.4ms)[0m  [1m[35mALTER TABLE `buildings` ADD CONSTRAINT `fk_rails_6dc7a885ab`
+FOREIGN KEY (`address_id`)
+  REFERENCES `addresses` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:6
+  [1m[35m (29.7ms)[0m  [1m[35mALTER TABLE `building_details` ADD `building_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:7
+  [1m[35m (34.9ms)[0m  [1m[35mCREATE  INDEX `index_building_details_on_building_id`  ON `building_details` (`building_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:7
+  [1m[35m (111.0ms)[0m  [1m[35mALTER TABLE `building_details` ADD CONSTRAINT `fk_rails_51749f8eac`
+FOREIGN KEY (`building_id`)
+  REFERENCES `buildings` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:7
+  [1m[35m (38.8ms)[0m  [1m[35mALTER TABLE `batteries` ADD `building_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:8
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE  INDEX `index_batteries_on_building_id`  ON `batteries` (`building_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:8
+  [1m[35m (108.9ms)[0m  [1m[35mALTER TABLE `batteries` ADD CONSTRAINT `fk_rails_fc40470545`
+FOREIGN KEY (`building_id`)
+  REFERENCES `buildings` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:8
+  [1m[35m (35.9ms)[0m  [1m[35mALTER TABLE `batteries` ADD `employee_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:9
+  [1m[35m (36.6ms)[0m  [1m[35mCREATE  INDEX `index_batteries_on_employee_id`  ON `batteries` (`employee_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:9
+  [1m[35m (129.0ms)[0m  [1m[35mALTER TABLE `batteries` ADD CONSTRAINT `fk_rails_ceeeaf55f7`
+FOREIGN KEY (`employee_id`)
+  REFERENCES `employees` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:9
+  [1m[35m (30.4ms)[0m  [1m[35mALTER TABLE `columns` ADD `battery_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:10
+  [1m[35m (35.4ms)[0m  [1m[35mCREATE  INDEX `index_columns_on_battery_id`  ON `columns` (`battery_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:10
+  [1m[35m (119.4ms)[0m  [1m[35mALTER TABLE `columns` ADD CONSTRAINT `fk_rails_021eb14ac4`
+FOREIGN KEY (`battery_id`)
+  REFERENCES `batteries` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:10
+  [1m[35m (32.0ms)[0m  [1m[35mALTER TABLE `elevators` ADD `column_id` bigint[0m
+  ↳ db/migrate/20220315162030_add_references.rb:11
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE  INDEX `index_elevators_on_column_id`  ON `elevators` (`column_id`) [0m
+  ↳ db/migrate/20220315162030_add_references.rb:11
+  [1m[35m (110.0ms)[0m  [1m[35mALTER TABLE `elevators` ADD CONSTRAINT `fk_rails_69442d7bc2`
+FOREIGN KEY (`column_id`)
+  REFERENCES `columns` (`id`)
+[0m
+  ↳ db/migrate/20220315162030_add_references.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220315162030')[0m
+  ↳ bin/rails:9
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-03-15 21:22:31', '2022-03-15 21:22:31')[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('4632049562355875520')[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:9

@@ -121,6 +121,19 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
+  create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "FullName"
+    t.string "CompanyName"
+    t.string "Email"
+    t.string "Phone"
+    t.string "ProjectName"
+    t.string "ProjectDescription"
+    t.string "DepartmentInCharge"
+    t.string "Message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "buildingtype"
     t.integer "numofapt"
