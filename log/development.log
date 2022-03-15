@@ -57730,3 +57730,131 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 110ms (Views: 94.0ms | ActiveRecord: 5.5ms)
 
 
+Started GET "/admin/building_detail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:38 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"building_detail"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mBuildingDetail Load (0.5ms)[0m  [1m[34mSELECT  `building_details`.* FROM `building_details` ORDER BY building_details.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (29.4ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/column?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:39 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"column"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mColumn Load (0.4ms)[0m  [1m[34mSELECT  `columns`.* FROM `columns` ORDER BY columns.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mBattery Load (0.3ms)[0m  [1m[34mSELECT `batteries`.* FROM `batteries` WHERE `batteries`.`id` IN (30, 29, 28, 27, 26, 25, 24)[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `columns`[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (70.3ms)
+Completed 200 OK in 79ms (Views: 74.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/building_detail?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:46 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"building_detail"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mBuildingDetail Load (0.7ms)[0m  [1m[34mSELECT  `building_details`.* FROM `building_details` ORDER BY building_details.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (26.2ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/customer?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:48 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"customer"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  `customers`.* FROM `customers` ORDER BY customers.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23)[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `customers`[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (79.0ms)
+Completed 200 OK in 95ms (Views: 90.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/elevator?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:49 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"elevator"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mElevator Load (0.7ms)[0m  [1m[34mSELECT  `elevators`.* FROM `elevators` ORDER BY elevators.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mColumn Load (0.5ms)[0m  [1m[34mSELECT `columns`.* FROM `columns` WHERE `columns`.`id` IN (3, 2, 1)[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `elevators`[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (76.4ms)
+Completed 200 OK in 86ms (Views: 79.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/employee?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:51 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"employee"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY employees.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1)[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `employees`[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (79.2ms)
+Completed 200 OK in 88ms (Views: 82.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/quote?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:24:59 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"quote"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mQuote Load (0.5ms)[0m  [1m[34mSELECT  `quotes`.* FROM `quotes` ORDER BY quotes.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (24.0ms)
+Completed 200 OK in 42ms (Views: 28.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:25:01 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.1ms)
+Completed 200 OK in 77ms (Views: 71.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/address?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2022-03-15 18:25:24 -0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"address"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ config/initializers/rails_admin.rb:7
+  Rendering /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mAddress Load (0.5ms)[0m  [1m[34mSELECT  `addresses`.* FROM `addresses` ORDER BY addresses.id desc LIMIT 20 OFFSET 0[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `addresses`[0m
+  ↳ /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  Rendered /home/rolens/.rbenv/versions/2.7.5/lib/ruby/gems/2.7.0/gems/rails_admin-2.2.1/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (67.9ms)
+Completed 200 OK in 78ms (Views: 71.7ms | ActiveRecord: 2.4ms)
+
+
