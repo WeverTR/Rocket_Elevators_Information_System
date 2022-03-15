@@ -49,7 +49,7 @@
 
     bType= ["residential","commerical","corporate","hybrid"].sample
     if(bType == "residential")
-      bEntity = ["Person", "Coorporation"]
+      bEntity = ["Person", "Coorporation"].sample
    else
      bEntity = ["Person","Coorporation", "Business", "LLC"].sample
    end
