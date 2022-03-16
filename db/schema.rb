@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
   end
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "building_address"
     t.string "full_name_building_admin"
     t.string "email_building_admin"
     t.string "phone_building_admin"

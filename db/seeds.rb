@@ -43,7 +43,7 @@
   
 # Faker generation data
 # From 2019 to 2022
-  100.times do
+  1.times do
     user = User.create(
       last_name: Faker::Name.last_name, 
       first_name: Faker::Name.first_name, 
@@ -58,16 +58,16 @@
     typeAddress = ["residential", "commercial", "corporate", "hybrid"]
 
     if randAdd.address2.length != 0
-      addEntity = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+      fullAddress = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
       address2 = randAdd.address2
     else
-      addEntity = randAdd.address1 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+      fullAddress = randAdd.address1 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
       address2 = "N/A"
     end
 
     address = Address.create( 
       type_of_address: typeAddress.sample,
-      entity: addEntity,
+      entity: "N/A",
       number_and_street:randAdd.address1,
       suite_appartment: address2,
       city: randAdd.city,
@@ -90,12 +90,12 @@
     )
 
     building = Building.create(
-      building_address: address.addEntity
-      full_name_building_admin: Faker::Name.name
-      email_building_admin: Faker::Internet.email
-      phone_building_admin: Faker::PhoneNumber.phone_number
-      full_name_technical_contact: customer.full_name_service_technical_authority
-      email_technical_contact: customer.technical_authority_email
+      building_address: fullAddress,
+      full_name_building_admin: Faker::Name.name,
+      email_building_admin: Faker::Internet.email,
+      phone_building_admin: Faker::PhoneNumber.phone_number,
+      full_name_technical_contact: customer.full_name_service_technical_authority,
+      email_technical_contact: customer.technical_authority_email,
       phone_technical_contact: customer.technical_authority_phone
     )
 
@@ -111,4 +111,8 @@
 
     # )
 
+  end
+
+  20.times do
+    
   end
