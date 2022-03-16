@@ -1,8 +1,23 @@
 # Employee creation data
-  11.times do
-    # jsonData
-  end
+  # 11.times do
+  #   json = File.read("rrad/employee-data.json")
+  #   hash = JSON.parse(json, object_class: OpenStruct)
+  #   userData = hash['data']
+  #   user = User.create!(
+  #     last_name: userData.last_name,
+  #     first_name: userData.first_name,
+  #     email: userData.email,
+  #     password: 123456
+  #   )
+  #   # Employee.create!(
+  #   #   last_name: user.last_name,
+  #   #   first_name: user.first_name,
+  #   #   email: user.email,
+  #   #   title: userData.title,
+  #   # )
+  # end
 
+  # Employee creation data
   User.create(email: 'mathieu.houde@codeboxx.biz', password: 123456)
   User.create(email: 'patrick.thibault@codeboxx.biz', password: 123456)
   User.create(email: 'francis.patry-jessop@codeboxx.biz', password: 123456)
@@ -14,17 +29,17 @@
   User.create(email: 'emmanuela.derilus@codeboxx.biz', password: 123456)
   User.create(email: 'marie-eve.goupil@codeboxx.biz', password: 123456)
   User.create(email: 'perry.sawatsky@codeboxx.biz', password: 123456)
-  Employee.create(user_id: user.id, last_name: 'Houde', first_name: 'Mattieu', email: 'mathieu.houde@codeboxx.biz', title: 'Captain')
-  Employee.create(user_id: user.id, last_name: 'Thibault', first_name: 'Patrick', email: 'patrick.thibault@codeboxx.biz', title: 'Engineer')
-  Employee.create(user_id: user.id, last_name: 'Patry-Jessop', first_name: 'Francis', email: 'francis.patry-jessop@codeboxx.biz', title: 'Engineer')
-  Employee.create(user_id: user.id, last_name: 'Akeeb', first_name: 'Abdul', email: 'abdul.akeeb@codebozz.biz', title: 'Engineer')
-  Employee.create(user_id: user.id, last_name: 'Amyot', first_name: 'David', email: 'david.amyot@codeboxx.biz', title: 'Engineer')
-  Employee.create(user_id: user.id, last_name: 'Carrier', first_name: 'Thomas', email: 'thomas.carrier@codeboxx.biz', title: 'Developer')
-  Employee.create(user_id: user.id, last_name: 'Wever', first_name: 'Timothy', email: 'timothy.wever@codeboxx.biz', title: 'Developer')
-  Employee.create(user_id: user.id, last_name: 'Kleinerman', first_name: 'Kiril', email: 'kiril.kleinerman@codeboxx.biz', title: 'Developer')
-  Employee.create(user_id: user.id, last_name: 'Derilus', first_name: 'Emmanuela', email: 'emmanuela.derilus@codeboxx.biz', title: 'Developer')
-  Employee.create(user_id: user.id, last_name: 'Goupil', first_name: 'Marie-Ève', email: 'marie-eve.goupil@codeboxx.biz', title: 'Developer')
-  Employee.create(user_id: user.id, last_name: 'Sawatsky', first_name: 'Perry', email: 'perry.sawatsky@codeboxx.biz', title: 'Developer')
+  Employee.create(user_id: 1, last_name: 'Houde', first_name: 'Mattieu', email: 'mathieu.houde@codeboxx.biz', title: 'Captain')
+  Employee.create(user_id: 2, last_name: 'Thibault', first_name: 'Patrick', email: 'patrick.thibault@codeboxx.biz', title: 'Engineer')
+  Employee.create(user_id: 3, last_name: 'Patry-Jessop', first_name: 'Francis', email: 'francis.patry-jessop@codeboxx.biz', title: 'Engineer')
+  Employee.create(user_id: 4, last_name: 'Akeeb', first_name: 'Abdul', email: 'abdul.akeeb@codebozz.biz', title: 'Engineer')
+  Employee.create(user_id: 5, last_name: 'Amyot', first_name: 'David', email: 'david.amyot@codeboxx.biz', title: 'Engineer')
+  Employee.create(user_id: 6, last_name: 'Carrier', first_name: 'Thomas', email: 'thomas.carrier@codeboxx.biz', title: 'Developer')
+  Employee.create(user_id: 7, last_name: 'Wever', first_name: 'Timothy', email: 'timothy.wever@codeboxx.biz', title: 'Developer')
+  Employee.create(user_id: 8, last_name: 'Kleinerman', first_name: 'Kiril', email: 'kiril.kleinerman@codeboxx.biz', title: 'Developer')
+  Employee.create(user_id: 9, last_name: 'Derilus', first_name: 'Emmanuela', email: 'emmanuela.derilus@codeboxx.biz', title: 'Developer')
+  Employee.create(user_id: 10, last_name: 'Goupil', first_name: 'Marie-Ève', email: 'marie-eve.goupil@codeboxx.biz', title: 'Developer')
+  Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 'perry.sawatsky@codeboxx.biz', title: 'Developer')
   
 # Faker generation data
 # From 2019 to 2022
@@ -32,7 +47,8 @@
     user = User.create(
       last_name: Faker::Name.last_name, 
       first_name: Faker::Name.first_name, 
-      email: Faker::Internet.email, password: 123456, 
+      email: Faker::Internet.email, 
+      password: 123456, 
       created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
     )
 
@@ -40,8 +56,6 @@
     hash = JSON.parse(json, object_class: OpenStruct)
     randAdd = hash['addresses'].sample
     typeAddress = ["residential", "commercial", "corporate", "hybrid"]
-    addEntity = ""
-    address2 = ""
 
     if randAdd.address2.length != 0
       addEntity = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
@@ -76,7 +90,24 @@
     )
 
     building = Building.create(
-
+       full_name_building_admin: Faker::Name.name
+       email_building_admin: Faker::Internet.email
+       phone_building_admin: Faker::PhoneNumber.phone_number
+       full_name_technical_contact: customer.full_name_service_technical_authority
+       email_technical_contact: customer.technical_authority_email
+       phone_technical_contact: customer.technical_authority_phone
     )
+
+    # buildingDetails = BuildingDetail.create(
+
+    #   building_id: building.id
+    #   if address.type_of_address == "residential"
+    #   elsif address.type_of_address == "commercial"
+    #   elsif address.type_of_address == "corporate"
+    #   else
+
+    #   end
+
+    # )
 
   end
