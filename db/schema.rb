@@ -81,12 +81,12 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.datetime "customer_creation_date"
     t.string "full_name_company_contact"
-    t.integer "company_contact_phone"
+    t.string "company_contact_phone"
     t.string "email_company"
     t.string "company_description"
     t.string "full_name_service_technical_authority"
-    t.integer "technical_autority_phone"
-    t.string "technical_autority_email"
+    t.string "technical_authority_phone"
+    t.string "technical_authority_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
