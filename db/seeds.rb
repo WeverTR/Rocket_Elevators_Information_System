@@ -1,24 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Employee creation data
+  # 11.times do
+  #   json = File.read("rrad/employee-data.json")
+  #   hash = JSON.parse(json, object_class: OpenStruct)
+  #   userData = hash['data']
+  #   user = User.create!(
+  #     last_name: userData.last_name,
+  #     first_name: userData.first_name,
+  #     email: userData.email,
+  #     password: 123456
+  #   )
+  #   # Employee.create!(
+  #   #   last_name: user.last_name,
+  #   #   first_name: user.first_name,
+  #   #   email: user.email,
+  #   #   title: userData.title,
+  #   # )
+  # end
 
-# first_name	last_name	title	email	
-# Mathieu	Houde	Captain	mathieu.houde@codeboxx.biz	
-# Patrick 	Thibault	Engineer	patrick.thibault@codeboxx.biz	
-# Francis	Patry-Jessop	Engineer	francis.patry-jessop@codeboxx.biz	
-# Abdul	Akeeb	Engineer	abdul.akeeb@codebozz.biz	
-# David	Amyot	Engineer	david.amyot@codeboxx.biz	
-# Thomas	Carrier	Developer	thomas.carrier@codeboxx.biz	
-# Timothy	Wever	Developer	timothy.wever@codeboxx.biz	
-# Kiril	Kleinerman	Developer	kiril.kleinerman@codeboxx.biz	
-# Emmanuela	Derilus	Developer	emmanuela.derilus@codeboxx.biz	
-# Marie-Ève 	Goupil	Developer	marie-eve.goupil@codeboxx.biz	
-# Perry	Sawatsky	Developer	perry.sawatsky@codeboxx.biz
-
+  # Employee creation data
   User.create(email: 'mathieu.houde@codeboxx.biz', password: 123456)
   User.create(email: 'patrick.thibault@codeboxx.biz', password: 123456)
   User.create(email: 'francis.patry-jessop@codeboxx.biz', password: 123456)
@@ -42,3 +41,74 @@
   Employee.create(user_id: 10, last_name: 'Goupil', first_name: 'Marie-Ève', email: 'marie-eve.goupil@codeboxx.biz', title: 'Developer')
   Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 'perry.sawatsky@codeboxx.biz', title: 'Developer')
   
+# Faker generation data
+# From 2019 to 2022
+  100.times do
+    user = User.create(
+      last_name: Faker::Name.last_name, 
+      first_name: Faker::Name.first_name, 
+      email: Faker::Internet.email, 
+      password: 123456, 
+      created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
+    )
+
+    json = File.read("rrad/addresses-us-all.min.json")
+    hash = JSON.parse(json, object_class: OpenStruct)
+    randAdd = hash['addresses'].sample
+    typeAddress = ["residential", "commercial", "corporate", "hybrid"]
+
+    if randAdd.address2.length != 0
+      addEntity = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+      address2 = randAdd.address2
+    else
+      addEntity = randAdd.address1 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+      address2 = "N/A"
+    end
+
+    address = Address.create( 
+      type_of_address: typeAddress.sample,
+      entity: addEntity,
+      number_and_street:randAdd.address1,
+      suite_appartment: address2,
+      city: randAdd.city,
+      postal_code: randAdd.postalCode,
+      country: randAdd.state
+  )
+
+    customer = Customer.create(
+      customer_creation_date: user.created_at,
+      full_name_company_contact: Faker::Company.name,
+      company_contact_phone: Faker::PhoneNumber.phone_number,
+      email_company: Faker::Internet.email,
+      company_description: Faker::Company.bs,
+      full_name_service_technical_authority: (user.first_name + user.last_name),
+      technical_authority_phone: Faker::PhoneNumber.phone_number,
+      technical_authority_email: user.email,
+      created_at: user.created_at,
+      user_id: user.id,
+      address_id: address.id
+    )
+
+    building = Building.create(
+      building_address: address.addEntity
+      full_name_building_admin: Faker::Name.name
+      email_building_admin: Faker::Internet.email
+      phone_building_admin: Faker::PhoneNumber.phone_number
+      full_name_technical_contact: customer.full_name_service_technical_authority
+      email_technical_contact: customer.technical_authority_email
+      phone_technical_contact: customer.technical_authority_phone
+    )
+
+    # buildingDetails = BuildingDetail.create(
+
+    #   building_id: building.id
+    #   if address.type_of_address == "residential"
+    #   elsif address.type_of_address == "commercial"
+    #   elsif address.type_of_address == "corporate"
+    #   else
+
+    #   end
+
+    # )
+
+  end
