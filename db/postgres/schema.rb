@@ -16,21 +16,42 @@ ActiveRecord::Schema.define(version: 2022_03_15_211017) do
   enable_extension "plpgsql"
 
   create_table "dim_customers", force: :cascade do |t|
+    t.string "creation_date"
+    t.string "company_name"
+    t.string "full_name_of_company_contact"
+    t.string "email_of_company_contact"
+    t.integer "nb_elevators"
+    t.string "customer_city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "fact_contacts", force: :cascade do |t|
+    t.integer "contact_id"
+    t.string "creation_date"
+    t.string "Company_name"
+    t.string "email"
+    t.string "project_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "fact_elevators", force: :cascade do |t|
+    t.integer "serial_number"
+    t.string "date_of_commissioning"
+    t.integer "building_id"
+    t.integer "customer_id"
+    t.string "building_city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "fact_quotes", force: :cascade do |t|
+    t.integer "quote_id"
+    t.string "creation"
+    t.string "company_name"
+    t.string "email"
+    t.string "nb_elevator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
