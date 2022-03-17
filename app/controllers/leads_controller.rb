@@ -17,7 +17,7 @@ class LeadsController < ApplicationController
         @Message = params[:Message]
 
         @leads = Leads.new(FullName: @FullName, CompanyName: @CompanyName, Email: @Email, Phone: @Phone, ProjectName: @ProjectName, ProjectDescription: @ProjectDescription, DepartmentInCharge: @DepartmentInCharge, Message: @Message)
-        @leads.Attachment.attach(params[:Attachment])
+        @leads.attachment.attach(params[:Attachment])
             if @leads.save
                 redirect_to index_path
             end
