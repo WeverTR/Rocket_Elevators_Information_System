@@ -43,7 +43,7 @@
   
 # Faker generation data
 # From 2019 to 2022
-  100.times do
+  1.times do
     user = User.create(
       last_name: Faker::Name.last_name, 
       first_name: Faker::Name.first_name, 
@@ -109,5 +109,35 @@
     #   end
 
     # )
+    batteries = Batteries.create(
+      buildingId: elevator.id
+      type: 
+      employeeId: employee.id
+      date_of_commissioning:
+      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      certificate_of_Operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      information:
+      notes:
 
+    )
+    column = Column.create(
+      batteryId: batteries.id 
+      type: Faker::Type.between('Residential', 'Commercial', 'Corporate')
+      number_of_floors_served:
+      status: Faker::Subscription.status
+      information:
+      notes:
+    )
+    elevator = Elevator.create(
+      columnId: column.id
+      serial_number: Faker::Number.hexadecimal(digits: 10)
+      model: (Standard, Premium, Excelium)
+      type: (Residential, Commercial, Corporate)
+      status: Faker::Subscription.status
+      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      certificate_of_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      information:
+      notes:
+    )
   end
