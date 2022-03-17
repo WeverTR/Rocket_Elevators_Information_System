@@ -43,7 +43,7 @@
   
 # Faker generation data
 # From 2019 to 2022
-  1.times do
+  10.times do
     user = User.create(
       last_name: Faker::Name.last_name, 
       first_name: Faker::Name.first_name, 
@@ -111,8 +111,53 @@
 
     # )
 
-  end
-
-  20.times do
-    
+    quote = Quote.create(
+       buildingtype: ["residential", "commercial", "corporate", "hybrid"].sample,
+       numofapt: Random.new.rand(5..40),
+       numoffloors: Random.new.rand(5..100),
+       numofbase: Random.new.rand(5..10),
+       numofpark: Random.new.rand(5..100),
+       numofcomp: Random.new.rand(5..100),
+       numofelev: Random.new.rand(10..100),
+       maxocc: Random.new.rand(100..500),
+       bushrs: Random.new.rand(5..100),
+       corp: Random.new.rand(5..100),
+       liftCage: Random.new.rand(5..100),
+       elevatorNum: Random.new.rand(5..100),
+       unitPrice: (10000..1000000),
+       totalPriceElevators: (10000..1000000),
+       installFees: (10000..1000000),
+       totalPrice: (10000..1000000)
+      # buildingArray = ["residential", "commercial", "corporate", "hybrid"].sample,
+      # if buildingArray == "residential"
+      #   numofapt = Random.new.rand(5..40),
+      #   numoffloors = Random.new.rand(5..100),
+      #   numofbase = Random.new.rand(5..100)
+      # elsif buildingArray == "commercial"
+      #   numofcomp = Random.new.rand(5..100),
+      #   numoffloors = Random.new.rand(5..100),
+      #   numofbase = Random.new.rand(5..100),
+      #   numofpark = Random.new.rand(5..100),
+      #   numofelev = Random.new.rand(5..100)
+      # elsif buildingArray == "corporate"
+      #   corp = Random.new.rand(5..100),
+      #   numoffloors = Random.new.rand(5..100),
+      #   numofbase = Random.new.rand(5..100),
+      #   numofpark = Random.new.rand(5..100),
+      #   maxocc = Random.new.rand(5..100)
+      # else
+      #   numofcomp = Random.new.rand(5..100),
+      #   numoffloors = Random.new.rand(5..100),
+      #   numofbase = Random.new.rand(5..100),
+      #   numofpark = Random.new.rand(5..100),
+      #   maxocc = Random.new.rand(5..100),
+      #   bushrs = Random.new.rand(5..100)
+      # end,
+      # buildingtype: buildingArray,
+      # elevatorNum: Random.new.rand(5..100),
+      # unitPrice: Random.new.rand(10000..1000000),
+      # totalPriceElevators: Random.new.rand(20000..1000000),
+      # installFees: Random.new.rand(10000..1000000),
+      # totalPrice: Random.new.rand(50000..1000000)
+    )
   end
