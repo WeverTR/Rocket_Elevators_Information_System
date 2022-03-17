@@ -98,22 +98,23 @@
        phone_technical_contact: customer.technical_authority_phone
     )
 
-    # buildingDetails = BuildingDetail.create(
+    buildingDetails = BuildingDetail.create(
 
-    #   building_id: building.id
-    #   if address.type_of_address == "residential"
-    #   elsif address.type_of_address == "commercial"
-    #   elsif address.type_of_address == "corporate"
-    #   else
+      building_id: building.id
+      number_of_floors: Faker::Number.digit
+      type:
+      architecture:
+      maximum_number_of_occupants: Faker::Number.digit
+      year_of_construction: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      BuildingId: building.id
 
-    #   end
 
-    # )
-    batteries = Batteries.create(
-      buildingId: elevator.id
+    )
+    battery = Battery.create(
+      buildingId: building.id
       type: 
       employeeId: employee.id
-      date_of_commissioning:
+      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
       date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
       certificate_of_Operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
       information:
