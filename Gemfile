@@ -45,6 +45,10 @@ group :development do
   gem 'pg', '~> 1.3', '>= 1.3.4'
   
   gem 'faker'
+
+  gem 'rspec', '~> 3.4'
+
+  gem 'database_cleaner-active_record'
 end
 
 group :test do
