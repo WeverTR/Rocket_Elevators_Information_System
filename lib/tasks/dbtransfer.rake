@@ -2,21 +2,20 @@ namespace :dwh do
    
     task :migrate do
         Rake::Task["db:migrate:reset"].invoke
-        Rake::Task["DB=postgres db:migrate:reset"].invoke
+        sh "DB=postgres rake db:migrate:reset"
         puts "All databases have been reset and migrated successfully."
     end
 
     task :seed do
         puts "Resetting environments..."
         Rake::Task["db:migrate:reset"].invoke
-        Rake::Task["DB=postgres db:migrate:reset"].invoke
+        sh "DB=postgres rake db:migrate:reset"
         puts "Seeding data..."
         Rake::Task["db:seed"].invoke
         puts "Seeding complete."
     end
 
-    desc "Import data from MySql and inject it into PostgreSql data warehouse"
-    task :import :environment do |t, args|
+    task :import do |t, args|
 
         puts "Cleaning database..."
         cleaner = DatabaseCleaner[:active_record, {model: PostgresRecord}]
