@@ -7,23 +7,23 @@ class LeadsController < ApplicationController
     end
     def create
        
-        @FullName = params[:FullName]
-        @CompanyName = params[:CompanyName]
-        @Email = params[:Email]
-        @Phone = params[:Phone]
-        @ProjectName = params[:ProjectName]
-        @ProjectDescription= params[:ProjectDescription]
-        @DepartmentInCharge = params[:DepartmentInCharge]
-        @Message = params[:Message]
+        @fullname = params[:fullname]
+        @companyname = params[:companyname]
+        @email = params[:email]
+        @phone = params[:phone]
+        @projectname = params[:projectname]
+        @projectdescription= params[:projectdescription]
+        @departmentincharge = params[:departmentincharge]
+        @message = params[:message]
 
-        @leads = Leads.new(FullName: @FullName, CompanyName: @CompanyName, Email: @Email, Phone: @Phone, ProjectName: @ProjectName, ProjectDescription: @ProjectDescription, DepartmentInCharge: @DepartmentInCharge, Message: @Message)
+        @leads = Leads.new(fullname: @fullname, companyname: @companyname, email: @email, phone: @phone, projectname: @projectname, projectdescription: @projectdescription, departmentincharge: @departmentincharge, message: @message)
         @leads.attachment.attach(params[:Attachment])
             if @leads.save
                 redirect_to index_path
             end
     end
     def leads_params
-        params.require(:leads).permit(:FullName, :CompanyName, :Email, :Phone, :ProjectName, :ProjectDescription, :DepartmentInCharge, :Message, Attachment:[])
+        params.require(:leads).permit(:fullname, :companyname, :email, :phone, :projectname, :projectdescription, :departmentincharge, :message, Attachment:[])
       end
 end
 
