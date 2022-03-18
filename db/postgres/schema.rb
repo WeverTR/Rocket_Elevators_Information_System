@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_152833) do
+ActiveRecord::Schema.define(version: 2022_03_18_053555) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_152833) do
     t.string "email_of_company_contact"
     t.integer "nb_elevators"
     t.string "customer_city"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "fact_contacts", force: :cascade do |t|
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_152833) do
     t.string "company_name"
     t.string "email"
     t.string "project_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.bigint "dim_customer_id"
     t.index ["dim_customer_id"], name: "index_fact_contacts_on_dim_customer_id"
   end
@@ -44,8 +44,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_152833) do
     t.integer "building_id"
     t.integer "customer_id"
     t.string "building_city"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.bigint "dim_customer_id"
     t.index ["dim_customer_id"], name: "index_fact_elevators_on_dim_customer_id"
   end
@@ -56,8 +56,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_152833) do
     t.string "company_name"
     t.string "email"
     t.string "nb_elevator"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.bigint "dim_customer_id"
     t.index ["dim_customer_id"], name: "index_fact_quotes_on_dim_customer_id"
   end
