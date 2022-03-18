@@ -111,17 +111,27 @@
       message: Faker::Company.catch_phrase 
     )
 
-    # buildingDetails = BuildingDetail.create(
+    buildingDetails = BuildingDetail.create(
 
-    #   building_id: building.id
-    #   if address.type_of_address == "residential"
-    #   elsif address.type_of_address == "commercial"
-    #   elsif address.type_of_address == "corporate"
-    #   else
+      building_id: building.id
+      number_of_floors: Faker::Number.digit
+      type:
+      architecture:
+      maximum_number_of_occupants: Faker::Number.digit
+      year_of_construction: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      BuildingId: building.id
 
-    #   end
 
-    # )
+    )
+    battery = Battery.create(
+      buildingId: building.id
+      type: 
+      employeeId: employee.id
+      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      certificate_of_Operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      information:
+      notes:
 
     price = Random.new.rand(10000..1000000)
     quote = Quote.create!(
@@ -172,5 +182,27 @@
       # totalPriceElevators: Random.new.rand(20000..1000000),
       # installFees: Random.new.rand(10000..1000000),
       # totalPrice: Random.new.rand(50000..1000000)
+    )
+  end
+    )
+    column = Column.create(
+      batteryId: batteries.id 
+      type: Faker::Type.between('Residential', 'Commercial', 'Corporate')
+      number_of_floors_served:
+      status: Faker::Subscription.status
+      information:
+      notes:
+    )
+    elevator = Elevator.create(
+      columnId: column.id
+      serial_number: Faker::Number.hexadecimal(digits: 10)
+      model: (Standard, Premium, Excelium)
+      type: (Residential, Commercial, Corporate)
+      status: Faker::Subscription.status
+      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      certificate_of_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
+      information:
+      notes:
     )
   end
