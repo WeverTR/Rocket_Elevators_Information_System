@@ -1,5 +1,9 @@
 namespace :dwh do
 
+    task :test do
+        
+    end
+
     task :psqlreset do
         sh "DB=postgres rake db:migrate:reset"
     end
@@ -20,19 +24,17 @@ namespace :dwh do
 
     task :factquote => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        quote = Quote.select(:id, :created_at, :elevatorNum)
-        customer = Customer.select(:company_name, :email_company)
-        quote.each do |quote|
-            query = "INSERT INTO fact_quotes(quote_id, creation, nb_elevator) values('#{quote.id}', '#{quote.created_at}', 
-            '#{quote.elevatorNum}')"
+        quotes = Quote.select(:id, :created_at, :companyname, :email, :elevatorNum)
+        quotes.each do |quote|
+            query = "INSERT INTO fact_quotes(quote_id, creation, company_name, email, nb_elevator) values('#{quote.id}', '#{quote.created_at}', '#{quote.companyname}', '#{quote.email}', '#{quote.elevatorNum}')"
             conn.exec(query)
         end
     end
 
     task :factcontact => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        lead = Leads.select(:id, :created_at, :companyname, :email, :projectname)
-        lead.each do |lead|
+        leads = Leads.select(:id, :created_at, :companyname, :email, :projectname)
+        leads.each do |lead|
             puts lead.id
             puts lead.created_at
             puts lead.companyname
@@ -45,11 +47,14 @@ namespace :dwh do
 
     task :factelevator => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        elevator = Elevator.select(:serial_number, :date_of_commissioning, :building_id)
-        elevator.each do |elevator|
+        elevators = Elevator.select(:serial_number, :date_of_commissioning, :building_id, :customer_id)
+        elevators.each do |elevator|
+            address = elevator.building
             puts elevator.serial_number
             puts elevator.date_of_commissioning
-            puts elevator.building_id
+            puts elevator.building.id
+            puts elevator.customer_id
+            puts elevator.address.city
             # query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}', '#{elevator.building_id}', '#{elevator.building.customer_id}')"
             # conn.exec(query)
         end
