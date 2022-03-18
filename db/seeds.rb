@@ -43,102 +43,91 @@
   
 # Faker generation data
 # From 2019 to 2022
-  1.times do
-    user = User.create(
-      last_name: Faker::Name.last_name, 
-      first_name: Faker::Name.first_name, 
-      email: Faker::Internet.email, 
-      password: 123456, 
-      created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
-    )
-
-    json = File.read("rrad/addresses-us-all.min.json")
-    hash = JSON.parse(json, object_class: OpenStruct)
-    randAdd = hash['addresses'].sample
-    typeAddress = ["residential", "commercial", "corporate", "hybrid"]
-
-    if randAdd.address2.length != 0
-      addEntity = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
-      address2 = randAdd.address2
-    else
-      addEntity = randAdd.address1 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
-      address2 = "N/A"
-    end
-
-    address = Address.create( 
-      type_of_address: typeAddress.sample,
-      entity: addEntity,
-      number_and_street:randAdd.address1,
-      suite_appartment: address2,
-      city: randAdd.city,
-      postal_code: randAdd.postalCode,
-      country: randAdd.state
+10.times do
+  user = User.create(
+    last_name: Faker::Name.last_name,
+    first_name: Faker::Name.first_name,
+    email: Faker::Internet.email,
+    password: 123456,
+    created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
+  )
+  json = File.read("rrad/addresses-us-all.min.json")
+  hash = JSON.parse(json, object_class: OpenStruct)
+  randAdd = hash['addresses'].sample
+  typeAddress = ["residential", "commercial", "corporate", "hybrid"]
+  if randAdd.address2.length != 0
+    fullAddress = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+    address2 = randAdd.address2
+  else
+    fullAddress = randAdd.address1 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+    address2 = "N/A"
+  end
+  address = Address.create(
+    type_of_address: typeAddress.sample,
+    entity: "N/A",
+    number_and_street:randAdd.address1,
+    suite_appartment: address2,
+    city: randAdd.city,
+    postal_code: randAdd.postalCode,
+    country: randAdd.state
+  )
+  customer = Customer.create(
+    customer_creation_date: user.created_at,
+    full_name_company_contact: user.first_name + user.last_name,
+    company_contact_phone: Faker::PhoneNumber.phone_number,
+    email_company: Faker::Internet.email,
+    company_description: Faker::Company.bs,
+    full_name_service_technical_authority: (user.first_name + user.last_name),
+    technical_authority_phone: Faker::PhoneNumber.phone_number,
+    technical_authority_email: user.email,
+    created_at: user.created_at,
+    user_id: user.id,
+    address_id: address.id
+  )
+  building = Building.create(
+    building_address: fullAddress,
+    full_name_building_admin: Faker::Name.name,
+    email_building_admin: Faker::Internet.email,
+    phone_building_admin: Faker::PhoneNumber.phone_number,
+    full_name_technical_contact: customer.full_name_service_technical_authority,
+    email_technical_contact: customer.technical_authority_email,
+    phone_technical_contact: customer.technical_authority_phone
   )
 
-    customer = Customer.create(
-      customer_creation_date: user.created_at,
-      full_name_company_contact: Faker::Company.name,
-      company_contact_phone: Faker::PhoneNumber.phone_number,
-      email_company: Faker::Internet.email,
-      company_description: Faker::Company.bs,
-      full_name_service_technical_authority: (user.first_name + user.last_name),
-      technical_authority_phone: Faker::PhoneNumber.phone_number,
-      technical_authority_email: user.email,
-      created_at: user.created_at,
-      user_id: user.id,
-      address_id: address.id
-    )
+  # buildingDetail = BuildingDetail.create(
 
-    building = Building.create(
-       full_name_building_admin: Faker::Name.name
-       email_building_admin: Faker::Internet.email
-       phone_building_admin: Faker::PhoneNumber.phone_number
-       full_name_technical_contact: customer.full_name_service_technical_authority
-       email_technical_contact: customer.technical_authority_email
-       phone_technical_contact: customer.technical_authority_phone
-    )
-
-    buildingDetails = BuildingDetail.create(
-
-      building_id: building.id
-      number_of_floors: Faker::Number.digit
-      type:
-      architecture:
-      maximum_number_of_occupants: Faker::Number.digit
-      year_of_construction: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      BuildingId: building.id
-
-
-    )
-    battery = Battery.create(
-      buildingId: building.id
-      type: 
-      employeeId: employee.id
-      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      certificate_of_Operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      information:
-      notes:
+  #     building_id: building.id,
+  #     information_key: ["type","year_of_construction","architecture","maximum_number_of_occupants","number_of_floors"],
+  #     value: ((1,['Residential', 'Commercial', 'Corporate'].sample),(2,Faker::Date.between(from: '2018-09-23', to: '2022-03-17')),(3,["Ancient Roman architecture","Resort architecture","Art Deco"].sample),(4,Faker::Number.digit)),
+  #   )
+   battery = Battery.create(
+      building_id: building.id,
+      types: ["Residential", "Commercial", "Corporate"].sample,
+      employee_id: user.id,
+      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
+      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
+      certificate_of_operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
+      information: Faker::Company.catch_phrase,
+      notes: Faker::Company.catch_phrase
 
     )
     column = Column.create(
-      batteryId: batteries.id 
-      type: Faker::Type.between('Residential', 'Commercial', 'Corporate')
-      number_of_floors_served:
-      status: Faker::Subscription.status
-      information:
-      notes:
+      battery_id: battery.id,
+      types: battery.types,
+      number_of_floors_served: Faker::Number.between(from: 1, to: 100),
+      status: Faker::Subscription.status,
+      information: Faker::Company.catch_phrase,
+      notes: Faker::Company.catch_phrase,
     )
-    elevator = Elevator.create(
-      columnId: column.id
-      serial_number: Faker::Number.hexadecimal(digits: 10)
-      model: (Standard, Premium, Excelium)
-      type: (Residential, Commercial, Corporate)
-      status: Faker::Subscription.status
-      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      certificate_of_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      information:
-      notes:
+  elevator = Elevator.create(
+      column_id: column.id,
+      serial_number: Faker::Number.hexadecimal(5),
+      model: ["Standard", "Premium", "Excelium"].sample,
+      types: ["Residential", "Commercial", "Corporate"].sample,
+      status: Faker::Subscription.status,
+      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
+      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
+      information: Faker::Company.catch_phrase,
+      notes: Faker::Company.catch_phrase,
     )
   end

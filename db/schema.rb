@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "type"
+    t.string "types"
     t.string "status"
     t.datetime "date_of_commissioning"
     t.datetime "date_of_last_inspection"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "building_address"
     t.string "full_name_building_admin"
     t.string "email_building_admin"
     t.string "phone_building_admin"
@@ -88,8 +89,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "type"
-    t.integer "Number_of_floor_served"
+    t.string "types"
+    t.integer "number_of_floors_served"
     t.string "status"
     t.string "information"
     t.string "notes"
@@ -119,7 +120,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "serial_number"
     t.string "model"
-    t.string "type"
+    t.string "types"
     t.string "status"
     t.datetime "date_of_commissioning"
     t.datetime "date_of_last_inspection"
