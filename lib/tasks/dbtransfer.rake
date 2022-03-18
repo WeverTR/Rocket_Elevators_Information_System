@@ -32,21 +32,26 @@ namespace :dwh do
     task :factcontact => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
         lead = Leads.select(:id, :created_at, :companyname, :email, :projectname)
-        quote.each do |quote|
-            query = "INSERT INTO fact_contacts(contact_id, creation, company_name, email, project_name) values('#{lead.id}', '#{lead.created_at}', 
-            '#{lead.companyname}, #{lead.email}, #{lead.projectname}')"
+        lead.each do |lead|
+            puts lead.id
+            puts lead.created_at
+            puts lead.companyname
+            puts lead.email
+            puts lead.projectname
+            query = "INSERT INTO fact_contacts(contact_id, creation_date, company_name, email, project_name) values('#{lead.id}', '#{lead.created_at}', '#{lead.companyname}', '#{lead.email}', '#{lead.projectname}')"
             conn.exec(query)
         end
     end
 
     task :factelevator => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        elevator = Elevator.select(:serial_number, :date_of_commissioning)
-        # building = Building.select(:id)
-        # customer = Customer.select(:id)
+        elevator = Elevator.select(:serial_number, :date_of_commissioning, :building_id)
         elevator.each do |elevator|
-            query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id, building_city) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}')"
-            conn.exec(query)
+            puts elevator.serial_number
+            puts elevator.date_of_commissioning
+            puts elevator.building_id
+            # query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}', '#{elevator.building_id}', '#{elevator.building.customer_id}')"
+            # conn.exec(query)
         end
     end
 

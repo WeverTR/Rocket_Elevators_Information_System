@@ -109,6 +109,8 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "column_id"
+    t.bigint "building_id"
+    t.index ["building_id"], name: "index_elevators_on_building_id"
     t.index ["column_id"], name: "index_elevators_on_column_id"
   end
 
@@ -188,6 +190,7 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
   add_foreign_key "columns", "batteries"
   add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users"
+  add_foreign_key "elevators", "buildings"
   add_foreign_key "elevators", "columns"
   add_foreign_key "employees", "users"
 end

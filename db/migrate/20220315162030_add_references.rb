@@ -9,5 +9,6 @@ class AddReferences < ActiveRecord::Migration[5.2]
     add_reference :batteries, :employee, foreign_key: true
     add_reference :columns, :battery, foreign_key: true
     add_reference :elevators, :column, foreign_key: true
+    add_reference :elevators, :building, foreign_key: true
   end
 end
