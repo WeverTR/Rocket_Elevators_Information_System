@@ -1,3 +1,4 @@
 class Address < ApplicationRecord
-    has_one :building
+    belongs_to :customer, optional: true
+    has_many :building
 end

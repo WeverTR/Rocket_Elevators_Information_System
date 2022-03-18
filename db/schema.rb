@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_004941) do
+ActiveRecord::Schema.define(version: 2022_03_18_221437) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -45,10 +45,12 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_addresses_on_customer_id"
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "type"
+    t.string "types"
     t.string "status"
     t.datetime "date_of_commissioning"
     t.datetime "date_of_last_inspection"
@@ -89,8 +91,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "type"
-    t.integer "Number_of_floor_served"
+    t.string "types"
+    t.integer "number_of_floors_served"
     t.string "status"
     t.string "information"
     t.string "notes"
@@ -121,18 +123,21 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "serial_number"
     t.string "model"
-    t.string "type"
+    t.string "types"
     t.string "status"
     t.datetime "date_of_commissioning"
     t.datetime "date_of_last_inspection"
+    t.string "certificate_of_inspection"
     t.string "information"
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "column_id"
     t.bigint "building_id"
+    t.bigint "customer_id"
     t.index ["building_id"], name: "index_elevators_on_building_id"
     t.index ["column_id"], name: "index_elevators_on_column_id"
+    t.index ["customer_id"], name: "index_elevators_on_customer_id"
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -206,8 +211,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "customers"
   add_foreign_key "batteries", "buildings"
-  add_foreign_key "batteries", "employees"
   add_foreign_key "building_details", "buildings"
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
@@ -216,5 +221,6 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   add_foreign_key "customers", "users"
   add_foreign_key "elevators", "buildings"
   add_foreign_key "elevators", "columns"
+  add_foreign_key "elevators", "customers"
   add_foreign_key "employees", "users"
 end
