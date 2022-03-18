@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.datetime "customer_creation_date"
+    t.string "company_name"
     t.string "full_name_company_contact"
     t.string "company_contact_phone"
     t.string "email_company"
@@ -123,14 +124,14 @@ ActiveRecord::Schema.define(version: 2022_03_15_162030) do
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "FullName"
-    t.string "CompanyName"
-    t.string "Email"
-    t.string "Phone"
-    t.string "ProjectName"
-    t.string "ProjectDescription"
-    t.string "DepartmentInCharge"
-    t.string "Message"
+    t.string "fullname"
+    t.string "companyname"
+    t.string "email"
+    t.string "phone"
+    t.string "projectname"
+    t.string "projectdescription"
+    t.string "departmentincharge"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

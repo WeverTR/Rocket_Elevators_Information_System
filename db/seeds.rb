@@ -77,7 +77,8 @@
 
     customer = Customer.create(
       customer_creation_date: user.created_at,
-      full_name_company_contact: Faker::Company.name,
+      company_name: Faker::Company.name,
+      full_name_company_contact: Faker::Name.name,
       company_contact_phone: Faker::PhoneNumber.phone_number,
       email_company: Faker::Internet.email,
       company_description: Faker::Company.bs,
@@ -99,6 +100,17 @@
       phone_technical_contact: customer.technical_authority_phone
     )
 
+    lead = Leads.create(
+      fullname: Faker::Name.name,
+      companyname: Faker::Company.name,
+      email: Faker::Internet.email,
+      phone: Faker::PhoneNumber.phone_number,
+      projectname: Faker::Company.industry,
+      projectdescription: Faker::Company.bs,
+      departmentincharge: Faker::IndustrySegments.sector,
+      message: Faker::Company.catch_phrase 
+    )
+
     # buildingDetails = BuildingDetail.create(
 
     #   building_id: building.id
@@ -111,7 +123,8 @@
 
     # )
 
-    quote = Quote.create(
+    price = Random.new.rand(10000..1000000)
+    quote = Quote.create!(
        buildingtype: ["residential", "commercial", "corporate", "hybrid"].sample,
        numofapt: Random.new.rand(5..40),
        numoffloors: Random.new.rand(5..100),
@@ -124,10 +137,10 @@
        corp: Random.new.rand(5..100),
        liftCage: Random.new.rand(5..100),
        elevatorNum: Random.new.rand(5..100),
-       unitPrice: (10000..1000000),
-       totalPriceElevators: (10000..1000000),
-       installFees: (10000..1000000),
-       totalPrice: (10000..1000000)
+       unitPrice: "$" + "#{price}",
+       totalPriceElevators: "$" + "#{price}",
+       installFees: "$" + "#{price}",
+       totalPrice: "$" + "#{price}"
       # buildingArray = ["residential", "commercial", "corporate", "hybrid"].sample,
       # if buildingArray == "residential"
       #   numofapt = Random.new.rand(5..40),
