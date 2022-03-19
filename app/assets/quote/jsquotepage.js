@@ -1,77 +1,153 @@
-window.onload = () => elevatorUnitPrice()
- 
+var documentready = function(){
+    start()
+}
+$(document). on('turbolinks:load',  documentready); 
+
+function start() {
+    $("#building-type").change(ChooseType)
+}
+
+function ChooseType() {
+    if ($("#building-type").val() === "residential") {
+       buildType = "res"
+
+
+    }else if ($("#building-type").val() === "commercial") {
+        console.log("com")
+        buildType = "com"
+
+
+    }else if ($("#building-type").val() === "corporate") {
+        console.log("corp")
+        buildType = "corp"
+
+
+    }else if ($("#building-type").val() === "hybrid") {
+        console.log("hyb")
+        buildType = "hyb"
+
+    }
+
+    ShowInputs(buildType)
+
+}
+
+function ShowInputs(type) {
+    switch(type) {
+        case "res":
+            showElements(buildingTypes.residential)
+            break;
+        case "com":
+            showElements(buildingTypes.commercial)
+            break;
+        case "corp":
+            showElements(buildingTypes.corporate)
+            break;
+        case "hyb":
+            showElements(buildingTypes.hybrid)
+            break;
+    }
+}
+
+// show the selectect elements the elements
+function showElements(elems)
+{
+    // hide everything before showing the right ones
+    hideElements(buildingTypes.residential)
+    hideElements(buildingTypes.commercial)
+    hideElements(buildingTypes.corporate)
+    hideElements(buildingTypes.hybrid)
+    document.getElementById ("elevatorForm").reset ();
+    document.getElementById ("outputForm").reset();
+
+    //do a for each for the elements in the array
+	elems.forEach(element => {
+        $("#"+element).css("display", "block");
+
+    });
+}
+
+// function to hide elements
+function hideElements(elems)
+{
+    // do a for each and also set the input values to blank
+	elems.forEach(element => {
+        $("#"+element).css("display", "none");
+        $("#"+element).value = " ";
+    });
+}
 let buildingType;
 
 $("#building-type").change(pick)
 
-function pick() {
-    if ($("#building-type").val() === "residential") {
-       buildingType = "residential"
-       document.getElementById ("elevatorForm").reset();
-       document.getElementById ("outputForm").reset();
+// function pick() {
+//     if ($("#building-type").val() === "residential") {
+//        buildingType = "residential"
+//        document.getElementById ("elevatorForm").reset();
+//        document.getElementById ("outputForm").reset();
        
-        $("#number-of-apartments").css("display", "block");
-        $("#number-of-basements").css("display", "block");
-        $("#number-of-floors").css("display", "block");
-        $("#number-of-parking-spots").css("display", "none");
-        $("#number-of-companies").css("display", "none");
-        $("#number-of-elevators").css("display", "none");
-        $("#maximum-occupancy").css("display", "none");
-        $("#business-hours").css("display", "none");
-        $("#number-of-corporations").css("display", "none");
+//         $("#number-of-apartments").css("display", "block");
+//         $("#number-of-basements").css("display", "block");
+//         $("#number-of-floors").css("display", "block");
+//         $("#number-of-parking-spots").css("display", "none");
+//         $("#number-of-companies").css("display", "none");
+//         $("#number-of-elevators").css("display", "none");
+//         $("#maximum-occupancy").css("display", "none");
+//         $("#business-hours").css("display", "none");
+//         $("#number-of-corporations").css("display", "none");
         
 
-    }else if ($("#building-type").val() === "commercial") {
-        buildingType = "commercial"
-        document.getElementById ("elevatorForm").reset ();
-        document.getElementById ("outputForm").reset();
-        $("#number-of-apartments").css("display", "none");
-        $("#number-of-floors").css("display", "block");
-        $("#number-of-basements").css("display", "block");
-        $("#number-of-companies").css("display", "block");
-        $("#number-of-parking-spots").css("display", "block");
-        $("#number-of-elevators").css("display", "block");
-        $("#maximum-occupancy").css("display", "none");
-        $("#business-hours").css("display", "none");
-        $("#number-of-corporations").css("display", "none");
+//     }else if ($("#building-type").val() === "commercial") {
+//         buildingType = "commercial"
+//         document.getElementById ("elevatorForm").reset ();
+//         document.getElementById ("outputForm").reset();
+//         $("#number-of-apartments").css("display", "none");
+//         $("#number-of-floors").css("display", "block");
+//         $("#number-of-basements").css("display", "block");
+//         $("#number-of-companies").css("display", "block");
+//         $("#number-of-parking-spots").css("display", "block");
+//         $("#number-of-elevators").css("display", "block");
+//         $("#maximum-occupancy").css("display", "none");
+//         $("#business-hours").css("display", "none");
+//         $("#number-of-corporations").css("display", "none");
       
 
-    }else if ($("#building-type").val() === "corporate") {
-        buildingType = "corporate"
-        document.getElementById ("elevatorForm").reset ();
-        document.getElementById ("outputForm").reset();
-        $("#number-of-apartments").css("display", "none");
-        $("#number-of-floors").css("display", "block");
-        $("#number-of-basements").css("display", "block");
-        $("#number-of-companies").css("display", "none");
-        $("#number-of-parking-spots").css("display", "block");
-        $("#number-of-elevators").css("display", "none");
-        $("#maximum-occupancy").css("display", "block");
-        $("#number-of-corporations").css("display", "block");
-        $("#business-hours").css("display", "none");
+//     }else if ($("#building-type").val() === "corporate") {
+//         buildingType = "corporate"
+//         document.getElementById ("elevatorForm").reset ();
+//         document.getElementById ("outputForm").reset();
+//         $("#number-of-apartments").css("display", "none");
+//         $("#number-of-floors").css("display", "block");
+//         $("#number-of-basements").css("display", "block");
+//         $("#number-of-companies").css("display", "none");
+//         $("#number-of-parking-spots").css("display", "block");
+//         $("#number-of-elevators").css("display", "none");
+//         $("#maximum-occupancy").css("display", "block");
+//         $("#number-of-corporations").css("display", "block");
+//         $("#business-hours").css("display", "none");
         
 
-    }else if ($("#building-type").val() === "hybrid") {
-        buildingType = "hybrid"
-        document.getElementById ("elevatorForm").reset ();
-        document.getElementById ("outputForm").reset();
-        $("#number-of-apartments").css("display", "none");
-        $("#number-of-floors").css("display", "block");
-        $("#number-of-basements").css("display", "block");
-        $("#number-of-companies").css("display", "block");
-        $("#number-of-parking-spots").css("display", "block");
-        $("#number-of-elevators").css("display", "none");
-        $("#maximum-occupancy").css("display", "block");
-        $("#business-hours").css("display", "block");
+//     }else if ($("#building-type").val() === "hybrid") {
+//         buildingType = "hybrid"
+//         document.getElementById ("elevatorForm").reset ();
+//         document.getElementById ("outputForm").reset();
+//         $("#number-of-apartments").css("display", "none");
+//         $("#number-of-floors").css("display", "block");
+//         $("#number-of-basements").css("display", "block");
+//         $("#number-of-companies").css("display", "block");
+//         $("#number-of-parking-spots").css("display", "block");
+//         $("#number-of-elevators").css("display", "none");
+//         $("#maximum-occupancy").css("display", "block");
+//         $("#business-hours").css("display", "block");
         
-    }
+//     }
 
-    $("#numofapt").on("input", update)
-    $("#numoffloors").on("input", update)
-    $("#numofbase").on("input", update)
-    $("#numofelev").on("input", update)
-    $("#maxocc").on("input", update)
-}
+//     $("#numofapt").on("input", update)
+//     $("#numoffloors").on("input", update)
+//     $("#numofbase").on("input", update)
+//     $("#numofelev").on("input", update)
+//     $("#maxocc").on("input", update)
+// }
 
 let outputValues = {
     "elevatorsRequired": 0,

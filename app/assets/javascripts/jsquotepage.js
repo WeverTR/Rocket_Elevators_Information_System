@@ -1,4 +1,8 @@
 
+$(document). on('turbolinks:load',  update); 
+
+
+
 const inputsElementIds = [ 'number-of-apartments',
 'number-of-floors',
 'number-of-basements',

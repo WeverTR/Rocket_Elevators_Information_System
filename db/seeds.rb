@@ -43,7 +43,7 @@
   
 # Faker generation data
 # From 2019 to 2022
-  1.times do
+  10.times do
     user = User.create(
       last_name: Faker::Name.last_name, 
       first_name: Faker::Name.first_name, 
