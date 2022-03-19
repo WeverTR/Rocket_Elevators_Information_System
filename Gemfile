@@ -50,3 +50,6 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'pg', '~> 1.3', '>= 1.3.4'
+gem 'multiverse'

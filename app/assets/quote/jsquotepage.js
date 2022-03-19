@@ -66,11 +66,11 @@ function pick() {
         
     }
 
-    $("#number-of-apartments").on("input", update)
-    $("#number-of-floors").on("input", update)
-    $("#number-of-basements").on("input", update)
-    $("#number-of-elevators").on("input", update)
-    $("#maximum-occupancy").on("input", update)
+    $("#numofapt").on("input", update)
+    $("#numoffloors").on("input", update)
+    $("#numofbase").on("input", update)
+    $("#numofelev").on("input", update)
+    $("#maxocc").on("input", update)
 }
 
 let outputValues = {
@@ -195,7 +195,8 @@ function displayResults() {
 
     // Display the final total price including fees
     let installFee = totalPrice * installFees[cage]
-    $("#totalPrice").val(`$${(totalPrice + installFee).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    //$("#totalPrice").val(`$${(totalPrice + installFee).toLocaleString(undefined, { minimumFractionDigits: 2 })}`)
+    alert("hello")
 }
 
 

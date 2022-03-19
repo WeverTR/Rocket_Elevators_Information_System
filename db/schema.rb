@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "building_id"
+    t.index ["building_id"], name: "index_addresses_on_building_id"
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -102,12 +104,12 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.datetime "customer_creation_date"
     t.string "full_name_company_contact"
-    t.string "company_contact_phone"
+    t.integer "company_contact_phone"
     t.string "email_company"
     t.string "company_description"
     t.string "full_name_service_technical_authority"
-    t.string "technical_authority_phone"
-    t.string "technical_authority_email"
+    t.integer "technical_autority_phone"
+    t.string "technical_autority_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -202,6 +204,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "buildings"
   add_foreign_key "batteries", "buildings"
   add_foreign_key "batteries", "employees"
   add_foreign_key "building_details", "buildings"
