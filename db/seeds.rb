@@ -93,23 +93,20 @@
     email_technical_contact: customer.technical_authority_email,
     phone_technical_contact: customer.technical_authority_phone
   )
-
-  # buildingDetail = BuildingDetail.create(
-
-  #     building_id: building.id,
-  #     information_key: ["type","year_of_construction","architecture","maximum_number_of_occupants","number_of_floors"],
-  #     value: ((1,['Residential', 'Commercial', 'Corporate'].sample),(2,Faker::Date.between(from: '2018-09-23', to: '2022-03-17')),(3,["Ancient Roman architecture","Resort architecture","Art Deco"].sample),(4,Faker::Number.digit)),
-  #   )
+  buildingDetail = BuildingDetail.create(
+      building_id: building.id,
+      information_key: ["type","year_of_construction","architecture","maximum_number_of_occupants","number_of_floors"],
+      value: [['Residential', 'Commercial', 'Corporate'].sample,Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),["Ancient Roman architecture","Resort architecture","Art Deco"].sample,Faker::Number.within(range: 1..100)]
+    )
    battery = Battery.create(
       building_id: building.id,
-      types: ["Residential", "Commercial", "Corporate"].sample,
+      types: ["Residential", "Commercial", "Corporate"],
       employee_id: user.id,
       date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
       date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
       certificate_of_operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),
       information: Faker::Company.catch_phrase,
       notes: Faker::Company.catch_phrase
-
     )
     column = Column.create(
       battery_id: battery.id,
@@ -121,7 +118,7 @@
     )
   elevator = Elevator.create(
       column_id: column.id,
-      serial_number: Faker::Number.hexadecimal(5),
+      serial_number: Faker::Company.french_siren_number,
       model: ["Standard", "Premium", "Excelium"].sample,
       types: ["Residential", "Commercial", "Corporate"].sample,
       status: Faker::Subscription.status,
