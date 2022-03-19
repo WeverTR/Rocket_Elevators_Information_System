@@ -47,31 +47,32 @@ namespace :dwh do
 
     task :factelevator => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        elevators = Elevator.select(:serial_number, :date_of_commissioning, :building_id, :customer_id)
+        elevators = Elevator.select(:serial_number, :date_of_commissioning, :building_id, :customer_id, :column_id)
         elevators.each do |elevator|
-            address = elevator.building
+            puts elevator.column.battery.building.address.city
             puts elevator.serial_number
             puts elevator.date_of_commissioning
             puts elevator.building.id
             puts elevator.customer_id
-            puts elevator.address.city
-            # query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}', '#{elevator.building_id}', '#{elevator.building.customer_id}')"
-            # conn.exec(query)
-        end
+            query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id, building_city) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}', '#{elevator.building_id}', '#{elevator.building.customer_id}', '#{elevator.column.battery.building.address.city}')"
+            conn.exec(query)
+            end
     end
 
     task :dim => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        customer = Customer.select(:created_at, :company_name, :full_name_company_contact, :email_company)
-        quote = Quote.select(:elevatorNum)
-        customer.each do |customer|
-            puts customer.company_name
+        buildings = Building.select(:address_id, :customer_id)
+        # address = Address.select(:quote_id)
+        buildings.each do |building|
+            puts building.customer.created_at
+            puts building.customer.company_name
+            puts building.customer.full_name_company_contact
+            puts building.customer.email_company
+            puts building.customer.quote
+            puts building.address.city
             # query = "INSERT INTO dim_customers(creation_date, company_name, full_name_of_company_contact, email_of_company_contact, nb_elevators, customer_city) values('#{customer.created_at}', '#{customer.company_name}', '#{customer.full_name_company_contact}', '#{customer.email_company}',
             # '#{quote.elevatorNum}', '#{address.city}')"
             # conn.exec(query)
-        end
-        quote.each do |quote|
-            puts quote.elevatorNum
         end
     end
 

@@ -1,7 +1,7 @@
 class AddReferences < ActiveRecord::Migration[5.2]
   def change
     add_reference :customers, :user, foreign_key: true
-    add_reference :customers, :address, foreign_key: true
+    add_reference :customers, :quote, foreign_key: true
     add_reference :buildings, :customer, foreign_key: true
     add_reference :buildings, :address, foreign_key: true
     add_reference :building_details, :building, foreign_key: true
