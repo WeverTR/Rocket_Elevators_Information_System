@@ -1,21 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Number_Of_Apartments: 1
-  Number_Of_Floors: 1
-  Number_Of_Basements: 1
-  Number_Of_Companies: 1
-  Number_Of_Parking_Spots: 1
-  Number_Of_Elevator_Cages: 1
-  Maximum_Occupants_Per_Floor: 1
-  Number_Of_Hours_Of_Activity_In_The_Building: 1
+  buildingtype: MyString
+  numofapt: 1
+  numoffloors: 1
+  numofbase: 1
+  numofpark: 1
+  numofcomp: 1
+  numofelev: 1
+  maxocc: 1
+  bushrs: 1
+  corp: 1
+  liftCage: MyString
+  elevatorNum: 1
+  unitPrice: MyString
+  totalPriceElevators: MyString
+  installFees: MyString
+  totalPrice: MyString
 
 two:
-  Number_Of_Apartments: 1
-  Number_Of_Floors: 1
-  Number_Of_Basements: 1
-  Number_Of_Companies: 1
-  Number_Of_Parking_Spots: 1
-  Number_Of_Elevator_Cages: 1
-  Maximum_Occupants_Per_Floor: 1
-  Number_Of_Hours_Of_Activity_In_The_Building: 1
+  buildingtype: MyString
+  numofapt: 1
+  numoffloors: 1
+  numofbase: 1
+  numofpark: 1
+  numofcomp: 1
+  numofelev: 1
+  maxocc: 1
+  bushrs: 1
+  corp: 1
+  liftCage: MyString
+  elevatorNum: 1
+  unitPrice: MyString
+  totalPriceElevators: MyString
+  installFees: MyString
+  totalPrice: MyString

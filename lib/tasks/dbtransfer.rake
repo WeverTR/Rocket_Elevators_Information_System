@@ -68,7 +68,7 @@ namespace :dwh do
             puts building.customer.company_name
             puts building.customer.full_name_company_contact
             puts building.customer.email_company
-            puts building.customer.quote
+            puts building.customer.quote.id
             puts building.address.city
             # query = "INSERT INTO dim_customers(creation_date, company_name, full_name_of_company_contact, email_of_company_contact, nb_elevators, customer_city) values('#{customer.created_at}', '#{customer.company_name}', '#{customer.full_name_company_contact}', '#{customer.email_company}',
             # '#{quote.elevatorNum}', '#{address.city}')"
