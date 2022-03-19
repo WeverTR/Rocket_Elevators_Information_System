@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_004941) do
+ActiveRecord::Schema.define(version: 2022_03_19_041404) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", null: false
@@ -45,12 +45,17 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.bigint "building_id"
     t.index ["building_id"], name: "index_addresses_on_building_id"
+=======
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_addresses_on_customer_id"
+>>>>>>> e226595ab075df5649c692b81b212238579b8f75
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "type"
+    t.string "types"
     t.string "status"
     t.datetime "date_of_commissioning"
     t.datetime "date_of_last_inspection"
@@ -75,6 +80,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.string "building_address"
     t.string "full_name_building_admin"
     t.string "email_building_admin"
     t.string "phone_building_admin"
@@ -90,8 +96,8 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "type"
-    t.integer "Number_of_floor_served"
+    t.string "types"
+    t.integer "number_of_floors_served"
     t.string "status"
     t.string "information"
     t.string "notes"
@@ -103,6 +109,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.datetime "customer_creation_date"
+    t.string "company_name"
     t.string "full_name_company_contact"
     t.integer "company_contact_phone"
     t.string "email_company"
@@ -113,24 +120,27 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.bigint "address_id"
-    t.index ["address_id"], name: "index_customers_on_address_id"
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.integer "serial_number"
     t.string "model"
-    t.string "type"
+    t.string "types"
     t.string "status"
     t.datetime "date_of_commissioning"
     t.datetime "date_of_last_inspection"
+    t.string "certificate_of_inspection"
     t.string "information"
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "column_id"
+    t.bigint "building_id"
+    t.bigint "customer_id"
+    t.index ["building_id"], name: "index_elevators_on_building_id"
     t.index ["column_id"], name: "index_elevators_on_column_id"
+    t.index ["customer_id"], name: "index_elevators_on_customer_id"
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -145,14 +155,14 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.string "FullName"
-    t.string "CompanyName"
-    t.string "Email"
-    t.string "Phone"
-    t.string "ProjectName"
-    t.string "ProjectDescription"
-    t.string "DepartmentInCharge"
-    t.string "Message"
+    t.string "fullname"
+    t.string "companyname"
+    t.string "email"
+    t.string "phone"
+    t.string "projectname"
+    t.string "projectdescription"
+    t.string "departmentincharge"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -204,15 +214,19 @@ ActiveRecord::Schema.define(version: 2022_03_17_004941) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+<<<<<<< HEAD
   add_foreign_key "addresses", "buildings"
+=======
+  add_foreign_key "addresses", "customers"
+>>>>>>> e226595ab075df5649c692b81b212238579b8f75
   add_foreign_key "batteries", "buildings"
-  add_foreign_key "batteries", "employees"
   add_foreign_key "building_details", "buildings"
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
-  add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users"
+  add_foreign_key "elevators", "buildings"
   add_foreign_key "elevators", "columns"
+  add_foreign_key "elevators", "customers"
   add_foreign_key "employees", "users"
 end

@@ -1,4 +1,4 @@
-class AddEmailToQuote < ActiveRecord::Migration[5.2]
+class AddEmailAndCompanyNameToQuote < ActiveRecord::Migration[5.2]
   def change
     add_column :quotes, :email, :string
     add_column :quotes, :companyname, :string
