@@ -11,6 +11,7 @@ class CreateCustomers < ActiveRecord::Migration[5.2]
       t.string :technical_authority_email
 
       t.timestamps
+
     end
   end
 end
