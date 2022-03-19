@@ -54,8 +54,8 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
   # totalPrice: Random.new.rand(50000..1000000)
   ##############################FINISH QUOTE
 
-#-- Setup address list --#
-  json = File.read("rrad/addresses-us-all.min.json")
+    10.times do
+    json = File.read("rrad/addresses-us-all.min.json")
     hash = JSON.parse(json, object_class: OpenStruct)
     randAdd = hash['addresses'].sample
     typeAddress = ["residential", "commercial", "corporate", "hybrid"]
@@ -67,7 +67,6 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
       address2 = "N/A"
     end
 
-    10.times do
     user = User.create(
     last_name: Faker::Name.last_name, 
     first_name: Faker::Name.first_name, 
@@ -75,7 +74,7 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
     password: 123456, 
     created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
     )
-    customer = Customer.create(
+    customer = Customer.create!(
       customer_creation_date: user.created_at,
       company_name: Faker::Company.name,
       full_name_company_contact: Faker::Name.name,
@@ -86,10 +85,9 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
       technical_authority_phone: Faker::PhoneNumber.phone_number,
       technical_authority_email: user.email,
       created_at: user.created_at,
-      user_id: user.id
+      user_id: user.id,
     )
-    price = Random.new.rand(10000..1000000)
-    quote = Quote.create(
+    quote = Quote.create!(
        buildingtype: ["residential", "commercial", "corporate", "hybrid"].sample,
        numofapt: Random.new.rand(5..40),
        numoffloors: Random.new.rand(5..100),
@@ -102,10 +100,10 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
        corp: Random.new.rand(5..100),
        liftCage: Random.new.rand(5..100),
        elevatorNum: Random.new.rand(5..100),
-       unitPrice: "$" + "#{price}",
-       totalPriceElevators: "$" + "#{price}",
-       installFees: "$" + "#{price}",
-       totalPrice: "$" + "#{price}",
+       unitPrice: "$75474573",
+       totalPriceElevators: "$43242342",
+       installFees: "$165456624",
+       totalPrice: "$43242346",
        companyname: customer.company_name,
        email: customer.email_company
       )
@@ -127,7 +125,7 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
           full_name_technical_contact: customer.full_name_service_technical_authority,
           email_technical_contact: customer.technical_authority_email,
           phone_technical_contact: customer.technical_authority_phone,
-          address_id: a.id,
+          address_id: address.id,
           customer_id: customer.id
           # buildingDetails = BuildingDetail.create(
           #   building_id: building.id
@@ -139,7 +137,7 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
           #   BuildingId: building.id
           )
                 battery = Battery.create!(
-                  building_id: b.id,
+                  building_id: building.id,
                   employee_id: Random.new.rand(1..12),
                   types: address.type_of_address,
                   status: ["active", "inactive"].sample,
@@ -162,6 +160,7 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
                     elevator = Elevator.create!(
                       building_id: building.id,
                       column_id: column.id,
+                      customer_id: customer.id,
                       serial_number: Faker::Number.hexadecimal(digits: 6),
                       model: ["standard", "premium", "excelium"].sample,
                       types: column.types,
@@ -172,11 +171,9 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
                       information: "Let me tell you 'bout my elevator.",
                       notes: column.notes
                     )
-                    end
                   end
                 end
               end
-            end
 
   1..20.times do |lead|
     lead = Leads.create(

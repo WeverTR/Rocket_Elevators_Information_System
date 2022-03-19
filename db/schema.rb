@@ -115,8 +115,8 @@ ActiveRecord::Schema.define(version: 2022_03_18_221437) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
-    t.bigint "address_id"
-    t.index ["address_id"], name: "index_customers_on_address_id"
+    t.bigint "quote_id"
+    t.index ["quote_id"], name: "index_customers_on_quote_id"
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
@@ -217,7 +217,7 @@ ActiveRecord::Schema.define(version: 2022_03_18_221437) do
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
-  add_foreign_key "customers", "addresses"
+  add_foreign_key "customers", "quotes"
   add_foreign_key "customers", "users"
   add_foreign_key "elevators", "buildings"
   add_foreign_key "elevators", "columns"
