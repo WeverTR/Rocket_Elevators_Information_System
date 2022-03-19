@@ -45,13 +45,8 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
-    t.bigint "building_id"
-    t.index ["building_id"], name: "index_addresses_on_building_id"
-=======
     t.bigint "customer_id"
     t.index ["customer_id"], name: "index_addresses_on_customer_id"
->>>>>>> e226595ab075df5649c692b81b212238579b8f75
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -111,12 +106,12 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
     t.datetime "customer_creation_date"
     t.string "company_name"
     t.string "full_name_company_contact"
-    t.integer "company_contact_phone"
+    t.string "company_contact_phone"
     t.string "email_company"
     t.string "company_description"
     t.string "full_name_service_technical_authority"
-    t.integer "technical_autority_phone"
-    t.string "technical_autority_email"
+    t.string "technical_authority_phone"
+    t.string "technical_authority_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
@@ -214,11 +209,7 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-<<<<<<< HEAD
-  add_foreign_key "addresses", "buildings"
-=======
   add_foreign_key "addresses", "customers"
->>>>>>> e226595ab075df5649c692b81b212238579b8f75
   add_foreign_key "batteries", "buildings"
   add_foreign_key "building_details", "buildings"
   add_foreign_key "buildings", "addresses"

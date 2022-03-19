@@ -17,13 +17,13 @@ class LeadsController < ApplicationController
         @message = params[:message]
 
         @leads = Leads.new(fullname: @fullname, companyname: @companyname, email: @email, phone: @phone, projectname: @projectname, projectdescription: @projectdescription, departmentincharge: @departmentincharge, message: @message)
-        @leads.attachment.attach(params[:Attachment])
+        @leads.attachment.attach(params[:attachment])
             if @leads.save
                 redirect_to index_path
             end
     end
     def leads_params
-        params.require(:leads).permit(:fullname, :companyname, :email, :phone, :projectname, :projectdescription, :departmentincharge, :message, Attachment:[])
+        params.require(:leads).permit(:fullname, :companyname, :email, :phone, :projectname, :projectdescription, :departmentincharge, :message, attachment:[])
       end
 end
 
