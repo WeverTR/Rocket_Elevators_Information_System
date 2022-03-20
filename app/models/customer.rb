@@ -1,5 +1,5 @@
 class Customer < ApplicationRecord
     belongs_to :user
-    belongs_to :quote, optional: true
-    has_one :building
+    belongs_to :address
+    has_many :buildings
 end

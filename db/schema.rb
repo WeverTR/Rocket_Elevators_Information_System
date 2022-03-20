@@ -45,8 +45,6 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
     t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "customer_id"
-    t.index ["customer_id"], name: "index_addresses_on_customer_id"
   end
 
   create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -115,6 +113,8 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.bigint "address_id"
+    t.index ["address_id"], name: "index_customers_on_address_id"
     t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
@@ -131,11 +131,7 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "column_id"
-    t.bigint "building_id"
-    t.bigint "customer_id"
-    t.index ["building_id"], name: "index_elevators_on_building_id"
     t.index ["column_id"], name: "index_elevators_on_column_id"
-    t.index ["customer_id"], name: "index_elevators_on_customer_id"
   end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -209,15 +205,13 @@ ActiveRecord::Schema.define(version: 2022_03_19_041404) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "addresses", "customers"
   add_foreign_key "batteries", "buildings"
   add_foreign_key "building_details", "buildings"
   add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
+  add_foreign_key "customers", "addresses"
   add_foreign_key "customers", "users"
-  add_foreign_key "elevators", "buildings"
   add_foreign_key "elevators", "columns"
-  add_foreign_key "elevators", "customers"
   add_foreign_key "employees", "users"
 end

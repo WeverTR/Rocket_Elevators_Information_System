@@ -74,6 +74,15 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
     password: 123456, 
     created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
     )
+    address = Address.create!(
+      type_of_address: typeAddress.sample,
+      entity: "N/A",
+      number_and_street:randAdd.address1,
+      suite_appartment: address2,
+      city: randAdd.city,
+      postal_code: randAdd.postalCode,
+      country: randAdd.state,
+    )
     customer = Customer.create!(
       customer_creation_date: user.created_at,
       company_name: Faker::Company.name,
@@ -86,6 +95,7 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
       technical_authority_email: user.email,
       created_at: user.created_at,
       user_id: user.id,
+      address_id: address.id
     )
     quote = Quote.create!(
        buildingtype: ["residential", "commercial", "corporate", "hybrid"].sample,
@@ -107,16 +117,6 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
        companyname: customer.company_name,
        email: customer.email_company
       )
-    address = Address.create!(
-      type_of_address: typeAddress.sample,
-      entity: "N/A",
-      number_and_street:randAdd.address1,
-      suite_appartment: address2,
-      city: randAdd.city,
-      postal_code: randAdd.postalCode,
-      country: randAdd.state,
-      customer_id: customer.id
-    )
       building = Building.create!(
           building_address: randAdd.address1,
           full_name_building_admin: Faker::Name.name,
@@ -158,9 +158,7 @@ Employee.create(user_id: 11, last_name: 'Sawatsky', first_name: 'Perry', email: 
                   )
                   1..6.times do
                     elevator = Elevator.create!(
-                      building_id: building.id,
                       column_id: column.id,
-                      customer_id: customer.id,
                       serial_number: Faker::Number.hexadecimal(digits: 6),
                       model: ["standard", "premium", "excelium"].sample,
                       types: column.types,

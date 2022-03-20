@@ -1,5 +1,5 @@
 class Building < ApplicationRecord
-    belongs_to :customer, optional: true
-    belongs_to :address, optional: true
-    has_one :battery
+    belongs_to :customer
+    belongs_to :address
+    has_many :batteries
 end
