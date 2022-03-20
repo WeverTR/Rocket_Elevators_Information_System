@@ -47,14 +47,14 @@ namespace :dwh do
 
     task :factelevator => :environment do
         conn = PG::Connection.new(host:'localhost', port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        elevators = Elevator.select(:serial_number, :date_of_commissioning, :building_id, :customer_id, :column_id)
+        elevators = Elevator.select(:serial_number, :date_of_commissioning, :column_id)
         elevators.each do |elevator|
             puts elevator.column.battery.building.address.city
             puts elevator.serial_number
             puts elevator.date_of_commissioning
-            puts elevator.building.id
-            puts elevator.customer_id
-            query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id, building_city) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}', '#{elevator.building_id}', '#{elevator.building.customer_id}', '#{elevator.column.battery.building.address.city}')"
+            puts elevator.column.battery.building_id
+            puts elevator.column.battery.building.customer_id
+            query = "INSERT INTO fact_elevators(serial_number, date_of_commissioning, building_id, customer_id, building_city) values('#{elevator.serial_number}', '#{elevator.date_of_commissioning}', '#{elevator.column.battery.building_id}', '#{elevator.column.battery.building.customer_id}', '#{elevator.column.battery.building.address.city}')"
             conn.exec(query)
             end
     end
@@ -72,6 +72,10 @@ namespace :dwh do
             # '#{quote.elevatorNum}', '#{address.city}')"
             # conn.exec(query)
         end
+
+    end
+
+    task :query1 => :environment do
 
     end
 
