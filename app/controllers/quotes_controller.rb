@@ -48,7 +48,7 @@ class QuotesController < ApplicationController
     
         respond_to do |format|
           if @quote.save
-            format.html { redirect_to quote_url(@quote), notice: "Quote was successfully created." }
+            format.html { redirect_to index_url(@quote), notice: "Quote was successfully created." }
             format.json { render :show, status: :created, location: @quote }
           else
             format.html { render :new, status: :unprocessable_entity }
