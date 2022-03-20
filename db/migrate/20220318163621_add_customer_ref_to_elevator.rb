@@ -1,5 +1,0 @@
-class AddCustomerRefToElevator < ActiveRecord::Migration[5.2]
-  def change
-    add_reference :elevators, :customer, foreign_key: true
-  end
-end

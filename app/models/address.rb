@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-    belongs_to :customer
+    has_one :customer
 end
