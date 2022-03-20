@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_18_053555) do
+ActiveRecord::Schema.define(version: 2022_03_20_204204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,12 @@ ActiveRecord::Schema.define(version: 2022_03_18_053555) do
     t.string "customer_city"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.bigint "fact_quotes_id"
+    t.bigint "fact_contacts_id"
+    t.bigint "fact_elevators_id"
+    t.index ["fact_contacts_id"], name: "index_dim_customers_on_fact_contacts_id"
+    t.index ["fact_elevators_id"], name: "index_dim_customers_on_fact_elevators_id"
+    t.index ["fact_quotes_id"], name: "index_dim_customers_on_fact_quotes_id"
   end
 
   create_table "fact_contacts", force: :cascade do |t|
@@ -34,8 +40,6 @@ ActiveRecord::Schema.define(version: 2022_03_18_053555) do
     t.string "project_name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.bigint "dim_customer_id"
-    t.index ["dim_customer_id"], name: "index_fact_contacts_on_dim_customer_id"
   end
 
   create_table "fact_elevators", force: :cascade do |t|
@@ -46,8 +50,6 @@ ActiveRecord::Schema.define(version: 2022_03_18_053555) do
     t.string "building_city"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.bigint "dim_customer_id"
-    t.index ["dim_customer_id"], name: "index_fact_elevators_on_dim_customer_id"
   end
 
   create_table "fact_quotes", force: :cascade do |t|
@@ -58,11 +60,9 @@ ActiveRecord::Schema.define(version: 2022_03_18_053555) do
     t.string "nb_elevator"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.bigint "dim_customer_id"
-    t.index ["dim_customer_id"], name: "index_fact_quotes_on_dim_customer_id"
   end
 
-  add_foreign_key "fact_contacts", "dim_customers"
-  add_foreign_key "fact_elevators", "dim_customers"
-  add_foreign_key "fact_quotes", "dim_customers"
+  add_foreign_key "dim_customers", "fact_contacts", column: "fact_contacts_id"
+  add_foreign_key "dim_customers", "fact_elevators", column: "fact_elevators_id"
+  add_foreign_key "dim_customers", "fact_quotes", column: "fact_quotes_id"
 end
