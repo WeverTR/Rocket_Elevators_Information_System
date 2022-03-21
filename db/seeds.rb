@@ -141,6 +141,7 @@
           puts "Seed ##{i + 1} successful."
       end
 
+<<<<<<< HEAD
     rand(20..40).times do
       lead = Leads.create(
         fullname: Faker::Name.name.gsub(/\W/, ''),
@@ -154,3 +155,37 @@
         created_at: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
       )
     end
+=======
+  1..20.times do |lead|
+    lead = Leads.create(
+      fullname: Faker::Name.name,
+      companyname: Faker::Company.name,
+      email: Faker::Internet.email,
+      phone: Faker::PhoneNumber.phone_number,
+      projectname: Faker::Company.industry,
+      projectdescription: Faker::Company.bs,
+      departmentincharge: Faker::IndustrySegments.sector,
+      message: Faker::Company.catch_phrase 
+    )
+  end
+
+# Employee creation data
+
+  # 11.times do
+  #   json = File.read("rrad/employee-data.json")
+  #   hash = JSON.parse(json, object_class: OpenStruct)
+  #   userData = hash['data']
+  #   user = User.create!(
+  #     last_name: userData.last_name,
+  #     first_name: userData.first_name,
+  #     email: userData.email,
+  #     password: 123456
+  #   )
+  #   # Employee.create!(
+  #   #   last_name: user.last_name,
+  #   #   first_name: user.first_name,
+  #   #   email: user.email,
+  #   #   title: userData.title,
+  #   # )
+  # end
+>>>>>>> f46f30118d0df06e1572b3dbb1dc6101a6188e9e
