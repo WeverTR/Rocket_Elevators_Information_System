@@ -1,24 +1,27 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
   # GET /quotes or /quotes.json
   def index
+    warden.authenticate!
     @quotes = Quote.all
   end
 
   # GET /quotes/1 or /quotes/1.json
   def show
+    warden.authenticate!
   end
 
   # GET /quotes/new
   def new
+    warden.authenticate!
     @quote = Quote.new
   end
 
   # GET /quotes/1/edit
   def edit
+    warden.authenticate!
   end
 
   # POST /quotes or /quotes.json
@@ -41,8 +44,10 @@ class QuotesController < ApplicationController
     @totalPriceElevators= params[:totalPriceElevators]
     @installFees= params[:installFees]
     @totalPrice= params[:totalPrice]
+    @email= params[:email]
+    @companyname= params[:companyname]
 
-    @quote = Quote.new(buildingtype: @buildingtype, numofapt: @numofapt, numoffloors: @numoffloors, numofbase: @numofbase, numofpark: @numofpark, numofcomp: @numofcomp, numofelev: @numofelev, maxocc: @maxocc, bushrs: @bushrs, corp: @corp, liftCage: @liftCage, elevatorNum: @elevatorNum, unitPrice: @unitPrice, totalPriceElevators: @totalPriceElevators, installFees: @installFees, totalPrice: @totalPrice)
+    @quote = Quote.new(buildingtype: @buildingtype, numofapt: @numofapt, numoffloors: @numoffloors, numofbase: @numofbase, numofpark: @numofpark, numofcomp: @numofcomp, numofelev: @numofelev, maxocc: @maxocc, bushrs: @bushrs, corp: @corp, liftCage: @liftCage, elevatorNum: @elevatorNum, unitPrice: @unitPrice, totalPriceElevators: @totalPriceElevators, installFees: @installFees, totalPrice: @totalPrice, email: @email, companyname: @companyname)
     
         respond_to do |format|
           if @quote.save
@@ -70,6 +75,7 @@ class QuotesController < ApplicationController
 
   # DELETE /quotes/1 or /quotes/1.json
   def destroy
+    warden.authenticate!
     @quote = Quote.destroy
 
     respond_to do |format|
@@ -77,10 +83,4 @@ class QuotesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_quote
-      @quote = Quote.find(params[:id])
-    end
 end

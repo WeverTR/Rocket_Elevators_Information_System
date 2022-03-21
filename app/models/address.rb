@@ -1,3 +1,4 @@
 class Address < ApplicationRecord
-    has_one :building
+    has_one :customer
+    has_many :buildings
 end
