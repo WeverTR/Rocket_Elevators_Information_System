@@ -22,7 +22,7 @@
     end
 
     # Faker generation data
-    100.times do |i|
+    5.times do |i|
     json = File.read("rrad/addresses-us-all.min.json")
     hash = JSON.parse(json, object_class: OpenStruct)
     randAdd = hash['addresses'].sample
@@ -69,18 +69,18 @@
       numofapt: Random.new.rand(5..40),
       numoffloors: Random.new.rand(5..100),
       numofbase: Random.new.rand(5..10),
-      numofpark: Random.new.rand(5..100),
+      numofpark: Random.new.rand(30..100),
       numofcomp: Random.new.rand(5..100),
-      numofelev: Random.new.rand(10..100),
+      numofelev: Random.new.rand(1..100),
       maxocc: Random.new.rand(100..500),
       bushrs: Random.new.rand(5..100),
-      corp: Random.new.rand(5..100),
+      corp: Random.new.rand(1..20),
       liftCage: Random.new.rand(5..100),
       elevatorNum: Random.new.rand(5..100),
-      unitPrice: "$75474573",
-      totalPriceElevators: "$43242342",
-      installFees: "$165456624",
-      totalPrice: "$43242346",
+      unitPrice: ["$7,565", "$12,345", "$15,400"].sample,
+      totalPriceElevators: "$" + "#{Random.new.rand(10000..30000)}",
+      installFees: "$" + "#{Random.new.rand(10000..50000)}",
+      totalPrice: "$" + "#{Random.new.rand(30000..200000)}",
       companyname: customer.company_name,
       email: customer.email_company,
       created_at: Faker::Date.between(from: '2019-01-01', to: Date.today)
@@ -125,7 +125,7 @@
                 rand(1..6).times do
                   elevator = Elevator.create!(
                     column_id: column.id,
-                    serial_number: Faker::Number.hexadecimal(digits: 6),
+                    serial_number: Faker::Number.leading_zero_number(digits: 10),
                     model: ["standard", "premium", "excelium"].sample,
                     types: column.types,
                     status: ["idle", "moving", "maintenance" "stopped"].sample,
