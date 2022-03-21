@@ -22,7 +22,7 @@
     end
 
     # Faker generation data
-    5.times do |i|
+    100.times do |i|
     json = File.read("rrad/addresses-us-all.min.json")
     hash = JSON.parse(json, object_class: OpenStruct)
     randAdd = hash['addresses'].sample
