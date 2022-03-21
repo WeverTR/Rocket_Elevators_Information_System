@@ -42,4 +42,6 @@
 //=require pages.coffee
 //=require quote.coffee
 //=require home.coffee
+//= require chartkick
+//= require Chart.bundle
 

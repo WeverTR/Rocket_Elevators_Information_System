@@ -1,24 +1,27 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
   skip_before_action :verify_authenticity_token
 
   # GET /quotes or /quotes.json
   def index
+    warden.authenticate!
     @quotes = Quote.all
   end
 
   # GET /quotes/1 or /quotes/1.json
   def show
+    warden.authenticate!
   end
 
   # GET /quotes/new
   def new
+    warden.authenticate!
     @quote = Quote.new
   end
 
   # GET /quotes/1/edit
   def edit
+    warden.authenticate!
   end
 
   # POST /quotes or /quotes.json
@@ -48,7 +51,7 @@ class QuotesController < ApplicationController
     
         respond_to do |format|
           if @quote.save
-            format.html { redirect_to index_url(@quote), notice: "Quote was successfully created." }
+            format.html { redirect_to quote_url(@quote), notice: "Quote was successfully created." }
             format.json { render :show, status: :created, location: @quote }
           else
             format.html { render :new, status: :unprocessable_entity }
@@ -72,6 +75,7 @@ class QuotesController < ApplicationController
 
   # DELETE /quotes/1 or /quotes/1.json
   def destroy
+    warden.authenticate!
     @quote = Quote.destroy
 
     respond_to do |format|
