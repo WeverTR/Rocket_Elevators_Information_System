@@ -142,12 +142,21 @@ $("#building-type").change(pick)
         
 //     }
 
+<<<<<<< HEAD
 //     $("#numofapt").on("input", update)
 //     $("#numoffloors").on("input", update)
 //     $("#numofbase").on("input", update)
 //     $("#numofelev").on("input", update)
 //     $("#maxocc").on("input", update)
 // }
+=======
+    $("#numofapt").on("input", update)
+    $("#numoffloors").on("input", update)
+    $("#numofbase").on("input", update)
+    $("#numofelev").on("input", update)
+    $("#maxocc").on("input", update)
+}
+>>>>>>> c9aacd66f79726d7553f2aa83e677f37d4dfa565
 
 let outputValues = {
     "elevatorsRequired": 0,
