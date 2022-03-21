@@ -22,7 +22,7 @@
     end
 
     # Faker generation data
-    10.times do |i|
+    100.times do |i|
     json = File.read("rrad/addresses-us-all.min.json")
     hash = JSON.parse(json, object_class: OpenStruct)
     randAdd = hash['addresses'].sample
@@ -141,7 +141,6 @@
           puts "Seed ##{i + 1} successful."
       end
 
-<<<<<<< HEAD
     rand(20..40).times do
       lead = Leads.create(
         fullname: Faker::Name.name.gsub(/\W/, ''),
@@ -155,58 +154,3 @@
         created_at: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
       )
     end
-=======
-    building = Building.create(
-       full_name_building_admin: Faker::Name.name
-       email_building_admin: Faker::Internet.email
-       phone_building_admin: Faker::PhoneNumber.phone_number
-       full_name_technical_contact: customer.full_name_service_technical_authority
-       email_technical_contact: customer.technical_authority_email
-       phone_technical_contact: customer.technical_authority_phone
-    )
-
-    buildingDetails = BuildingDetail.create(
-
-      building_id: building.id
-      number_of_floors: Faker::Number.digit
-      type:
-      architecture:
-      maximum_number_of_occupants: Faker::Number.digit
-      year_of_construction: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      BuildingId: building.id
-
-
-    )
-    battery = Battery.create(
-      buildingId: building.id
-      type: 
-      employeeId: employee.id
-      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      certificate_of_Operations: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      information:
-      notes:
-
-    )
-    column = Column.create(
-      batteryId: batteries.id 
-      type: Faker::Type.between('Residential', 'Commercial', 'Corporate')
-      number_of_floors_served:
-      status: Faker::Subscription.status
-      information:
-      notes:
-    )
-    elevator = Elevator.create(
-      columnId: column.id
-      serial_number: Faker::Number.hexadecimal(digits: 10)
-      model: (Standard, Premium, Excelium)
-      type: (Residential, Commercial, Corporate)
-      status: Faker::Subscription.status
-      date_of_commissioning: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      date_of_last_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      certificate_of_inspection: Faker::Date.between(from: '2018-09-23', to: '2022-03-17')
-      information:
-      notes:
-    )
-  end
->>>>>>> c9aacd66f79726d7553f2aa83e677f37d4dfa565

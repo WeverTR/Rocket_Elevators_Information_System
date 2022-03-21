@@ -67,9 +67,3 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-<<<<<<< HEAD
-=======
-gem 'pg', '~> 1.3', '>= 1.3.4'
-gem 'multiverse'
->>>>>>> c9aacd66f79726d7553f2aa83e677f37d4dfa565
