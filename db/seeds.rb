@@ -96,6 +96,11 @@
           address_id: address.id,
           customer_id: customer.id
           )
+          buildingDetail = BuildingDetail.create(
+            building_id: building.id,
+            information_key: ["type","year_of_construction","architecture","maximum_number_of_occupants","number_of_floors"],
+            value: [['Residential', 'Commercial', 'Corporate'].sample,Faker::Date.between(from: '2018-09-23', to: '2022-03-17'),["Ancient Roman architecture","Resort architecture","Art Deco"].sample,Faker::Number.within(range: 1..100)]
+          )
           rand(1..3).times do
               battery = Battery.create!(
                 building_id: building.id,
