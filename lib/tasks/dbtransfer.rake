@@ -98,8 +98,8 @@ namespace :dwh do
         Rake::Task["dwh:factcontact"].invoke
         puts "Beginning query: sorting number of unique requests by month..."
 
-        query = FactContact.group_by_month(:creation_date, format: "%b %Y").count
-        puts query
+        query = FactContact.select(:creation_date).count
+        puts query/12.to_f
         puts "Query complete."
     end
 
@@ -108,15 +108,16 @@ namespace :dwh do
         Rake::Task["dwh:factquote"].invoke
         puts "Beginning query: sorting number of unique requests by month..."
 
-        query = FactQuote.group_by_month(:creation, format: "%b %Y").count
-        puts query
+        query = FactQuote.select(:creation).count
+        puts query/12.to_f
         puts "Query complete."
     end
 
     task :query3 => :environment do
         conn = PG::Connection.new(port:'5432', dbname:'wevertr', user:'wevertr', password:'3090')
-        # Rake::Task["dwh:dim"].invoke
-        # puts "Beginning query: sorting number of elevators contained in buildings owned by each customer..."
+        Rake::Task["dwh:dim"].invoke
+        puts "Sorting number of elevators contained in buildings owned by each customer. First number is customer ID, second is number of
+        elevators. Beginning query..."
 
         query = DimCustomer.order(:id).group(:id, :nb_elevators).count
         puts query

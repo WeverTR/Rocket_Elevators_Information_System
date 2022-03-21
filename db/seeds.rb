@@ -28,7 +28,7 @@
     randAdd = hash['addresses'].sample
     typeAddress = ["residential", "commercial", "corporate", "hybrid"]
     # if randAdd.address2.length != 0
-      fullAddress = randAdd.address1 + ", " + randAdd.address2 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
+      fullAddress = randAdd.address1 + ", " + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode
       # address2 = randAdd.address2
     # else
     #   fullAddress = randAdd.address1 + ", "  + randAdd.city + ", "  + randAdd.state + ", "  + randAdd.postalCode

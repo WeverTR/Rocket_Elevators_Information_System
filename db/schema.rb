@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 2022_03_21_011702) do
   end
 
   create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.integer "serial_number"
+    t.string "serial_number"
     t.string "model"
     t.string "types"
     t.string "status"
