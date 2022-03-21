@@ -37,7 +37,7 @@ gem 'bcrypt'
 gem "font-awesome-rails"
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3' #newly test
 gem 'popper_js', '~> 2.9.3' #new
-gem 'database_cleaner-active_record'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
