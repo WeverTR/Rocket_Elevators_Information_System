@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :graphs
   root to: "pages#index"
   get "/index", to:"pages#index"
   get "/quote", to:"pages#quote"

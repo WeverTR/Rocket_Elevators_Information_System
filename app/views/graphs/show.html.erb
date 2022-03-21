@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Query:</strong>
+  <%= @graph.query_id %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @graph.time %>
+</p>
+
+<%= link_to 'Edit', edit_graph_path(@graph) %> |
+<%= link_to 'Back', graphs_path %>
