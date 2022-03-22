@@ -5,20 +5,15 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 2.7
 
-* System dependencies
+* Databases: MySql - relational database; PostgreSql - 
 
-* Configuration
+Query 1: How many unique contact requests were made each month?
+RESULT: 6.5 requests/month
 
-* Database creation
+Query 2: How many unique quote requests were made each month?
+RESULT: 25 requests/month
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Query 3: How many elevators does each customer have?
+RESULT: 
