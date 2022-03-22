@@ -33,6 +33,8 @@ gem "groupdate"
 
 gem "chartkick"
 
+gem 'dropbox_api'
+
 gem 'bcrypt'
 gem "font-awesome-rails"
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3' #newly test
