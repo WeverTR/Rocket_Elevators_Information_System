@@ -138,7 +138,6 @@ namespace :dwh do
             Rake::Task["dwh:truncateAll"].invoke
         else 
             p "Cancelling truncation."
-            break
         end
       end
 
