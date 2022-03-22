@@ -19,7 +19,7 @@ namespace :dwh do
     end
 
     task :factquote => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com" port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:truncate"].invoke
         quotes = Quote.select(:id, :created_at, :companyname, :email, :elevatorNum)
         quotes.each do |quote|
@@ -35,7 +35,7 @@ namespace :dwh do
     end
 
     task :factcontact => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com" port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:truncate"].invoke
         leads = Leads.select(:id, :created_at, :companyname, :email, :projectname)
         leads.each do |lead|
@@ -51,7 +51,7 @@ namespace :dwh do
     end
 
     task :factelevator => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com" port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:truncate"].invoke
         elevators = Elevator.select(:serial_number, :date_of_commissioning, :column_id)
         elevators.each do |elevator|
@@ -67,7 +67,7 @@ namespace :dwh do
     end
 
     task :dim => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com" port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:truncate"].invoke
         customers = Customer.select(:id, :created_at, :company_name, :full_name_company_contact, :email_company, :address_id)
         elevators = Elevator.select(:id, :column_id)
@@ -94,7 +94,7 @@ namespace :dwh do
     end
 
     task :query1 => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com" port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:factcontact"].invoke
         puts "Beginning query: sorting number of unique requests by month..."
 
@@ -104,7 +104,7 @@ namespace :dwh do
     end
 
     task :query2 => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com"port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com",port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:factquote"].invoke
         puts "Beginning query: sorting number of unique requests by month..."
 
@@ -114,7 +114,7 @@ namespace :dwh do
     end
 
     task :query3 => :environment do
-        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com" port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
+        conn = PG::Connection.new(host: "codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com", port:'5432', dbname:'wevertr', user:'wevertr', password:'Codeboxx1!')
         Rake::Task["dwh:dim"].invoke
         puts "Sorting number of elevators contained in buildings owned by each customer. First number is customer ID, second is number of
         elevators. Beginning query..."
